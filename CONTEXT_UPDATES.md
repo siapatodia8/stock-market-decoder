@@ -237,3 +237,17 @@ must be run locally, not from the sandbox:
 ```
 cd ~/Desktop/stock-market-decoder && pip install requests python-dotenv hydradb-sdk && python3 scripts/setup_and_ingest_sdk.py --step <step>
 ```
+
+## Operating constraint: sandbox can't reach registry.npmjs.org either
+Same shape of restriction as the HydraDB one above — `npm create vite@latest` /
+`npm install` inside the sandbox both 403 (`blocked-by-allowlist`). `frontend/`'s
+scaffold files (`package.json`, `vite.config.js`, `index.html`, `src/*.jsx`) were
+therefore hand-written directly rather than generated via `npm create vite`. Run
+locally to actually install and start it:
+```
+cd frontend && npm install && npm run dev
+```
+The frontend also needs the backend running locally at the same time (separate
+terminal, `cd backend && uvicorn main:app --reload --port 8000`) — `App.jsx` calls
+`http://localhost:8000` directly, matching `main.py`'s CORS allowlist for
+`http://localhost:5173` (Vite's default port).
