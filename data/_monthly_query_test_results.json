@@ -1,0 +1,192 @@
+{
+  "2022-02": {
+    "A_generic_filtered_single_date": {
+      "n_chunks": 0,
+      "chunk_sources": [],
+      "n_query_paths": 0,
+      "n_chunk_relations": 0,
+      "synthesis_context": null,
+      "top_combined_contexts": []
+    },
+    "A2_generic_filtered_list_of_dates": {
+      "n_chunks": 0,
+      "chunk_sources": [],
+      "n_query_paths": 0,
+      "n_chunk_relations": 0,
+      "synthesis_context": "The user is asking for a summary of disclosures or announcements made by Peloton within a specific (though currently underspecified) time period. This requires a broad search across documents to synthesize various announcements.",
+      "top_combined_contexts": []
+    },
+    "B_generic_with_period_filtered": {
+      "n_chunks": 0,
+      "chunk_sources": [],
+      "n_query_paths": 0,
+      "n_chunk_relations": 0,
+      "synthesis_context": null,
+      "top_combined_contexts": []
+    },
+    "B_fast_mode_comparison": {
+      "n_chunks": 0,
+      "chunk_sources": [],
+      "n_query_paths": 0,
+      "n_chunk_relations": 0,
+      "synthesis_context": null,
+      "top_combined_contexts": []
+    },
+    "C_natural_language_dated_no_filter": {
+      "n_chunks": 14,
+      "chunk_sources": [
+        "peloton_2021-08-26_shareholder-letter_v2.md",
+        "peloton_2022-02-05_8k.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-08_8k.md",
+        "peloton_2022-02-08_restructuring-pr.md",
+        "peloton_2022-02-08_shareholder-letter.md",
+        "peloton_2022-06-06_8k.md",
+        "peloton_2022-06-06_pr.md"
+      ],
+      "n_query_paths": 10,
+      "n_chunk_relations": 15,
+      "synthesis_context": "The query asks for specific events or disclosures tied to a precise time window (February 2022) for a specific entity (Peloton).",
+      "top_combined_contexts": [
+        "For the second quarter of fiscal year 2022, ending February 8, 2022, Peloton reported connected fitness subscriptions grew 66% to 2.77 million, paid digital subscriptions grew 38% to 862 thousand, and total members grew to over 6.6 million. Total revenue grew 6% to $1,133.9 million, with a net loss of $439.4 million ($1.39 per diluted share) and Adjusted EBITDA of negative $266.5 million with a margin of negative 23.5%. (Date/Time: 2022-02-08)",
+        "On May 24th, Peloton announced plans to build its first U.S. factory, Peloton Output Park (POP), which will sit on over 200 acres of land in Troy Township, Ohio, featuring more than a million square feet of manufacturing, office, and amenities space. (Date/Time: 2021-05-24)",
+        "Peloton's FY2022 guidance represents a continued prioritization of subscription growth over near-term profitability. (Date/Time: FY2022)"
+      ]
+    },
+    "D_generic_no_filter_no_date": {
+      "n_chunks": 13,
+      "chunk_sources": [
+        "peloton_2020-12-21_8k.md",
+        "peloton_2021-08-26_8k.md",
+        "peloton_2021-08-26_shareholder-letter_v2.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-08_8k.md",
+        "peloton_2022-02-08_restructuring-pr.md",
+        "peloton_2022-02-08_shareholder-letter.md",
+        "peloton_2022-06-06_pr.md",
+        "peloton_2024-05-20_8k.md",
+        "peloton_2024-05-20_pr.md"
+      ],
+      "n_query_paths": 10,
+      "n_chunk_relations": 15,
+      "synthesis_context": "The user is asking for a summary of disclosures or announcements made by Peloton within a specific (though currently underspecified) time period. This requires a broad search for announcements and disclosures across the available documents.",
+      "top_combined_contexts": [
+        "On May 24th, Peloton announced plans to build its first U.S. factory, Peloton Output Park (POP), which will sit on over 200 acres of land in Troy Township, Ohio, featuring more than a million square feet of manufacturing, office, and amenities space. (Date/Time: 2021-05-24)",
+        "Peloton's guidance for Q3 FY2022 includes approximately 2.93 million ending connected fitness subscriptions, total revenue between $950 million and $1 billion, a gross margin of approximately 23%, and Adjusted EBITDA between negative $140 million and negative $125 million. (Date/Time: FY2022 Q3)",
+        "Peloton's FY2022 guidance represents a continued prioritization of subscription growth over near-term profitability. (Date/Time: FY2022)"
+      ]
+    }
+  },
+  "2021-08": {
+    "A_generic_filtered_single_date": {
+      "n_chunks": 0,
+      "chunk_sources": [],
+      "n_query_paths": 0,
+      "n_chunk_relations": 0,
+      "synthesis_context": null,
+      "top_combined_contexts": []
+    },
+    "B_generic_with_period_filtered": {
+      "n_chunks": 0,
+      "chunk_sources": [],
+      "n_query_paths": 0,
+      "n_chunk_relations": 0,
+      "synthesis_context": null,
+      "top_combined_contexts": []
+    },
+    "B_fast_mode_comparison": {
+      "n_chunks": 0,
+      "chunk_sources": [],
+      "n_query_paths": 0,
+      "n_chunk_relations": 0,
+      "synthesis_context": null,
+      "top_combined_contexts": []
+    },
+    "C_natural_language_dated_no_filter": {
+      "n_chunks": 13,
+      "chunk_sources": [
+        "peloton_2020-12-21_8k.md",
+        "peloton_2021-08-26_8k.md",
+        "peloton_2021-08-26_shareholder-letter_v2.md",
+        "peloton_2022-02-08_restructuring-pr.md",
+        "peloton_2022-02-08_shareholder-letter.md",
+        "peloton_2022-06-06_8k.md",
+        "peloton_2022-06-06_pr.md"
+      ],
+      "n_query_paths": 10,
+      "n_chunk_relations": 15,
+      "synthesis_context": "The query asks for specific events or disclosures tied to a precise time window (August 2021) for a specific entity (Peloton).",
+      "top_combined_contexts": [
+        "On May 24th, Peloton announced plans to build its first U.S. factory, Peloton Output Park (POP), which will sit on over 200 acres of land in Troy Township, Ohio, featuring more than a million square feet of manufacturing, office, and amenities space. (Date/Time: 2021-05-24)",
+        "For the fourth quarter of fiscal year 2021, ending August 26, 2021, Peloton reported that Connected Fitness Subscriptions grew 114% to over 2.33 million, paid Digital Subscriptions grew 176% to over 874,000, total Members grew to over 5.9 million, and total revenue grew 54% to $937 million. (Date/Time: 2021-08-26)",
+        "As of June 30, 2021, Peloton reported total assets of $4,485.6 million, compared to $2,981.8 million as of June 30, 2020. (Date/Time: 2021-06-30)"
+      ]
+    },
+    "D_generic_no_filter_no_date": {
+      "n_chunks": 12,
+      "chunk_sources": [
+        "peloton_2020-12-21_8k.md",
+        "peloton_2021-08-26_8k.md",
+        "peloton_2021-08-26_shareholder-letter_v2.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-08_8k.md",
+        "peloton_2022-02-08_restructuring-pr.md",
+        "peloton_2022-02-08_shareholder-letter.md",
+        "peloton_2022-06-06_pr.md",
+        "peloton_2024-05-20_pr.md"
+      ],
+      "n_query_paths": 10,
+      "n_chunk_relations": 15,
+      "synthesis_context": "The user is asking for a summary of disclosures or announcements made by Peloton within a specific (though currently underspecified) time period. This requires a broad search for announcements and disclosures across the available documents.",
+      "top_combined_contexts": [
+        "On May 24th, Peloton announced plans to build its first U.S. factory, Peloton Output Park (POP), which will sit on over 200 acres of land in Troy Township, Ohio, featuring more than a million square feet of manufacturing, office, and amenities space. (Date/Time: 2021-05-24)",
+        "Peloton's guidance for Q3 FY2022 includes approximately 2.93 million ending connected fitness subscriptions, total revenue between $950 million and $1 billion, a gross margin of approximately 23%, and Adjusted EBITDA between negative $140 million and negative $125 million. (Date/Time: FY2022 Q3)",
+        "Peloton's FY2022 guidance represents a continued prioritization of subscription growth over near-term profitability. (Date/Time: FY2022)"
+      ]
+    }
+  },
+  "2021-03": {
+    "C_natural_language_dated_no_filter": {
+      "n_chunks": 14,
+      "chunk_sources": [
+        "peloton_2020-12-21_8k.md",
+        "peloton_2020-12-21_pr.md",
+        "peloton_2021-08-26_8k.md",
+        "peloton_2021-08-26_shareholder-letter_v2.md",
+        "peloton_2022-02-08_restructuring-pr.md",
+        "peloton_2022-02-08_shareholder-letter.md",
+        "peloton_2022-06-06_pr.md",
+        "peloton_2024-05-20_pr.md"
+      ],
+      "n_query_paths": 10,
+      "n_chunk_relations": 15,
+      "synthesis_context": "The query asks for specific events or disclosures tied to a precise time window (March 2021), requiring a search filtered by date.",
+      "top_combined_contexts": [
+        "On May 24th, Peloton announced plans to build its first U.S. factory, Peloton Output Park (POP), which will sit on over 200 acres of land in Troy Township, Ohio, featuring more than a million square feet of manufacturing, office, and amenities space. (Date/Time: 2021-05-24)",
+        "As of June 30, 2021, Peloton reported total assets of $4,485.6 million, compared to $2,981.8 million as of June 30, 2020. (Date/Time: 2021-06-30)",
+        "For the fiscal year ended June 30, 2021, Peloton reported total revenue of $4,021.8 million, compared to $1,825.9 million in FY2020. (Date/Time: 2021-06-30)"
+      ]
+    },
+    "D_generic_no_filter_no_date": {
+      "n_chunks": 12,
+      "chunk_sources": [
+        "peloton_2020-12-21_8k.md",
+        "peloton_2021-08-26_8k.md",
+        "peloton_2021-08-26_shareholder-letter_v2.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-08_8k.md",
+        "peloton_2022-02-08_shareholder-letter.md",
+        "peloton_2022-06-06_pr.md",
+        "peloton_2024-05-20_pr.md"
+      ],
+      "n_query_paths": 10,
+      "n_chunk_relations": 15,
+      "synthesis_context": "The user is asking for a summary of disclosures or announcements made by Peloton within a specific (though currently underspecified) time period. This requires a broad search across documents to synthesize various announcements.",
+      "top_combined_contexts": [
+        "On May 24th, Peloton announced plans to build its first U.S. factory, Peloton Output Park (POP), which will sit on over 200 acres of land in Troy Township, Ohio, featuring more than a million square feet of manufacturing, office, and amenities space. (Date/Time: 2021-05-24)",
+        "Peloton's guidance for Q3 FY2022 includes approximately 2.93 million ending connected fitness subscriptions, total revenue between $950 million and $1 billion, a gross margin of approximately 23%, and Adjusted EBITDA between negative $140 million and negative $125 million. (Date/Time: FY2022 Q3)",
+        "Peloton's FY2022 guidance represents a continued prioritization of subscription growth over near-term profitability. (Date/Time: FY2022)"
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+event: |
+  You are a financial disclosure analyst summarizing what a public company
+  disclosed in a specific filing period, for a reader trying to understand
+  why the stock moved.
+
+  QUESTION: "{question}"
+
+  DISCLOSURES THIS PERIOD (grouped by date and narrative role):
+  {context_block}
+
+  ROLE KEY:
+  - claim: a confident, forward-looking statement made from a position of strength
+  - reversal_marker: the event that signals a turning point, usually structural (e.g. a leadership change)
+  - reversal_content: the substantive detail explaining why the reversal is happening (e.g. financial deterioration)
+  - resolution: where the story lands — a stabilizing or closing action
+
+  RULES:
+  - Use ONLY the disclosures above. Do not use outside knowledge of Peloton, its financials, or the fitness industry beyond what's provided here.
+  - Use the specific numbers, dates, and names present in the disclosures — dollar figures, percentages, job counts, executive names — never vague paraphrases.
+  - If multiple dates are present, treat reversal_marker as the pivot fact of the period and anchor the headline on it; treat reversal_content as the supporting detail explaining why.
+  - If only one narrative role is present, anchor the headline on its single most significant concrete fact.
+  - Punchy, interpretive framing is fine in the headline (e.g. "began to unravel") as long as every concrete claim underneath stays real and sourced from the disclosures above — never invent unstated causes, motivations, or opinions.
+
+  FORMATTING:
+  - headline: one sentence, punchy and generic in tone, roughly 15-25 words, anchored per the RULES above.
+  - detail: exactly one sentence per DISTINCT DATE listed in "DISCLOSURES THIS PERIOD" above — not one sentence per snippet. If a date has multiple snippets, combine them into that single sentence; do not imply any time passed between snippets that share the same date, since no such gap exists in the source data.
+  - Time-language transitions ("three days later", etc.) are only allowed BETWEEN two different dates listed above, and must reflect the real gap between those two dates — never invent an elapsed-time relationship between snippets from the same date.
+  - If there is only one date listed, detail is one sentence combining its supporting specifics — no time language at all.
+  - No markdown, no bullet points, no numbered lists, no emojis.
+
+  Return ONLY valid JSON, no markdown, no explanation:
+  {{
+      "headline": "...",
+      "detail": "..."
+  }}

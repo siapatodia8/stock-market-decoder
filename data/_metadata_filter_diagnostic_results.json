@@ -1,0 +1,130 @@
+{
+  "tested_document": "peloton_2020-12-21_8k",
+  "known_filing_date": "2020-12-21",
+  "known_doc_type": "8-K",
+  "raw_chunk_metadata": [
+    {
+      "source_title": "peloton_2020-12-21_8k.md",
+      "metadata": {
+        "doc_summary": "Peloton announces agreement to acquire Precor for $420M to establish U.S. manufacturing capacity",
+        "doc_type": "8-K",
+        "filing_date": "2020-12-21",
+        "narrative_role": "claim"
+      },
+      "additional_metadata": null
+    },
+    {
+      "source_title": "peloton_2020-12-21_pr.md",
+      "metadata": {
+        "doc_summary": "Press release detailing the Precor acquisition \u2014 U.S. manufacturing, R&D, and commercial-market expansion plans",
+        "doc_type": "press_release",
+        "filing_date": "2020-12-21",
+        "narrative_role": "claim"
+      },
+      "additional_metadata": null
+    },
+    {
+      "source_title": "peloton_2020-12-21_pr.md",
+      "metadata": {
+        "doc_summary": "Press release detailing the Precor acquisition \u2014 U.S. manufacturing, R&D, and commercial-market expansion plans",
+        "doc_type": "press_release",
+        "filing_date": "2020-12-21",
+        "narrative_role": "claim"
+      },
+      "additional_metadata": null
+    },
+    {
+      "source_title": "peloton_2022-02-08_shareholder-letter.md",
+      "metadata": {
+        "doc_summary": "Q2 FY22 letter: net loss $439.4M, guidance cut from $5.4B to $3.7-3.8B, Foley announces his own CEO transition, restructuring detailed",
+        "doc_type": "shareholder_letter",
+        "filing_date": "2022-02-08",
+        "narrative_role": "reversal_content"
+      },
+      "additional_metadata": {
+        "_retrieval_source": "graph"
+      }
+    },
+    {
+      "source_title": "peloton_2022-02-05_board-pr.md",
+      "metadata": {
+        "doc_summary": "Press release announcing new board directors; Barry McCarthy named CEO; John Foley becomes Executive Chair",
+        "doc_type": "press_release",
+        "filing_date": "2022-02-05",
+        "narrative_role": "reversal_marker"
+      },
+      "additional_metadata": {
+        "_retrieval_source": "graph"
+      }
+    },
+    {
+      "source_title": "peloton_2021-08-26_shareholder-letter_v2.md",
+      "metadata": {
+        "doc_summary": "Confident Q4 FY21 letter: announces new Peloton Output Park factory, sets aggressive FY2022 guidance ($5.4B revenue, 3.63M subscriptions)",
+        "doc_type": "shareholder_letter",
+        "filing_date": "2021-08-26",
+        "narrative_role": "claim"
+      },
+      "additional_metadata": null
+    },
+    {
+      "source_title": "peloton_2021-08-26_shareholder-letter_v2.md",
+      "metadata": {
+        "doc_summary": "Confident Q4 FY21 letter: announces new Peloton Output Park factory, sets aggressive FY2022 guidance ($5.4B revenue, 3.63M subscriptions)",
+        "doc_type": "shareholder_letter",
+        "filing_date": "2021-08-26",
+        "narrative_role": "claim"
+      },
+      "additional_metadata": null
+    },
+    {
+      "source_title": "peloton_2021-08-26_shareholder-letter_v2.md",
+      "metadata": {
+        "doc_summary": "Confident Q4 FY21 letter: announces new Peloton Output Park factory, sets aggressive FY2022 guidance ($5.4B revenue, 3.63M subscriptions)",
+        "doc_type": "shareholder_letter",
+        "filing_date": "2021-08-26",
+        "narrative_role": "claim"
+      },
+      "additional_metadata": null
+    }
+  ],
+  "filter_shape_results": {
+    "filing_date_top_level_plain": {
+      "n_chunks": 3,
+      "sources": [
+        "peloton_2020-12-21_8k.md",
+        "peloton_2020-12-21_pr.md"
+      ]
+    },
+    "filing_date_top_level_list": {
+      "n_chunks": 3,
+      "sources": [
+        "peloton_2020-12-21_8k.md",
+        "peloton_2020-12-21_pr.md"
+      ]
+    },
+    "filing_date_nested_plain": {
+      "n_chunks": 0,
+      "sources": []
+    },
+    "filing_date_nested_list": {
+      "n_chunks": 0,
+      "sources": []
+    },
+    "filing_date_document_metadata_alias_plain": {
+      "n_chunks": 0,
+      "sources": []
+    },
+    "doc_type_top_level_plain": {
+      "n_chunks": 2,
+      "sources": [
+        "peloton_2020-12-21_8k.md",
+        "peloton_2022-02-05_8k.md"
+      ]
+    },
+    "doc_type_nested_plain": {
+      "n_chunks": 0,
+      "sources": []
+    }
+  }
+}

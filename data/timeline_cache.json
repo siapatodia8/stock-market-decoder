@@ -1,0 +1,508 @@
+[
+  {
+    "month": "2020-12",
+    "price": {
+      "close": 148.53,
+      "pct_change": 32.58
+    },
+    "event": {
+      "filing_dates": [
+        "2020-12-21"
+      ],
+      "question": "Based only on the provided documents, what did Peloton disclose, announce, or report during this period?",
+      "headline": "Peloton announces $420 million acquisition of Precor to enhance U.S. manufacturing and R&D capabilities.",
+      "detail": "On December 21, 2020, Peloton entered into a Stock and Asset Purchase Agreement to acquire Precor for $420 million, aiming to establish U.S. manufacturing capacity and enhance R&D with nearly 100 new employees.",
+      "source_titles": [
+        "peloton_2020-12-21_8k.md",
+        "peloton_2020-12-21_pr.md"
+      ],
+      "doc_summaries": [
+        "Peloton announces agreement to acquire Precor for $420M to establish U.S. manufacturing capacity",
+        "Press release detailing the Precor acquisition \u2014 U.S. manufacturing, R&D, and commercial-market expansion plans"
+      ],
+      "chunk_count": 2,
+      "evidence": [
+        {
+          "date": "2020-12-21",
+          "narrative_role": "claim",
+          "snippets": [
+            "# Press Release: Peloton Signs Agreement to Acquire Precor\n**New York, NY \u2014 December 21, 2020**\n\nAcquisition expected to establish Peloton's U.S. manufacturing footprint, enhance R&D\ncapabilities, and accelerate growth of commercial verticals.\n\nPeloton (NASDAQ: PTON), the leading interactive fitness platform, today announced that it has\nentered into an agreement to acquire Precor, one of the largest global commercial fitness\nequipment providers with a significant U.S. manufacturing presence, in a transaction valued at\n$420 million USD. With the acquisition, Peloton plans to establish U.S. manufacturing capacity,\nboost research and development capabilities with Precor's highly-skilled team, and accelerate\nPeloton's penetration of the commercial market. Peloton plans to produce connected fitness\nproducts in the U.S. before the end of calendar year 2021.\n\nPrecor President Rob Barker will become CEO, Precor and General Manager, Peloton Commercial,\nreporting to William Lynch, Peloton's President. Precor is a division of Finnish sporting\ngoods company Amer Sports. The transaction is expected to close in early calendar year 2021.\n\n**\"Precor embodies the Peloton mission of putting Members first,\"** said Peloton's Lynch. \"By\ncombining our talented and committed R&D and Supply Chain teams with the incredibly capable\nPrecor team and their decades of experience, we believe we will be able to lead the global\nconnected fitness market in both innovation and scale.\"\n\n## Establishing U.S. manufacturing\nThe acquisition adds 625,000 square feet of U.S. manufacturing capacity in Whitsett, North\nCarolina and Woodinville, Washington. Peloton will be able to control the entire production\nprocess, from design to ship, and increase total production scale.\n\n## Investing more in research and development\nThe acquisition adds a team of nearly 100 dedicated R&D employees to Peloton's team.\n\n## Scaling Peloton commercial offerings\nPrecor has 40 years of experience building a customer-focused commercial fitness business at\nscale, with long-standing relationships with hotels, multifamily residences, and college and\ncorporate campuses.\n\n**About Peloton:** Peloton is the leading interactive fitness platform in the world with a\nloyal community of more than 3.6 million Members. Founded in 2012, headquartered in New York\nCity.",
+            "# Peloton Interactive, Inc. \u2014 Form 8-K\n**Date of Report:** December 21, 2020\n\n## Item 1.01 \u2014 Entry into a Material Definitive Agreement\n\n**Stock and Asset Purchase Agreement**\n\nOn December 21, 2020, Peloton Interactive, Inc., a Delaware corporation (\"Peloton\"), entered\ninto a Stock and Asset Purchase Agreement (\"Purchase Agreement\") with Amer Sports Corporation,\na Finnish corporation (\"Parent\"), pursuant to which Peloton will acquire Precor Incorporated,\na Delaware corporation (\"Precor\"), and certain related entities and assets from Parent and\ncertain of its subsidiaries (the \"Acquisition\"). Precor manufactures, sells and distributes\ncardiovascular and strength-building exercise machines, fitness equipment and associated\ntechnical and digital services.\n\nUnder the terms of the Purchase Agreement, Peloton has agreed to acquire Precor for $420.0\nmillion in cash, subject to customary adjustments for working capital, transaction expenses,\ncash and indebtedness. The closing of the transactions is anticipated to occur in early\ncalendar year 2021 and is subject to customary closing conditions, including expiration or\ntermination of the applicable waiting period under the Hart-Scott-Rodino Antitrust\nImprovements Act of 1976.\n\n**Press Release**\n\nOn December 21, 2020, Peloton issued a press release announcing the execution of the Purchase\nAgreement. This press release is furnished as Exhibit 99.1 to this Current Report on Form 8-K.\n\n## Item 9.01 \u2014 Financial Statements and Exhibits\n\n(d) Exhibits: Exhibit 99.1 \u2014 Press release dated December 21, 2020.\n\n**Signature:** Hisao Kushi, Chief Legal Officer",
+            "On December 21, 2020, Peloton Interactive, Inc. issued a press release announcing the execution of the Purchase Agreement, which is furnished as Exhibit 99.1 to the Form 8-K report. (Date/Time: 2020-12-21)",
+            "Peloton entered into an agreement to acquire Precor, one of the largest global commercial fitness equipment providers, in a transaction valued at $420 million USD. The acquisition is intended to establish a U.S. manufacturing footprint, enhance R&D capabilities, and accelerate growth in commercial verticals. (Date/Time: December 21, 2020)",
+            "Rob Barker, in his role as CEO of Precor and General Manager of Peloton Commercial, reports to William Lynch, the President of Peloton.",
+            "Hisao Kushi signed the Form 8-K report in his capacity as the Chief Legal Officer of Peloton Interactive, Inc. (Date/Time: 2020-12-21)",
+            "The acquisition of Precor adds a team of nearly 100 dedicated R&D employees to Peloton's team.",
+            "Peloton plans to produce connected fitness products in the U.S. before the end of calendar year 2021. (Date/Time: before end of 2021)"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "month": "2021-01",
+    "price": {
+      "close": 147.73,
+      "pct_change": -0.54
+    },
+    "event": null
+  },
+  {
+    "month": "2021-02",
+    "price": {
+      "close": 117.97,
+      "pct_change": -20.14
+    },
+    "event": null
+  },
+  {
+    "month": "2021-03",
+    "price": {
+      "close": 115.38,
+      "pct_change": -2.2
+    },
+    "event": null
+  },
+  {
+    "month": "2021-04",
+    "price": {
+      "close": 96.7,
+      "pct_change": -16.19
+    },
+    "event": null
+  },
+  {
+    "month": "2021-05",
+    "price": {
+      "close": 108.89,
+      "pct_change": 12.61
+    },
+    "event": null
+  },
+  {
+    "month": "2021-06",
+    "price": {
+      "close": 123.69,
+      "pct_change": 13.59
+    },
+    "event": null
+  },
+  {
+    "month": "2021-07",
+    "price": {
+      "close": 119.27,
+      "pct_change": -3.57
+    },
+    "event": null
+  },
+  {
+    "month": "2021-08",
+    "price": {
+      "close": 100.19,
+      "pct_change": -16.0
+    },
+    "event": {
+      "filing_dates": [
+        "2021-08-26"
+      ],
+      "question": "Based only on the provided documents, what did Peloton disclose, announce, or report during this period?",
+      "headline": "Peloton reveals significant net loss and operational challenges while announcing ambitious growth plans.",
+      "detail": "On August 26, 2021, Peloton reported a net loss of $(189.0) million for FY2021, compared to a net loss of $(71.6) million for FY2020, and provided FY2022 Q1 guidance projecting 2.47 million ending Connected Fitness Subscriptions and $800 million total revenue.",
+      "source_titles": [
+        "peloton_2021-08-26_8k.md",
+        "peloton_2021-08-26_shareholder-letter_v2.md"
+      ],
+      "doc_summaries": [
+        "8-K cover filing referencing FY2021 Q4 results and attached shareholder letter",
+        "Confident Q4 FY21 letter: announces new Peloton Output Park factory, sets aggressive FY2022 guidance ($5.4B revenue, 3.63M subscriptions)"
+      ],
+      "chunk_count": 2,
+      "evidence": [
+        {
+          "date": "2021-08-26",
+          "narrative_role": "claim",
+          "snippets": [
+            "# Peloton Interactive, Inc. \u2014 Form 8-K\n**Date of Report:** August 26, 2021\n\n## Item 2.02 \u2014 Results of Operations and Financial Condition\n\nOn August 26, 2021, Peloton Interactive, Inc. (\"Peloton\" or the \"Company\") will hold a\nconference call regarding its financial results for the year ended June 30, 2021. Peloton also\nissued a letter to its stockholders announcing its financial results for the year ended June\n30, 2021 (the \"Shareholder Letter\"). A copy of the Shareholder Letter is furnished as Exhibit\n99.1 to this Current Report on Form 8-K.\n\nPeloton is making reference to non-GAAP financial information in both the Shareholder Letter\nand the conference call. A reconciliation of GAAP to non-GAAP results is provided in the\nShareholder Letter.\n\nPeloton uses its Investor Relations website, Peloton's Twitter feed (@onepeloton), John\nFoley's Twitter feed (@keylargofoley), and the Peloton Press Newsroom as means of disclosing\nmaterial non-public information under Regulation FD.\n\n## Item 9.01 \u2014 Financial Statements and Exhibits\n\n(d) Exhibits: Exhibit 99.1 \u2014 Letter to Shareholders, dated August 26, 2021.\n\n**Signature:** Jill Woodworth, Chief Financial Officer",
+            "shipping to reduce order-to-delivery windows, which we were pleased to restore to\npre-pandemic levels during the fourth quarter.\n\nTo support our large long-term growth opportunity, on May 24th we announced plans to build our\nfirst U.S. factory. **Peloton Output Park (POP)** will sit on over 200 acres of land in Troy\nTownship, Ohio and will feature more than a million square feet of manufacturing, office, and\namenities space, making it one of the largest connected fitness plants in the world. This\nfactory will diversify our manufacturing footprint, provide additional capacity to support our\ngrowth, drive production efficiencies through automation and scale, and accelerate our\nspeed-to-market. POP will complement our existing manufacturing assets in Taiwan and the\nrecently acquired Precor assets in North Carolina and Washington state. We expect to begin\nproducing Bike, Bike+, and Tread products at POP starting in calendar 2023.\n\nWe also announced our latest step in making Peloton more attainable by lowering the price of\nour original Peloton Bike across all markets to $1,495 USD. We officially launched the Peloton\nCorporate Wellness program, with initial launch partners including Wayfair, Samsung, SAP,\nAccenture Interactive, and Sky, and our first partnership with a health insurer, United\nHealthcare. We're pleased to report that on August 30th we will officially launch sales of the\nPeloton Tread in the U.S. while resuming sales in the U.K. and Canada.\n\nWe ended the quarter with 2.33 million Connected Fitness Subscriptions, representing 114%\nyear-over-year growth. Total platform workouts grew to over 154 million in the quarter from 83\nmillion in the year-ago quarter.\n\n### Internal Controls Update\nAs you will see in our upcoming Annual Report on Form 10-K, in the course of our fiscal 2021\naudit process, a material weakness was identified in our internal controls over financial\nreporting with respect to identification and valuation of inventory. This was a result of\ndiscovering an immaterial discrepancy in our year-end physical inventory counts. It did not\nresult in a material misstatement of our financial statements. We are committed to fully\nremediating these issues as soon as possible.\n\n### Q1 and Full Fiscal Year 2022 Business Outlook\n\n**FY2022 Q1 Guidance:**\n- 2.47 million ending Connected Fitness Subscriptions\n- Average Net Monthly Connected Fitness Churn of approximately 0.85%",
+            "Peloton Interactive, Inc. uses its official Twitter feed (@onepeloton) to disclose material non-public information under Regulation FD.",
+            "John Foley's Twitter feed (@keylargofoley) is used as a means of disclosing material non-public information for Peloton Interactive, Inc. under Regulation FD.",
+            "Peloton provided FY2022 Q1 guidance projecting 2.47 million ending Connected Fitness Subscriptions, $800 million total revenue, gross margin of approximately 33%, and Adjusted EBITDA of $(285) million. (Date/Time: 2021-08-26)",
+            "Peloton Interactive, Inc. utilizes its Investor Relations website, the Peloton Press Newsroom, and specific Twitter feeds to disclose material non-public information under Regulation FD.",
+            "Peloton Output Park (POP) will be located on over 200 acres of land in Troy Township, Ohio, featuring more than a million square feet of manufacturing, office, and amenities space. (Date/Time: announced 2021-05-24)",
+            "Peloton reported a net loss of $(189.0) million for FY2021, compared to a net loss of $(71.6) million for FY2020. (Date/Time: FY2021)"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "month": "2021-09",
+    "price": {
+      "close": 82.56,
+      "pct_change": -17.6
+    },
+    "event": null
+  },
+  {
+    "month": "2021-10",
+    "price": {
+      "close": 89.37,
+      "pct_change": 8.25
+    },
+    "event": null
+  },
+  {
+    "month": "2021-11",
+    "price": {
+      "close": 44.0,
+      "pct_change": -50.77
+    },
+    "event": null
+  },
+  {
+    "month": "2021-12",
+    "price": {
+      "close": 33.82,
+      "pct_change": -23.14
+    },
+    "event": null
+  },
+  {
+    "month": "2022-01",
+    "price": {
+      "close": 28.02,
+      "pct_change": -17.15
+    },
+    "event": null
+  },
+  {
+    "month": "2022-02",
+    "price": {
+      "close": 27.62,
+      "pct_change": -1.43
+    },
+    "event": {
+      "filing_dates": [
+        "2022-02-05",
+        "2022-02-08"
+      ],
+      "question": "Based only on the provided documents, what did Peloton disclose, announce, or report during this period?",
+      "headline": "Peloton undergoes major leadership changes and announces significant restructuring plan amid financial losses.",
+      "detail": "On February 5, 2022, Peloton announced the appointment of Barry McCarthy as CEO, along with new directors Angel L. Mendez and Jonathan Mildenhall, while Erik Blachford stepped down from the Board. On February 8, 2022, Peloton revealed a comprehensive restructuring plan aimed at achieving at least $800 million in annual cost savings and announced a workforce reduction of approximately 2,800 positions, alongside financial results showing a net loss of $439.4 million for the quarter ended December 31, 2021.",
+      "source_titles": [
+        "peloton_2022-02-05_8k.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-08_8k.md",
+        "peloton_2022-02-08_restructuring-pr.md",
+        "peloton_2022-02-08_shareholder-letter.md"
+      ],
+      "doc_summaries": [
+        "$800M annual cost savings, ~2,800 job cuts, winding down in-house manufacturing (POP), $150M capex cut",
+        "8-K cover referencing Q2 FY22 earnings and the restructuring press release",
+        "8-K detailing board changes and CEO transition, Foley to McCarthy, effective Feb 9 2022",
+        "Press release announcing new board directors; Barry McCarthy named CEO; John Foley becomes Executive Chair",
+        "Q2 FY22 letter: net loss $439.4M, guidance cut from $5.4B to $3.7-3.8B, Foley announces his own CEO transition, restructuring detailed"
+      ],
+      "chunk_count": 5,
+      "evidence": [
+        {
+          "date": "2022-02-05",
+          "narrative_role": "reversal_marker",
+          "snippets": [
+            "# Press Release: Peloton Announces Appointment of New Directors to the Board\n**New York \u2014 February 8, 2022**\n\nAngel L. Mendez and Jonathan Mildenhall to Join the Peloton Board; Longtime Director Erik\nBlachford to Step Down. **Barry McCarthy, Newly Named CEO and President of Peloton, to Also\nJoin Board; John Foley to Become Executive Chair.**\n\nPeloton Interactive, Inc. (NASDAQ: PTON) today announced the appointment of two new directors\nto its Board: Angel L. Mendez, a supply chain leader, and Jonathan Mildenhall, a creative\nleader in marketing and advertising. Erik Blachford, a director since 2015, will step down.\n\nIn addition, **Barry McCarthy, Peloton's newly named CEO and President, will join the Board as\na director, and John Foley has been named Executive Chair.**\n\nWith these changes, Peloton's Board will comprise nine directors, four of whom will have been\nappointed in the past three years.\n\n**John Foley, Co-Founder of Peloton and Executive Chair, said:** \"We are pleased to welcome\nBarry, Angel and Jonathan as new directors to the Peloton Board at this important time. We are\nconfident they will provide valuable perspectives as we continue to execute our strategy,\ndrive profitability, and enhance value for all Peloton shareholders.\"\n\n**Pamela Thomas-Graham, Chair of the Nominating, Governance and Corporate Responsibility\nCommittee, said:** \"These appointments are the culmination of a robust search process that\nbegan several months ago.\"\n\nFoley concluded: \"On behalf of the entire Board, I thank Erik for his valuable perspective and\nincredible commitment to Peloton over the past nearly seven years.\"\n\n## About Angel L. Mendez\nExecutive Chairman of the Board of LevaData Inc. Previously EVP and COO of HERE Technologies\n(2016-2020), and senior executive at Cisco Systems (2005-2015).\n\n## About Jonathan Mildenhall\nCo-founder and Chair of TwentyFirstCenturyBrand. Previously CMO of Airbnb (2014-2018), during\nwhich Airbnb's valuation increased from $1 billion to more than $31 billion. Previously led\nCoca-Cola's marketing initiatives.\n\nAdditional information regarding McCarthy's appointment as Peloton's new CEO and President can\nbe found in a separate press release issued today.",
+            "# Peloton Interactive, Inc. \u2014 Form 8-K\n**Date of Report:** February 5, 2022\n\n## Item 5.02 \u2014 Departure of Directors or Certain Officers; Election of Directors; Appointment of Certain Officers\n\n### Director Changes\nOn February 5, 2022, Erik Blachford notified the Board of his resignation as a Class I\ndirector and from the Compensation and NCGR Committees, effective February 8, 2022. Mr.\nBlachford's resignation is not the result of any disagreement with the Company.\n\nOn February 7, 2022, the Board increased its size from seven to nine directors and appointed\nAngel L. Mendez and Jonathan Mildenhall to the Board.\n\n### CEO Transition; Executive Chair\nOn February 7, 2022, the Board appointed **Barry McCarthy as Chief Executive Officer and\nPresident**, succeeding **John Foley**, the Company's Co-Founder and former CEO, effective\nFebruary 9, 2022. Mr. Foley was appointed **Executive Chair** of the Board. Mr. McCarthy was\nalso appointed to the Board.\n\nMr. McCarthy, 68, most recently served as Spotify's Chief Financial Officer from 2015 to\nJanuary 2020. From 1999 to 2010, he served as CFO and Principal Accounting Officer of Netflix,\nInc. He has served on the boards of Spotify and Instacart, and previously served on the boards\nof Chegg, Eventbrite, MSD Acquisition Corp, Pandora, and Rent the Runway.\n\nUnder his Offer Letter, Mr. McCarthy is eligible for: (i) an annual base salary of $1,000,000,\n(ii) a stock option award to purchase 8,000,000 shares of Class A Common Stock, (iii) up to\n$150,000 relocation reimbursement, and (iv) up to $30,000 legal cost reimbursement.\n\n### President Transition\nIn connection with Mr. McCarthy's appointment as President, **William Lynch** will transition\nfrom this position to a non-executive director on the Board.\n\n## Item 9.01 \u2014 Financial Statements and Exhibits\n\n(d) Exhibits:\n- 10.1 \u2014 Offer Letter between Barry McCarthy and the Registrant, dated February 7, 2022\n- 99.1 \u2014 Press Release Announcing Board Appointments, dated February 8, 2022\n- 99.2 \u2014 Press Release Announcing Leadership Transitions, dated February 8, 2022\n\n**Signature:** Hisao Kushi, Chief Legal and Culture Officer",
+            "Under his Offer Letter dated February 7, 2022, Barry McCarthy is eligible for an annual base salary of $1,000,000, a stock option award to purchase 8,000,000 shares of Class A Common Stock, up to $150,000 relocation reimbursement, and up to $30,000 legal cost reimbursement. (Date/Time: 2022-02-07)"
+          ]
+        },
+        {
+          "date": "2022-02-08",
+          "narrative_role": "reversal_content",
+          "snippets": [
+            "# Press Release: Peloton Announces Comprehensive Program to Reduce Costs and Drive Growth, Profitability, and Free Cash Flow\n**New York \u2014 February 8, 2022**\n\nRealigning Business Operations, Reducing Manufacturing Footprint, and Enhancing Capital and\nOperational Efficiency. **Expects to Deliver at Least $800 Million in Annual Run-Rate Cost\nSavings; Reduces Planned 2022 CapEx Spending by Approximately $150 Million.**\n\nPeloton Interactive, Inc. (NASDAQ: PTON) today announced a series of steps it is taking to\nposition the business for long-term growth while establishing a clear path to consistent\nprofitability and sustainable free cash flow. Once these actions are fully implemented, the\ncompany expects to achieve **at least $800 million of annual run-rate cost savings** through\noperating expense efficiencies and significant margin improvement in its Connected Fitness\ncategory. The company will also reduce its planned capital expenditures in 2022 by\napproximately $150 million. The restructuring program is expected to result in approximately\n$130 million in cash charges related to severance and other exit/restructuring activities, and\n$80 million in non-cash charges.\n\n**John Foley, Co-Founder of Peloton and newly appointed Executive Chair, said:** \"Peloton is at\nan important juncture, and we are taking decisive steps. Our focus is on building on the\nalready amazing Peloton Member experience, while optimizing our organization to deliver\nprofitable growth. This restructuring program is the result of diligent planning to address\nkey areas of the business and realign our operations.\"\n\nAs a result of the initiatives announced today, the company expects to:\n\n- **Improve the economics of its hardware business.** The company is winding down the\n  development of its Peloton Output Park (POP) manufacturing plan, resulting in $60 million in\n  restructuring capital expenditures. Peloton will also optimize its logistics network by\n  reducing its owned and operated warehousing and delivery footprint.\n- **Right-size the organization by enacting a workforce reduction.** The workforce reduction\n  will occur across nearly all business operations, resulting in the reduction of\n  **approximately 2,800 global positions**. Corporate positions will be reduced by\n  approximately 20%.\n\nPeloton's roster of instructors and breadth and depth of its content will not be impacted by\nthese initiatives.\n\nFoley added: \"These decisions, particularly those related to our impacted Peloton team\nmembers, were not taken lightly. We greatly value the contributions of our talented\ncolleagues and are committed to supporting impacted team members in their transitions.\"\n\nThe company also rescheduled its second quarter 2022 earnings conference call, previously",
+            "# Peloton Interactive, Inc. \u2014 Form 8-K\n**Date of Report:** February 8, 2022\n\n## Item 2.02 \u2014 Results of Operations and Financial Condition\n\nOn February 8, 2022, Peloton Interactive, Inc. will hold a conference call regarding its\nfinancial results for the quarter ended December 31, 2021. Peloton has issued a letter to its\nstockholders announcing its financial results for the quarterly period ended December 31, 2021\n(the \"Shareholder Letter\"), furnished as Exhibit 99.1.\n\n## Item 7.01 \u2014 Regulation FD Disclosure\n\nOn February 8, 2022, the Company issued a press release announcing **a restructuring plan**.\nThe full text of the press release is furnished as Exhibit 99.2.\n\n## Item 9.01 \u2014 Financial Statements and Exhibits\n\n(d) Exhibits:\n- 99.1 \u2014 Letter to Shareholders, dated February 8, 2022\n- 99.2 \u2014 Press Release Announcing Restructuring Plan, dated February 8, 2022\n\n**Signature:** Jill Woodworth, Chief Financial Officer",
+            "streamline our teams and reporting structures, increase P&L accountability, create a more\nefficient and flexible supply chain, and enforce greater investment discipline.\n\nAs part of this program, **we are announcing a meaningful reduction of our workforce**, which\nwill impact nearly all of our operations and across almost all levels. It is not easy to say\ngoodbye to valued colleagues and friends, each of whom have made important contributions to\nhelping build Peloton into the company it is today.\n\nWhen fully implemented, we expect our restructuring initiatives to yield **at least $800\nmillion in annual run-rate cost savings** across operating expense efficiencies and material\nimprovements in our Connected Fitness gross margin. We have also decided to **wind down the\ndevelopment of Peloton Output Park**. While we still see strategic merit in diversifying our\nmanufacturing footprint over the long term, we believe Tonic and our third party manufacturing\npartners can support our growth for the next few years.\n\nThis has been a humbling time for Peloton, but we remain confident in the fundamentals of our\nbusiness, the strength of our platform, and the significant growth potential for Connected\nFitness and our leadership position within it. Our operational restructuring will not\nnegatively impact our instructor roster, number of classes produced, or range of class\nmodalities.\n\nWhile not directly related to our restructuring, in addition to Barry joining the Board, we\nalso announced the appointment of two new Board members, Angel Mendez and Jonathan Mildenhall,\nand thanked Erik Blachford, who is stepping down from his role on the Board.\n\nIndeed, when I co-founded Peloton we were a five-person fitness group who aimed to bring the\ncommunity and excitement of boutique fitness into the home. Today, we are over 6.6 million\nMembers strong. As we look to execute on the next phase of our company's transformation, we\nare clear-eyed that it will not occur overnight and that our progress may not be linear.\n\nJohn\n\n## Introducing Peloton Guide\nWe are excited to officially announce the launch of Peloton Guide, our first connected\nfitness strength product, on April 5, priced at $495.\n\n## Q2 2022 Summary\nWe ended the quarter with 2.77 million Connected Fitness Subscriptions, representing 66%\nyear-over-year growth. Total revenue grew 6% to $1,133.9 million, driven by higher",
+            "Peloton Interactive, Inc. issued a letter to its stockholders (Exhibit 99.1) on February 8, 2022, announcing financial results for the quarterly period ended December 31, 2021. (Date/Time: 2022-02-08)",
+            "Peloton provided Q3 FY2022 guidance expecting approximately 2.93 million ending Connected Fitness Subscriptions, total revenue between $950 million and $1 billion, a gross margin of approximately 23%, and Adjusted EBITDA between negative $140 million and negative $125 million. (Date/Time: 2022-02-08)",
+            "Peloton announced the appointment of Angel Mendez and Jonathan Mildenhall as new Board members. (Date/Time: 2022-02-08)",
+            "For the three months ended December 31, 2021, Peloton reported total revenue of $1,133.9 million, Connected Fitness segment revenue of $796.4 million, Subscription revenue of $337.5 million, and gross profit of $280.2 million (24.7% of revenue). The company had a net loss of $439.4 million and cash and cash equivalents of $1.6 billion. (Date/Time: 2021-12-31)",
+            "For the second quarter of fiscal year 2022, ending February 8, 2022, Peloton reported that Connected Fitness Subscriptions grew 66% to 2.77 million, paid Digital Subscriptions grew 38% to 862 thousand, and total Members grew to over 6.6 million. Total revenue grew 6% to $1,133.9 million, while the company saw a Net Loss of $439.4 million ($1.39 per diluted share) and Adjusted EBITDA of negative $266.5 million with a margin of negative 23.5%. (Date/Time: 2022-02-08)"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "month": "2022-03",
+    "price": {
+      "close": 26.2,
+      "pct_change": -5.14
+    },
+    "event": null
+  },
+  {
+    "month": "2022-04",
+    "price": {
+      "close": 18.31,
+      "pct_change": -30.11
+    },
+    "event": null
+  },
+  {
+    "month": "2022-05",
+    "price": {
+      "close": 13.96,
+      "pct_change": -23.76
+    },
+    "event": null
+  },
+  {
+    "month": "2022-06",
+    "price": {
+      "close": 10.41,
+      "pct_change": -25.43
+    },
+    "event": {
+      "filing_dates": [
+        "2022-06-06"
+      ],
+      "question": "Based only on the provided documents, what did Peloton disclose, announce, or report during this period?",
+      "headline": "Peloton appoints new CFO amid leadership transition as Jill Woodworth steps down.",
+      "detail": "On June 6, 2022, Peloton announced the appointment of Liz Coddington as Chief Financial Officer, effective June 13, 2022, succeeding Jill Woodworth, who will serve as a consultant through September 13, 2022, to support the company in reporting its FY2022 financial results.",
+      "source_titles": [
+        "peloton_2022-06-06_8k.md",
+        "peloton_2022-06-06_pr.md"
+      ],
+      "doc_summaries": [
+        "8-K detailing CFO transition, Woodworth to Coddington",
+        "Press release announcing Liz Coddington as CFO, succeeding Jill Woodworth"
+      ],
+      "chunk_count": 2,
+      "evidence": [
+        {
+          "date": "2022-06-06",
+          "narrative_role": "reversal_marker",
+          "snippets": [
+            "# Press Release: Peloton Appoints Liz Coddington as Chief Financial Officer\n**New York \u2014 June 6, 2022**\n\nPeloton Interactive, Inc. (NASDAQ: PTON) today announced it has appointed **Liz Coddington**\nas the company's Chief Financial Officer, effective June 13, 2022. Ms. Coddington brings more\nthan 20 years of experience in financial planning and analysis and operational finance. **She\nsucceeds Jill Woodworth, who has decided to step down as Peloton's Chief Financial Officer\nafter serving the company since 2018.**\n\nMs. Woodworth will serve as a consultant for Peloton on an interim basis, ensuring a smooth\ntransition and supporting the company in preparation to report its FY2022 financial results.\n\nMost recently, Ms. Coddington served as Vice President of Finance for Amazon Web Services.\nPrior to AWS, she held senior leadership roles including CFO of Adara and Walmart.com, as well\nas Vice President, Financial Planning and Analysis of Netflix.\n\n**Peloton CEO Barry McCarthy said:** \"Liz is a deeply talented finance executive and will be\nan invaluable addition to Peloton's leadership team. Having worked at some of the strongest and\nmost recognizable technology brands, she not only brings the expertise needed to run our\nfinance organization, but she has a critical understanding of what it takes to drive growth\nand operational excellence.\"\n\nMr. McCarthy continued: \"I would like to thank Jill for four years of dedicated service. She\nscaled the global finance function through an extraordinary period, led the company through\nits IPO, and has been an integral member of the leadership team. We wish Jill well in the next\nphase of her career.\"\n\n**About Peloton:** Peloton is the leading interactive fitness platform in the world with a\nloyal community of more than 7 million Members. Founded in 2012, headquartered in New York\nCity.",
+            "# Peloton Interactive, Inc. \u2014 Form 8-K\n**Date of Report:** June 6, 2022\n\n## Item 5.02 \u2014 Departure of Directors or Certain Officers; Election of Directors; Appointment of Certain Officers\n\n### CFO Transition\nOn June 6, 2022, the Board of Directors appointed **Elizabeth Coddington as Chief Financial\nOfficer**, to succeed **Jill Woodworth**, who is stepping down from that role, effective June\n13, 2022.\n\nMs. Coddington, 45, brings more than 20 years of experience in financial planning and\noperational finance. She most recently served as Vice President of Finance for Amazon Web\nServices (January 2021 to June 2022). Prior to Amazon, she served as CFO of Adara, Inc., VP\nFinance and CFO at Walmart.com, and VP Financial Planning and Analysis at Netflix, Inc.\n\nUnder her Offer Letter, Ms. Coddington is eligible for: (i) an annual base salary of\n$1,000,000, (ii) an equity award valued at $9,000,000 on the date of grant, (iii) up to\n$150,000 relocation reimbursement.\n\n### Transition Agreement\nIn connection with Ms. Woodworth's employment separation, the Company entered into a\ntransition and consulting agreement with Ms. Woodworth on June 6, 2022. She will provide\nconsulting services through September 13, 2022, supporting the company in preparation to\nreport its fiscal year 2022 financial results. **Ms. Woodworth's departure is not the result of\nany disagreement with the Company on any subject, including its operations, policies or\npractices.**\n\n## Item 7.01 \u2014 Regulation FD Disclosure\nOn June 6, 2022, the Company issued a press release announcing Ms. Coddington's appointment\nand Ms. Woodworth's departure, filed as Exhibit 99.1.\n\n## Item 9.01 \u2014 Financial Statements and Exhibits\n\n(d) Exhibits:\n- 10.1 \u2014 Offer Letter between Ms. Coddington and the Registrant, dated June 6, 2022\n- 10.2 \u2014 Transition and Consulting Agreement with Jill Woodworth, dated June 6, 2022\n- 99.1 \u2014 Press Release Announcing Leadership Transition, dated June 6, 2022\n\n**Signature:** Hisao Kushi, Chief Legal Officer and Secretary",
+            "Peloton Interactive, Inc. entered into a transition and consulting agreement with Jill Woodworth on June 6, 2022, under which she will provide consulting services through September 13, 2022, to support the reporting of fiscal year 2022 financial results. (Date/Time: 2022-06-06)",
+            "Jill Woodworth will serve as a consultant for Peloton on an interim basis to ensure a smooth transition and support the company in reporting its FY2022 financial results. (Date/Time: 2022-06-06)",
+            "Under her offer letter dated June 6, 2022, Elizabeth Coddington is eligible for an annual base salary of $1,000,000, an equity award valued at $9,000,000 on the date of grant, and up to $150,000 in relocation reimbursement. (Date/Time: 2022-06-06)"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "month": "2022-07",
+    "price": {
+      "close": 10.72,
+      "pct_change": 2.98
+    },
+    "event": null
+  },
+  {
+    "month": "2022-08",
+    "price": {
+      "close": 8.69,
+      "pct_change": -18.94
+    },
+    "event": null
+  },
+  {
+    "month": "2022-09",
+    "price": {
+      "close": 8.86,
+      "pct_change": 1.96
+    },
+    "event": null
+  },
+  {
+    "month": "2022-10",
+    "price": {
+      "close": 8.94,
+      "pct_change": 0.9
+    },
+    "event": null
+  },
+  {
+    "month": "2022-11",
+    "price": {
+      "close": 12.46,
+      "pct_change": 39.37
+    },
+    "event": null
+  },
+  {
+    "month": "2022-12",
+    "price": {
+      "close": 8.12,
+      "pct_change": -34.83
+    },
+    "event": null
+  },
+  {
+    "month": "2023-01",
+    "price": {
+      "close": 12.93,
+      "pct_change": 59.24
+    },
+    "event": null
+  },
+  {
+    "month": "2023-02",
+    "price": {
+      "close": 12.92,
+      "pct_change": -0.08
+    },
+    "event": null
+  },
+  {
+    "month": "2023-03",
+    "price": {
+      "close": 11.73,
+      "pct_change": -9.21
+    },
+    "event": null
+  },
+  {
+    "month": "2023-04",
+    "price": {
+      "close": 8.61,
+      "pct_change": -26.6
+    },
+    "event": null
+  },
+  {
+    "month": "2023-05",
+    "price": {
+      "close": 8.26,
+      "pct_change": -4.07
+    },
+    "event": null
+  },
+  {
+    "month": "2023-06",
+    "price": {
+      "close": 8.19,
+      "pct_change": -0.85
+    },
+    "event": null
+  },
+  {
+    "month": "2023-07",
+    "price": {
+      "close": 9.61,
+      "pct_change": 17.34
+    },
+    "event": null
+  },
+  {
+    "month": "2023-08",
+    "price": {
+      "close": 6.59,
+      "pct_change": -31.43
+    },
+    "event": null
+  },
+  {
+    "month": "2023-09",
+    "price": {
+      "close": 5.07,
+      "pct_change": -23.07
+    },
+    "event": null
+  },
+  {
+    "month": "2023-10",
+    "price": {
+      "close": 4.76,
+      "pct_change": -6.11
+    },
+    "event": null
+  },
+  {
+    "month": "2023-11",
+    "price": {
+      "close": 5.9,
+      "pct_change": 23.95
+    },
+    "event": null
+  },
+  {
+    "month": "2023-12",
+    "price": {
+      "close": 5.82,
+      "pct_change": -1.36
+    },
+    "event": null
+  },
+  {
+    "month": "2024-01",
+    "price": {
+      "close": 4.38,
+      "pct_change": -24.74
+    },
+    "event": null
+  },
+  {
+    "month": "2024-02",
+    "price": {
+      "close": 4.26,
+      "pct_change": -2.74
+    },
+    "event": null
+  },
+  {
+    "month": "2024-03",
+    "price": {
+      "close": 4.06,
+      "pct_change": -4.69
+    },
+    "event": null
+  },
+  {
+    "month": "2024-04",
+    "price": {
+      "close": 3.11,
+      "pct_change": -23.4
+    },
+    "event": null
+  },
+  {
+    "month": "2024-05",
+    "price": {
+      "close": 3.62,
+      "pct_change": 16.4
+    },
+    "event": {
+      "filing_dates": [
+        "2024-05-20"
+      ],
+      "question": "Based only on the provided documents, what did Peloton disclose, announce, or report during this period?",
+      "headline": "Peloton announces global refinancing effort to address existing debt obligations.",
+      "detail": "On May 20, 2024, Peloton Interactive, Inc. announced its intention to launch a global refinancing effort, proposing to offer $275.0 million aggregate principal amount of convertible senior notes due 2029 and enter into a $1.0 billion five-year term loan facility and a $100.0 million five-year revolving credit facility, intending to use the proceeds to repurchase approximately $800.0 million of its existing convertible senior notes due 2026 and refinance its existing credit facilities.",
+      "source_titles": [
+        "peloton_2024-05-20_8k.md",
+        "peloton_2024-05-20_pr.md"
+      ],
+      "doc_summaries": [
+        "8-K announcing global refinancing: $275M convertible notes, $1.0B term loan, $100M revolver, repurchasing ~$800M existing notes",
+        "Press release detailing the refinancing terms"
+      ],
+      "chunk_count": 2,
+      "evidence": [
+        {
+          "date": "2024-05-20",
+          "narrative_role": "resolution",
+          "snippets": [
+            "# Press Release: Peloton Interactive, Inc. Announces Launch of Global Refinancing\n**New York \u2014 May 20, 2024**\n\nPeloton Interactive, Inc. (\"Peloton\") (Nasdaq: PTON) today announced that it intends to launch\na global refinancing, pursuant to which it will offer **$275.0 million aggregate principal\namount of convertible senior notes due 2029** (the \"notes\") in a private offering and enter\ninto a **$1.0 billion five-year term loan facility** and a **$100.0 million five-year revolving\ncredit facility** (together with the new term loan facility, the \"new credit facilities\").\nPeloton also expects to grant the initial purchasers of the notes a 13-day option to purchase\nup to an additional $41.3 million aggregate principal amount of the notes.\n\nPeloton intends to use the net proceeds of the offering and the new credit facilities,\ntogether with cash on hand, to **repurchase approximately $800.0 million of its 0.00%\nconvertible senior notes due 2026** (the \"Existing Notes\"), to refinance its existing term\nloan and revolving credit facilities, and to pay fees and expenses related thereto. The\nclosing of the offering, the entry into the new credit facilities, and the repurchase of the\nExisting Notes are not cross-conditioned upon each other, except that entry into the new\ncredit facilities is conditioned upon repurchasing at least $800.0 million aggregate principal\namount of the Existing Notes.\n\nThe notes will be senior, unsecured obligations of Peloton, convertible into cash, shares of\nPeloton's Class A common stock, or a combination thereof, at Peloton's election. The notes\nwill only be offered and sold to persons reasonably believed to be qualified institutional\nbuyers pursuant to Rule 144A under the Securities Act of 1933.\n\nThis announcement is neither an offer to sell nor a solicitation of an offer to buy any of the\nnotes or any shares of Class A common stock potentially issuable upon conversion of the notes.\n\n**Investor Relations Contact:** James Marsh\n**Press Contact:** Letena Lindsay",
+            "# Peloton Interactive, Inc. \u2014 Form 8-K\n**Date of Report:** May 20, 2024\n\n## Item 7.01 \u2014 Regulation FD Disclosure\nIn connection with the proposed global refinancing referred to in Item 8.01 below, Peloton\nInteractive, Inc. has made available an investor presentation on its investor relations\nwebsite.\n\n## Item 8.01 \u2014 Other Events\n\nOn May 20, 2024, the Company issued a press release to announce the launch of a **global\nrefinancing**, pursuant to which it is proposing to offer $275.0 million aggregate principal\namount of **convertible senior notes due 2029** (the \"Notes\") and enter into a **$1.0 billion\nfive-year term loan facility** and a **$100.0 million five-year revolving credit facility**\n(together, the \"New Credit Facilities\"). The Notes will be sold to qualified institutional\nbuyers pursuant to Rule 144A under the Securities Act of 1933.\n\nThe Company intends to use the net proceeds of the Offering and the New Credit Facilities,\ntogether with cash on hand, to **repurchase approximately $800.0 million aggregate principal\namount of its 0.00% convertible senior notes due 2026** (the \"Existing Notes\"), to refinance\nits existing term loan and revolving credit facilities, and to pay related fees and expenses.\nThe entry into the New Credit Facilities is conditioned upon the repurchase of at least $800.0\nmillion aggregate principal amount of the Existing Notes.\n\n## Item 9.01 \u2014 Financial Statements and Exhibits\n\n(d) Exhibits: Exhibit 99.1 \u2014 Press Release, dated May 20, 2024, announcing the launch of the\nproposed offering of the Notes and entry into the New Credit Facilities.\n\n**Signature:** Tammy Albarr\u00e1n, Chief Legal Officer",
+            "On May 20, 2024, Peloton Interactive, Inc. announced its intention to launch a global refinancing effort. (Date/Time: 2024-05-20)",
+            "On May 20, 2024, Peloton Interactive, Inc. announced the launch of a global refinancing effort. (Date/Time: 2024-05-20)",
+            "Peloton Interactive, Inc. issued Exhibit 99.1, a press release dated May 20, 2024, announcing the proposed offering of Notes and entry into the New Credit Facilities. (Date/Time: 2024-05-20)"
+          ]
+        }
+      ]
+    }
+  }
+]

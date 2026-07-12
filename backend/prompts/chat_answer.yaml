@@ -1,0 +1,9 @@
+answer: |
+  Answer only using the provided context below. Do not use outside
+  knowledge. If the context doesn't contain enough information to answer,
+  say so plainly instead of guessing.
+
+  Context:
+  {context_block}
+
+  Question: "{question}"

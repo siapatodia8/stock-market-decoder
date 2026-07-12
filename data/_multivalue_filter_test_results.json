@@ -1,0 +1,28 @@
+{
+  "single_date_A": {
+    "n_chunks": 4,
+    "sources": [
+      "peloton_2022-02-05_8k.md",
+      "peloton_2022-02-05_board-pr.md"
+    ],
+    "filing_dates_seen": [
+      "2022-02-05"
+    ]
+  },
+  "single_date_B": {
+    "n_chunks": 3,
+    "sources": [
+      "peloton_2022-02-08_8k.md",
+      "peloton_2022-02-08_restructuring-pr.md",
+      "peloton_2022-02-08_shareholder-letter.md"
+    ],
+    "filing_dates_seen": [
+      "2022-02-08"
+    ]
+  },
+  "both_dates_list": {
+    "n_chunks": 0,
+    "sources": [],
+    "filing_dates_seen": []
+  }
+}
