@@ -18,11 +18,18 @@ CACHE_PATH = REPO_ROOT / "data" / "timeline_cache.json"
 START_MONTH = "2020-12"
 END_MONTH = "2024-05"
 
+# Single source of truth for this dataset's company/industry — used in the
+# retrieval question and passed into synthesis so the prompt itself never
+# hardcodes a company name. Change these two lines to point the whole
+# pipeline at a different company's filings.
+COMPANY_NAME = "Peloton Interactive"
+COMPANY_INDUSTRY = "connected fitness"
+
 # Fixed and generic — never event-specific, so the question itself doesn't
 # presuppose what happened. Scoping to the right month/document is entirely
 # done via metadata_filters, not by naming the event in the query text.
 GENERIC_QUESTION = (
-    "Based only on the provided documents, what did Peloton disclose, "
+    f"Based only on the provided documents, what did {COMPANY_NAME} disclose, "
     "announce, or report during this period?"
 )
 
@@ -67,6 +74,9 @@ def _build_event(dates_with_roles: dict) -> dict:
         data = hydradb_client.query(
             GENERIC_QUESTION,
             mode="thinking",
+            max_results=20,  # default (10) missed real chunks near the ranking
+            # boundary under thinking-mode's rerank volatility — confirmed via
+            # scripts/test_chunk_retrieval_stability.py (2/8 hits at 10 vs 8/8 at 20)
             metadata_filters={"filing_date": date},
         )
         chunks = data.chunks or []
@@ -82,7 +92,9 @@ def _build_event(dates_with_roles: dict) -> dict:
         all_chunks += chunks
 
     all_chunks = _dedupe(all_chunks)
-    result = synthesis.synthesize_timeline_event(GENERIC_QUESTION, date_groups)
+    result = synthesis.synthesize_timeline_event(
+        GENERIC_QUESTION, date_groups, company=COMPANY_NAME, industry=COMPANY_INDUSTRY
+    )
 
     source_titles = sorted({getattr(c, "source_title", None) for c in all_chunks if getattr(c, "source_title", None)})
     doc_summaries = sorted({

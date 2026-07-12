@@ -81,13 +81,15 @@ def synthesize_answer(question: str, chunks=None, chunk_relations=None, query_pa
     return response.choices[0].message.content.strip()
 
 
-def synthesize_timeline_event(question: str, date_groups: list) -> Optional[dict]:
+def synthesize_timeline_event(question: str, date_groups: list, company: str, industry: str) -> Optional[dict]:
     """Timeline event synthesis. date_groups is a list of
     {"date": "YYYY-MM-DD", "narrative_role": str|None, "snippets": [str]},
     one entry per filing_date-scoped query (kept separate per date so the
     prompt can anchor the headline on the reversal_marker fact and order
-    detail chronologically). Returns {"headline": str, "detail": str}, or
-    None if there's no evidence or no OpenAI key configured."""
+    detail chronologically). company/industry are passed through from the
+    caller, not hardcoded here, so this isn't tied to one dataset. Returns
+    {"headline": str, "detail": str}, or None if there's no evidence or no
+    OpenAI key configured."""
     non_empty = [g for g in date_groups if g.get("snippets")]
     if not non_empty or _client is None:
         return None
@@ -97,13 +99,15 @@ def synthesize_timeline_event(question: str, date_groups: list) -> Optional[dict
         + "\n".join(f"- {s}" for s in g["snippets"])
         for g in non_empty
     )
-    prompt = _TIMELINE_PROMPT.format(question=question, context_block=context_block)
+    prompt = _TIMELINE_PROMPT.format(
+        question=question, context_block=context_block, company=company, industry=industry
+    )
 
     response = _client.chat.completions.create(
         model=MODEL,
         messages=[{"role": "user", "content": prompt}],
         temperature=0.2,
-        max_tokens=220,
+        max_tokens=350,
         response_format={"type": "json_object"},
     )
     try:

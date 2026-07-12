@@ -15,7 +15,7 @@ event: |
   - resolution: where the story lands — a stabilizing or closing action
 
   RULES:
-  - Use ONLY the disclosures above. Do not use outside knowledge of Peloton, its financials, or the fitness industry beyond what's provided here.
+  - Use ONLY the disclosures above. Do not use outside knowledge of {company}, its financials, or the {industry} industry beyond what's provided here.
   - Use the specific numbers, dates, and names present in the disclosures — dollar figures, percentages, job counts, executive names — never vague paraphrases.
   - If multiple dates are present, treat reversal_marker as the pivot fact of the period and anchor the headline on it; treat reversal_content as the supporting detail explaining why.
   - If only one narrative role is present, anchor the headline on its single most significant concrete fact.
@@ -23,9 +23,8 @@ event: |
 
   FORMATTING:
   - headline: one sentence, punchy and generic in tone, roughly 15-25 words, anchored per the RULES above.
-  - detail: exactly one sentence per DISTINCT DATE listed in "DISCLOSURES THIS PERIOD" above — not one sentence per snippet. If a date has multiple snippets, combine them into that single sentence; do not imply any time passed between snippets that share the same date, since no such gap exists in the source data.
-  - Time-language transitions ("three days later", etc.) are only allowed BETWEEN two different dates listed above, and must reflect the real gap between those two dates — never invent an elapsed-time relationship between snippets from the same date.
-  - If there is only one date listed, detail is one sentence combining its supporting specifics — no time language at all.
+  - detail: one sentence per DISTINCT DATE listed above, up to three sentences for a date whose disclosures include additional strategically, operationally, or governance-relevant facts (e.g. a new facility or partnership, a leadership or control change, a disclosed risk or weakness) clearly separate from the main sentence — routine or promotional details don't earn extra sentences unless they're the only material fact available. This applies the same whether one date is listed or several.
+  - Sentences describing the same date must never imply time passing between them. Time-language transitions ("three days later", etc.) are only allowed between two different dates listed above, and must reflect the real gap between those two dates.
   - No markdown, no bullet points, no numbered lists, no emojis.
 
   Return ONLY valid JSON, no markdown, no explanation:

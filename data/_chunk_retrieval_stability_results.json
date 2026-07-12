@@ -1,0 +1,264 @@
+{
+  "thinking_max10": [
+    {
+      "n_chunks": 1,
+      "source_titles": [
+        "peloton_2022-02-05_board-pr.md"
+      ],
+      "target_present": false,
+      "target_rank": null,
+      "target_relevancy_score": null
+    },
+    {
+      "n_chunks": 2,
+      "source_titles": [
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_8k.md"
+      ],
+      "target_present": true,
+      "target_rank": 2,
+      "target_relevancy_score": 0.8808925128706346
+    },
+    {
+      "n_chunks": 2,
+      "source_titles": [
+        "peloton_2022-02-05_8k.md",
+        "peloton_2022-02-05_board-pr.md"
+      ],
+      "target_present": true,
+      "target_rank": 1,
+      "target_relevancy_score": 0.04417657980219064
+    },
+    {
+      "n_chunks": 1,
+      "source_titles": [
+        "peloton_2022-02-05_board-pr.md"
+      ],
+      "target_present": false,
+      "target_rank": null,
+      "target_relevancy_score": null
+    },
+    {
+      "n_chunks": 1,
+      "source_titles": [
+        "peloton_2022-02-05_board-pr.md"
+      ],
+      "target_present": false,
+      "target_rank": null,
+      "target_relevancy_score": null
+    },
+    {
+      "n_chunks": 1,
+      "source_titles": [
+        "peloton_2022-02-05_board-pr.md"
+      ],
+      "target_present": false,
+      "target_rank": null,
+      "target_relevancy_score": null
+    },
+    {
+      "n_chunks": 1,
+      "source_titles": [
+        "peloton_2022-02-05_board-pr.md"
+      ],
+      "target_present": false,
+      "target_rank": null,
+      "target_relevancy_score": null
+    },
+    {
+      "n_chunks": 1,
+      "source_titles": [
+        "peloton_2022-02-05_board-pr.md"
+      ],
+      "target_present": false,
+      "target_rank": null,
+      "target_relevancy_score": null
+    }
+  ],
+  "thinking_max20": [
+    {
+      "n_chunks": 3,
+      "source_titles": [
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_8k.md",
+        "peloton_2022-02-05_board-pr.md"
+      ],
+      "target_present": true,
+      "target_rank": 2,
+      "target_relevancy_score": 0.8470285885563054
+    },
+    {
+      "n_chunks": 3,
+      "source_titles": [
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_8k.md",
+        "peloton_2022-02-05_board-pr.md"
+      ],
+      "target_present": true,
+      "target_rank": 2,
+      "target_relevancy_score": 0.8469962285563054
+    },
+    {
+      "n_chunks": 3,
+      "source_titles": [
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_8k.md",
+        "peloton_2022-02-05_board-pr.md"
+      ],
+      "target_present": true,
+      "target_rank": 2,
+      "target_relevancy_score": 0.8470010825563055
+    },
+    {
+      "n_chunks": 3,
+      "source_titles": [
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_8k.md",
+        "peloton_2022-02-05_board-pr.md"
+      ],
+      "target_present": true,
+      "target_rank": 2,
+      "target_relevancy_score": 0.8469962285563054
+    },
+    {
+      "n_chunks": 2,
+      "source_titles": [
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_8k.md"
+      ],
+      "target_present": true,
+      "target_rank": 2,
+      "target_relevancy_score": 0.8813178848389951
+    },
+    {
+      "n_chunks": 2,
+      "source_titles": [
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_8k.md"
+      ],
+      "target_present": true,
+      "target_rank": 2,
+      "target_relevancy_score": 0.8804603951793768
+    },
+    {
+      "n_chunks": 3,
+      "source_titles": [
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_8k.md",
+        "peloton_2022-02-05_board-pr.md"
+      ],
+      "target_present": true,
+      "target_rank": 2,
+      "target_relevancy_score": 0.8469962285563054
+    },
+    {
+      "n_chunks": 3,
+      "source_titles": [
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_8k.md",
+        "peloton_2022-02-05_board-pr.md"
+      ],
+      "target_present": true,
+      "target_rank": 2,
+      "target_relevancy_score": 0.8469962285563054
+    }
+  ],
+  "fast_max10": [
+    {
+      "n_chunks": 4,
+      "source_titles": [
+        "peloton_2022-02-05_8k.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_8k.md"
+      ],
+      "target_present": true,
+      "target_rank": 1,
+      "target_relevancy_score": 1.4244978427886963
+    },
+    {
+      "n_chunks": 4,
+      "source_titles": [
+        "peloton_2022-02-05_8k.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_8k.md"
+      ],
+      "target_present": true,
+      "target_rank": 1,
+      "target_relevancy_score": 1.4244978427886963
+    },
+    {
+      "n_chunks": 4,
+      "source_titles": [
+        "peloton_2022-02-05_8k.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_8k.md"
+      ],
+      "target_present": true,
+      "target_rank": 1,
+      "target_relevancy_score": 1.4244978427886963
+    },
+    {
+      "n_chunks": 4,
+      "source_titles": [
+        "peloton_2022-02-05_8k.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_8k.md"
+      ],
+      "target_present": true,
+      "target_rank": 1,
+      "target_relevancy_score": 1.4244978427886963
+    },
+    {
+      "n_chunks": 4,
+      "source_titles": [
+        "peloton_2022-02-05_8k.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_8k.md"
+      ],
+      "target_present": true,
+      "target_rank": 1,
+      "target_relevancy_score": 1.4244978427886963
+    },
+    {
+      "n_chunks": 4,
+      "source_titles": [
+        "peloton_2022-02-05_8k.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_8k.md"
+      ],
+      "target_present": true,
+      "target_rank": 1,
+      "target_relevancy_score": 1.4244978427886963
+    },
+    {
+      "n_chunks": 4,
+      "source_titles": [
+        "peloton_2022-02-05_8k.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_8k.md"
+      ],
+      "target_present": true,
+      "target_rank": 1,
+      "target_relevancy_score": 1.4244978427886963
+    },
+    {
+      "n_chunks": 4,
+      "source_titles": [
+        "peloton_2022-02-05_8k.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_board-pr.md",
+        "peloton_2022-02-05_8k.md"
+      ],
+      "target_present": true,
+      "target_rank": 1,
+      "target_relevancy_score": 1.4244978427886963
+    }
+  ]
+}
