@@ -119,6 +119,16 @@ job. Four stages:
     (`Literal['fast','thinking','auto']`) but is undocumented in both narrative docs and
     the OpenAPI `RetrieveMode` enum (only `fast`/`thinking` listed there); tested in
     `sia-test` and behaved identically to `"fast"` (`synthesis_context: None`).**
+10a. **`max_results` is not just a token-budget knob under `mode="thinking"`.**
+    `essentials/v2/api-results.md`'s practical-guidance section frames it purely as
+    that — *"Start small on chunks... raise to 20 if you rerank downstream"* — but
+    hands-on testing found `mode="thinking"`'s internal reranking step is genuinely
+    non-deterministic near the `max_results` boundary: a correct, relevant chunk was
+    present in only 2/8 identical repeated calls at `max_results=10`, vs. 8/8 at
+    `max_results=20` or under `mode="fast"` (see finding #22). This caused a real
+    wrong-date attribution in `timeline.py`'s output before being caught. Treat
+    `max_results` as a correctness lever under `thinking` mode, not only a budget one.
+
 11. Occasionally, when HydraDB's internal (non-configurable) classifier decides a query
     needed multi-step decomposition, `graph_context.synthesis_context` gets populated —
     per its OpenAPI field description: *"LLM-generated summary of how sub-query results
@@ -131,8 +141,19 @@ job. Four stages:
 
 **Stage 3 — App-layer synthesis (entirely our backend's job, not HydraDB's)**
 13. Backend formats the raw JSON into an LLM-ready text block — via HydraDB's own
-    `build_string()`/`buildString()` helper, or a custom formatter (our `/api/chat`
-    fallback uses `chunk_relations`/`query_paths` `combined_context` strings directly).
+    `build_string()`/`buildString()` helper, or a custom formatter. **We use a custom
+    formatter (`synthesis.get_context_snippets()`), not `build_string()`, by deliberate
+    choice**: `build_string()` preserves server order and formats `chunks` and
+    `graph_context` as separate sections, but our Aug-2021 fallback bug (a single weak
+    `chunk_relations` snippet silently blocking a stronger fact sitting in a raw chunk —
+    see synthesis.py's docstring) needed the two pools unioned and ranked together by
+    `relevancy_score`. This is a knowing deviation from `api-results.md`'s stated common
+    mistake ("re-sorting chunks client-side overrides HydraDB's ranking") — justified here
+    because we're not re-sorting one HydraDB-ranked list, we're merging two differently-
+    sourced pools (raw chunks + relation `combined_context` strings) that don't share one
+    native order to begin with. Also confirmed (finding #23) that the SDK's chunk object
+    exposes metadata as `.metadata`, not the `additional_metadata` name shown in that
+    page's own JSON schema example.
 14. Backend builds a prompt: grounding system instruction ("answer only from the
     provided context; say so if it isn't there") + formatted context + the question.
 15. Backend calls its own LLM (every cookbook uses GPT-4o via
