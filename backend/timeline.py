@@ -9,6 +9,7 @@ import json
 from pathlib import Path
 
 import hydradb_client
+import knowledge_graph
 import price_data
 import synthesis
 
@@ -87,7 +88,7 @@ def _build_event(dates_with_roles: dict) -> dict:
         date_groups.append({
             "date": date,
             "narrative_role": dates_with_roles[date],
-            "snippets": snippets,
+            "snippets": snippets,  # [{"text", "source_title"}, ...] — see synthesis.get_context_snippets
         })
         all_chunks += chunks
 
@@ -96,12 +97,43 @@ def _build_event(dates_with_roles: dict) -> dict:
         GENERIC_QUESTION, date_groups, company=COMPANY_NAME, industry=COMPANY_INDUSTRY
     )
 
-    source_titles = sorted({getattr(c, "source_title", None) for c in all_chunks if getattr(c, "source_title", None)})
+    # Document-wise evidence, not snippet-wise: group each date's snippets by
+    # their real source document instead of showing raw chunk fragments.
+    # Relation-derived snippets (source_title=None, HydraDB's own graph-LLM
+    # summary text, not a verbatim quote) aren't attributable to one document
+    # — kept as separate, unattributed relation_notes instead of dropped.
+    evidence = []
+    for g in date_groups:
+        documents = sorted({s["source_title"] for s in g["snippets"] if s["source_title"]})
+        relation_notes = [s["text"] for s in g["snippets"] if not s["source_title"]]
+        evidence.append({
+            "date": g["date"],
+            "narrative_role": g["narrative_role"],
+            "documents": documents,
+            "relation_notes": relation_notes,
+        })
+
+    # Derived from the same snippets actually used for synthesis, not from
+    # every raw chunk retrieved — a raw chunk that got outranked and never
+    # made it into get_context_snippets() shouldn't be listed as "shown".
+    source_titles = sorted({d for e in evidence for d in e["documents"]})
     doc_summaries = sorted({
         (getattr(c, "metadata", None) or {}).get("doc_summary")
         for c in all_chunks
-        if (getattr(c, "metadata", None) or {}).get("doc_summary")
+        if getattr(c, "source_title", None) in source_titles and (getattr(c, "metadata", None) or {}).get("doc_summary")
     })
+
+    # Precomputed here (not fetched live by the frontend) for the same
+    # reason evidence/doc_summaries are: it's per-event, not too large to
+    # cache, and this keeps the event view instant like the rest of the
+    # app. Built from source_titles — the same deduplicated document list
+    # already used for the evidence panel's decode dropdown, so the graph
+    # always covers exactly the documents a user can already open. See
+    # knowledge_graph.py and finding #24 (hydradb_findings_log.md) for the
+    # entity-alias step this goes through.
+    graph = knowledge_graph.build_graph(source_titles) if source_titles else {
+        "documents": [], "skipped_documents": [], "nodes": [], "edges": []
+    }
 
     return {
         "filing_dates": sorted(dates_with_roles),
@@ -111,7 +143,8 @@ def _build_event(dates_with_roles: dict) -> dict:
         "source_titles": source_titles,
         "doc_summaries": doc_summaries,
         "chunk_count": len(all_chunks),
-        "evidence": date_groups,
+        "evidence": evidence,
+        "knowledge_graph": graph,
     }
 
 

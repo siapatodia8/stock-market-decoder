@@ -10,8 +10,8 @@
         "2020-12-21"
       ],
       "question": "Based only on the provided documents, what did Peloton Interactive disclose, announce, or report during this period?",
-      "headline": "Peloton Interactive announces $420 million acquisition of Precor to enhance manufacturing and R&D capabilities.",
-      "detail": "On December 21, 2020, Peloton Interactive, Inc. entered into a Stock and Asset Purchase Agreement to acquire Precor Incorporated for $420 million in cash. The acquisition is expected to establish Peloton's U.S. manufacturing footprint, enhance research and development capabilities, and accelerate growth in commercial verticals. Precor President Rob Barker will become CEO of Precor and General Manager of Peloton Commercial, reporting to Peloton's President William Lynch.",
+      "headline": "Peloton Interactive announces acquisition of Precor for $420 million, aiming to enhance U.S. manufacturing and R&D capabilities.",
+      "detail": "On December 21, 2020, Peloton Interactive, Inc. issued a press release announcing the execution of the Purchase Agreement to acquire Precor for $420 million. The acquisition is expected to establish Peloton's U.S. manufacturing footprint, enhance research and development capabilities, and accelerate growth in commercial verticals. Precor President Rob Barker will become CEO of Precor and General Manager of Peloton Commercial, reporting to Peloton's President William Lynch.",
       "source_titles": [
         "peloton_2020-12-21_8k.md",
         "peloton_2020-12-21_pr.md"
@@ -20,21 +20,514 @@
         "Peloton announces agreement to acquire Precor for $420M to establish U.S. manufacturing capacity",
         "Press release detailing the Precor acquisition \u2014 U.S. manufacturing, R&D, and commercial-market expansion plans"
       ],
-      "chunk_count": 3,
+      "chunk_count": 2,
       "evidence": [
         {
           "date": "2020-12-21",
           "narrative_role": "claim",
-          "snippets": [
-            "# Peloton Interactive, Inc. \u2014 Form 8-K\n**Date of Report:** December 21, 2020\n\n## Item 1.01 \u2014 Entry into a Material Definitive Agreement\n\n**Stock and Asset Purchase Agreement**\n\nOn December 21, 2020, Peloton Interactive, Inc., a Delaware corporation (\"Peloton\"), entered\ninto a Stock and Asset Purchase Agreement (\"Purchase Agreement\") with Amer Sports Corporation,\na Finnish corporation (\"Parent\"), pursuant to which Peloton will acquire Precor Incorporated,\na Delaware corporation (\"Precor\"), and certain related entities and assets from Parent and\ncertain of its subsidiaries (the \"Acquisition\"). Precor manufactures, sells and distributes\ncardiovascular and strength-building exercise machines, fitness equipment and associated\ntechnical and digital services.\n\nUnder the terms of the Purchase Agreement, Peloton has agreed to acquire Precor for $420.0\nmillion in cash, subject to customary adjustments for working capital, transaction expenses,\ncash and indebtedness. The closing of the transactions is anticipated to occur in early\ncalendar year 2021 and is subject to customary closing conditions, including expiration or\ntermination of the applicable waiting period under the Hart-Scott-Rodino Antitrust\nImprovements Act of 1976.\n\n**Press Release**\n\nOn December 21, 2020, Peloton issued a press release announcing the execution of the Purchase\nAgreement. This press release is furnished as Exhibit 99.1 to this Current Report on Form 8-K.\n\n## Item 9.01 \u2014 Financial Statements and Exhibits\n\n(d) Exhibits: Exhibit 99.1 \u2014 Press release dated December 21, 2020.\n\n**Signature:** Hisao Kushi, Chief Legal Officer",
-            "# Press Release: Peloton Signs Agreement to Acquire Precor\n**New York, NY \u2014 December 21, 2020**\n\nAcquisition expected to establish Peloton's U.S. manufacturing footprint, enhance R&D\ncapabilities, and accelerate growth of commercial verticals.\n\nPeloton (NASDAQ: PTON), the leading interactive fitness platform, today announced that it has\nentered into an agreement to acquire Precor, one of the largest global commercial fitness\nequipment providers with a significant U.S. manufacturing presence, in a transaction valued at\n$420 million USD. With the acquisition, Peloton plans to establish U.S. manufacturing capacity,\nboost research and development capabilities with Precor's highly-skilled team, and accelerate\nPeloton's penetration of the commercial market. Peloton plans to produce connected fitness\nproducts in the U.S. before the end of calendar year 2021.\n\nPrecor President Rob Barker will become CEO, Precor and General Manager, Peloton Commercial,\nreporting to William Lynch, Peloton's President. Precor is a division of Finnish sporting\ngoods company Amer Sports. The transaction is expected to close in early calendar year 2021.\n\n**\"Precor embodies the Peloton mission of putting Members first,\"** said Peloton's Lynch. \"By\ncombining our talented and committed R&D and Supply Chain teams with the incredibly capable\nPrecor team and their decades of experience, we believe we will be able to lead the global\nconnected fitness market in both innovation and scale.\"\n\n## Establishing U.S. manufacturing\nThe acquisition adds 625,000 square feet of U.S. manufacturing capacity in Whitsett, North\nCarolina and Woodinville, Washington. Peloton will be able to control the entire production\nprocess, from design to ship, and increase total production scale.\n\n## Investing more in research and development\nThe acquisition adds a team of nearly 100 dedicated R&D employees to Peloton's team.\n\n## Scaling Peloton commercial offerings\nPrecor has 40 years of experience building a customer-focused commercial fitness business at\nscale, with long-standing relationships with hotels, multifamily residences, and college and\ncorporate campuses.\n\n**About Peloton:** Peloton is the leading interactive fitness platform in the world with a\nloyal community of more than 3.6 million Members. Founded in 2012, headquartered in New York\nCity.",
-            "combining our talented and committed R&D and Supply Chain teams with the incredibly capable\nPrecor team and their decades of experience, we believe we will be able to lead the global\nconnected fitness market in both innovation and scale.\"\n\n## Establishing U.S. manufacturing\nThe acquisition adds 625,000 square feet of U.S. manufacturing capacity in Whitsett, North\nCarolina and Woodinville, Washington. Peloton will be able to control the entire production\nprocess, from design to ship, and increase total production scale.\n\n## Investing more in research and development\nThe acquisition adds a team of nearly 100 dedicated R&D employees to Peloton's team.\n\n## Scaling Peloton commercial offerings\nPrecor has 40 years of experience building a customer-focused commercial fitness business at\nscale, with long-standing relationships with hotels, multifamily residences, and college and\ncorporate campuses.\n\n**About Peloton:** Peloton is the leading interactive fitness platform in the world with a\nloyal community of more than 3.6 million Members. Founded in 2012, headquartered in New York\nCity.\n\n**Advisors:** Fenwick & West LLP is serving as legal advisor to Peloton. Citi is serving as\nsole financial advisor to Amer Sports, and Kirkland & Ellis LLP is serving as their legal\nadvisor.",
+          "documents": [
+            "peloton_2020-12-21_8k.md",
+            "peloton_2020-12-21_pr.md"
+          ],
+          "relation_notes": [
             "On December 21, 2020, Peloton Interactive, Inc. issued a press release announcing the execution of the Purchase Agreement, which is furnished as Exhibit 99.1 to the Form 8-K report. (Date/Time: 2020-12-21)",
             "Rob Barker, in his role as CEO of Precor and General Manager of Peloton Commercial, reports to William Lynch, the President of Peloton.",
             "Hisao Kushi signed the Form 8-K report in his capacity as the Chief Legal Officer of Peloton Interactive, Inc. (Date/Time: 2020-12-21)"
           ]
         }
-      ]
+      ],
+      "knowledge_graph": {
+        "documents": [
+          "peloton_2020-12-21_8k.md",
+          "peloton_2020-12-21_pr.md"
+        ],
+        "skipped_documents": [],
+        "nodes": [
+          {
+            "id": "peloton interactive, inc.",
+            "name": "peloton interactive, inc.",
+            "type": "ORGANIZATION",
+            "identifier": "NASDAQ: PTON",
+            "documents": [
+              "peloton_2020-12-21_8k.md",
+              "peloton_2020-12-21_pr.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "2012",
+            "name": "2012",
+            "type": "EVENT",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "amer sports",
+            "name": "amer sports",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "ceo of precor and general manager of peloton commercial",
+            "name": "ceo of precor and general manager of peloton commercial",
+            "type": "ROLE",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "chief legal officer",
+            "name": "chief legal officer",
+            "type": "ROLE",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "citi",
+            "name": "citi",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "commercial fitness business",
+            "name": "commercial fitness business",
+            "type": "CONCEPT",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "connected fitness products",
+            "name": "connected fitness products",
+            "type": "PRODUCT",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "exhibit 99.1",
+            "name": "exhibit 99.1",
+            "type": "DOCUMENT",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "fenwick  west llp",
+            "name": "fenwick  west llp",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "fitness equipment",
+            "name": "fitness equipment",
+            "type": "PRODUCT",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "hisao kushi",
+            "name": "hisao kushi",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "kirkland  ellis llp",
+            "name": "kirkland  ellis llp",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "new york city",
+            "name": "new york city",
+            "type": "LOCATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "precor",
+            "name": "precor",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "precor incorporated",
+            "name": "precor incorporated",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "rd employees",
+            "name": "rd employees",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "rob barker",
+            "name": "rob barker",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "stock and asset purchase agreement",
+            "name": "stock and asset purchase agreement",
+            "type": "DOCUMENT",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "whitsett, north carolina and woodinville, washington",
+            "name": "whitsett, north carolina and woodinville, washington",
+            "type": "LOCATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "william lynch",
+            "name": "william lynch",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2020-12-21_pr.md"
+            ],
+            "doc_count": 1
+          }
+        ],
+        "edges": [
+          {
+            "id": "citi|serving as sole financial advisor to|amer sports",
+            "source_id": "citi",
+            "target_id": "amer sports",
+            "predicate": "serving as sole financial advisor to",
+            "evidence": [
+              {
+                "context": "Citi is serving as the sole financial advisor to Amer Sports regarding the transaction involving Precor.",
+                "document": "peloton_2020-12-21_pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2020-12-21_pr_chunk_0001"
+              }
+            ]
+          },
+          {
+            "id": "fenwick  west llp|serving as legal advisor to|peloton interactive, inc.",
+            "source_id": "fenwick  west llp",
+            "target_id": "peloton interactive, inc.",
+            "predicate": "serving as legal advisor to",
+            "evidence": [
+              {
+                "context": "Fenwick & West LLP is serving as the legal advisor to Peloton regarding the acquisition of Precor.",
+                "document": "peloton_2020-12-21_pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2020-12-21_pr_chunk_0001"
+              }
+            ]
+          },
+          {
+            "id": "hisao kushi|holds role of|chief legal officer",
+            "source_id": "hisao kushi",
+            "target_id": "chief legal officer",
+            "predicate": "holds role of",
+            "evidence": [
+              {
+                "context": "Hisao Kushi signed the Form 8-K report in his capacity as the Chief Legal Officer of Peloton Interactive, Inc.",
+                "document": "peloton_2020-12-21_8k.md",
+                "temporal_details": "2020-12-21",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2020-12-21_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "kirkland  ellis llp|serving as legal advisor to|amer sports",
+            "source_id": "kirkland  ellis llp",
+            "target_id": "amer sports",
+            "predicate": "serving as legal advisor to",
+            "evidence": [
+              {
+                "context": "Kirkland & Ellis LLP is serving as the legal advisor to Amer Sports regarding the transaction involving Precor.",
+                "document": "peloton_2020-12-21_pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2020-12-21_pr_chunk_0001"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|adds manufacturing capacity in|whitsett, north carolina and woodinville, washington",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "whitsett, north carolina and woodinville, washington",
+            "predicate": "adds manufacturing capacity in",
+            "evidence": [
+              {
+                "context": "The acquisition of Precor adds 625,000 square feet of U.S. manufacturing capacity located in Whitsett, North Carolina and Woodinville, Washington.",
+                "document": "peloton_2020-12-21_pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2020-12-21_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|adds team of|rd employees",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "rd employees",
+            "predicate": "adds team of",
+            "evidence": [
+              {
+                "context": "The acquisition of Precor adds a team of nearly 100 dedicated R&D employees to Peloton's team.",
+                "document": "peloton_2020-12-21_pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2020-12-21_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|entered into|stock and asset purchase agreement",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "stock and asset purchase agreement",
+            "predicate": "entered into",
+            "evidence": [
+              {
+                "context": "On December 21, 2020, Peloton Interactive, Inc., a Delaware corporation, entered into a Stock and Asset Purchase Agreement with Amer Sports Corporation to acquire Precor Incorporated and certain related entities and assets.",
+                "document": "peloton_2020-12-21_8k.md",
+                "temporal_details": "2020-12-21",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2020-12-21_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|entered into an agreement to acquire|precor",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "precor",
+            "predicate": "entered into an agreement to acquire",
+            "evidence": [
+              {
+                "context": "Peloton entered into an agreement to acquire Precor, one of the largest global commercial fitness equipment providers, in a transaction valued at $420 million USD. The acquisition is intended to establish a U.S. manufacturing footprint, enhance R&D capabilities, and accelerate growth in commercial verticals.",
+                "document": "peloton_2020-12-21_pr.md",
+                "temporal_details": "December 21, 2020",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2020-12-21_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|founded in|2012",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "2012",
+            "predicate": "founded in",
+            "evidence": [
+              {
+                "context": "Peloton was founded in 2012.",
+                "document": "peloton_2020-12-21_pr.md",
+                "temporal_details": "2012",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2020-12-21_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|headquartered in|new york city",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "new york city",
+            "predicate": "headquartered in",
+            "evidence": [
+              {
+                "context": "Peloton is headquartered in New York City.",
+                "document": "peloton_2020-12-21_pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2020-12-21_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|issued|exhibit 99.1",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "exhibit 99.1",
+            "predicate": "issued",
+            "evidence": [
+              {
+                "context": "On December 21, 2020, Peloton Interactive, Inc. issued a press release announcing the execution of the Purchase Agreement, which is furnished as Exhibit 99.1 to the Form 8-K report.",
+                "document": "peloton_2020-12-21_8k.md",
+                "temporal_details": "2020-12-21",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2020-12-21_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|plans to produce|connected fitness products",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "connected fitness products",
+            "predicate": "plans to produce",
+            "evidence": [
+              {
+                "context": "Peloton plans to produce connected fitness products in the U.S. before the end of calendar year 2021.",
+                "document": "peloton_2020-12-21_pr.md",
+                "temporal_details": "before end of 2021",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2020-12-21_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|will acquire|precor incorporated",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "precor incorporated",
+            "predicate": "will acquire",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. agreed to acquire Precor Incorporated for $420.0 million in cash, subject to customary adjustments for working capital, transaction expenses, cash, and indebtedness. The closing is anticipated for early calendar year 2021.",
+                "document": "peloton_2020-12-21_8k.md",
+                "temporal_details": "early calendar year 2021",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2020-12-21_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "precor|has experience in|commercial fitness business",
+            "source_id": "precor",
+            "target_id": "commercial fitness business",
+            "predicate": "has experience in",
+            "evidence": [
+              {
+                "context": "Precor has 40 years of experience building a customer-focused commercial fitness business at scale, maintaining relationships with hotels, multifamily residences, and college and corporate campuses.",
+                "document": "peloton_2020-12-21_pr.md",
+                "temporal_details": "40 years",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2020-12-21_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "precor|is a division of|amer sports",
+            "source_id": "precor",
+            "target_id": "amer sports",
+            "predicate": "is a division of",
+            "evidence": [
+              {
+                "context": "Precor is a division of Amer Sports, a Finnish sporting goods company.",
+                "document": "peloton_2020-12-21_pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2020-12-21_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "precor incorporated|manufactures, sells and distributes|fitness equipment",
+            "source_id": "precor incorporated",
+            "target_id": "fitness equipment",
+            "predicate": "manufactures, sells and distributes",
+            "evidence": [
+              {
+                "context": "Precor Incorporated manufactures, sells, and distributes cardiovascular and strength-building exercise machines, fitness equipment, and associated technical and digital services.",
+                "document": "peloton_2020-12-21_8k.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2020-12-21_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "rob barker|reports to|william lynch",
+            "source_id": "rob barker",
+            "target_id": "william lynch",
+            "predicate": "reports to",
+            "evidence": [
+              {
+                "context": "Rob Barker, in his role as CEO of Precor and General Manager of Peloton Commercial, reports to William Lynch, the President of Peloton.",
+                "document": "peloton_2020-12-21_pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2020-12-21_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "rob barker|will become|ceo of precor and general manager of peloton commercial",
+            "source_id": "rob barker",
+            "target_id": "ceo of precor and general manager of peloton commercial",
+            "predicate": "will become",
+            "evidence": [
+              {
+                "context": "Rob Barker, previously the President of Precor, will become the CEO of Precor and General Manager of Peloton Commercial.",
+                "document": "peloton_2020-12-21_pr.md",
+                "temporal_details": "early 2021",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2020-12-21_pr_chunk_0000"
+              }
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -104,8 +597,8 @@
         "2021-08-26"
       ],
       "question": "Based only on the provided documents, what did Peloton Interactive disclose, announce, or report during this period?",
-      "headline": "Peloton reveals significant growth but identifies internal control weaknesses in financial reporting.",
-      "detail": "On August 26, 2021, Peloton Interactive, Inc. announced its financial results for the year ended June 30, 2021, reporting total revenue of $4,021.8 million, a 120% increase from the previous year. The company ended the quarter with 2.33 million Connected Fitness Subscriptions, representing 114% year-over-year growth, but disclosed a material weakness in internal controls over financial reporting related to inventory valuation. Peloton provided guidance for FY2022, projecting 2.47 million ending Connected Fitness Subscriptions and $800 million in total revenue.",
+      "headline": "Peloton reveals significant financial losses and internal control weaknesses in Q4 FY2021 results.",
+      "detail": "On August 26, 2021, Peloton reported a net loss of $(313.2) million for Q4 FY2021, with total revenue growing 54% to $937 million and Connected Fitness Subscriptions reaching 2.33 million, a 114% year-over-year increase. The company identified a material weakness in internal controls over financial reporting related to inventory valuation, although it did not result in a material misstatement of financial statements. Peloton provided guidance for FY2022, projecting 2.47 million ending Connected Fitness Subscriptions and total revenue of $800 million.",
       "source_titles": [
         "peloton_2021-08-26_8k.md",
         "peloton_2021-08-26_shareholder-letter_v2.md"
@@ -119,18 +612,619 @@
         {
           "date": "2021-08-26",
           "narrative_role": "claim",
-          "snippets": [
-            "# Peloton Interactive, Inc. \u2014 Form 8-K\n**Date of Report:** August 26, 2021\n\n## Item 2.02 \u2014 Results of Operations and Financial Condition\n\nOn August 26, 2021, Peloton Interactive, Inc. (\"Peloton\" or the \"Company\") will hold a\nconference call regarding its financial results for the year ended June 30, 2021. Peloton also\nissued a letter to its stockholders announcing its financial results for the year ended June\n30, 2021 (the \"Shareholder Letter\"). A copy of the Shareholder Letter is furnished as Exhibit\n99.1 to this Current Report on Form 8-K.\n\nPeloton is making reference to non-GAAP financial information in both the Shareholder Letter\nand the conference call. A reconciliation of GAAP to non-GAAP results is provided in the\nShareholder Letter.\n\nPeloton uses its Investor Relations website, Peloton's Twitter feed (@onepeloton), John\nFoley's Twitter feed (@keylargofoley), and the Peloton Press Newsroom as means of disclosing\nmaterial non-public information under Regulation FD.\n\n## Item 9.01 \u2014 Financial Statements and Exhibits\n\n(d) Exhibits: Exhibit 99.1 \u2014 Letter to Shareholders, dated August 26, 2021.\n\n**Signature:** Jill Woodworth, Chief Financial Officer",
-            "shipping to reduce order-to-delivery windows, which we were pleased to restore to\npre-pandemic levels during the fourth quarter.\n\nTo support our large long-term growth opportunity, on May 24th we announced plans to build our\nfirst U.S. factory. **Peloton Output Park (POP)** will sit on over 200 acres of land in Troy\nTownship, Ohio and will feature more than a million square feet of manufacturing, office, and\namenities space, making it one of the largest connected fitness plants in the world. This\nfactory will diversify our manufacturing footprint, provide additional capacity to support our\ngrowth, drive production efficiencies through automation and scale, and accelerate our\nspeed-to-market. POP will complement our existing manufacturing assets in Taiwan and the\nrecently acquired Precor assets in North Carolina and Washington state. We expect to begin\nproducing Bike, Bike+, and Tread products at POP starting in calendar 2023.\n\nWe also announced our latest step in making Peloton more attainable by lowering the price of\nour original Peloton Bike across all markets to $1,495 USD. We officially launched the Peloton\nCorporate Wellness program, with initial launch partners including Wayfair, Samsung, SAP,\nAccenture Interactive, and Sky, and our first partnership with a health insurer, United\nHealthcare. We're pleased to report that on August 30th we will officially launch sales of the\nPeloton Tread in the U.S. while resuming sales in the U.K. and Canada.\n\nWe ended the quarter with 2.33 million Connected Fitness Subscriptions, representing 114%\nyear-over-year growth. Total platform workouts grew to over 154 million in the quarter from 83\nmillion in the year-ago quarter.\n\n### Internal Controls Update\nAs you will see in our upcoming Annual Report on Form 10-K, in the course of our fiscal 2021\naudit process, a material weakness was identified in our internal controls over financial\nreporting with respect to identification and valuation of inventory. This was a result of\ndiscovering an immaterial discrepancy in our year-end physical inventory counts. It did not\nresult in a material misstatement of our financial statements. We are committed to fully\nremediating these issues as soon as possible.\n\n### Q1 and Full Fiscal Year 2022 Business Outlook\n\n**FY2022 Q1 Guidance:**\n- 2.47 million ending Connected Fitness Subscriptions\n- Average Net Monthly Connected Fitness Churn of approximately 0.85%",
-            "# Peloton Q4 2021 Shareholder Letter\n**Fourth Quarter Fiscal Year 2021 \u2014 dated August 26, 2021**\n\n## Q4 FY2021 Highlights (all comparisons year-over-year)\n- Q4 ending Connected Fitness Subscriptions grew 114% to over 2.33 million; paid Digital\n  Subscriptions grew 176% to over 874,000; total Members grew to over 5.9 million\n- Q4 total revenue grew 54% to $937 million\n- Q4 Connected Fitness Subscription Workouts grew 75% to 134.3 million\n- Q4 Average Net Monthly Connected Fitness Churn was 0.73%; 12-month retention rate was 92%\n- Q4 Net Loss was $(313.2) million; Q4 Adjusted EBITDA was $(45.1) million, margin (4.8)%\n- **FY2022 Q1 guidance:** 2.47 million ending Connected Fitness Subscriptions, $800 million\n  total revenue, gross margin ~33%, Adjusted EBITDA $(285) million\n- **Full Year FY2022 guidance:** 3.63 million ending Connected Fitness Subscriptions, **$5.4\n  billion total revenue**, gross margin ~34%, Adjusted EBITDA $(325) million, margin (6.0)%\n\n## Letter to Shareholders\n\nPeloton Shareholders,\n\nThe past year represented an inflection point for the connected fitness industry, with\nsignificant increases in awareness and demand following the onset of the COVID-19 pandemic.\nThis necessitated significant investments in manufacturing capacity, logistics and expedited\nshipping to reduce order-to-delivery windows, which we were pleased to restore to\npre-pandemic levels during the fourth quarter.\n\nTo support our large long-term growth opportunity, on May 24th we announced plans to build our\nfirst U.S. factory. **Peloton Output Park (POP)** will sit on over 200 acres of land in Troy\nTownship, Ohio and will feature more than a million square feet of manufacturing, office, and\namenities space, making it one of the largest connected fitness plants in the world. This\nfactory will diversify our manufacturing footprint, provide additional capacity to support our\ngrowth, drive production efficiencies through automation and scale, and accelerate our\nspeed-to-market. POP will complement our existing manufacturing assets in Taiwan and the\nrecently acquired Precor assets in North Carolina and Washington state. We expect to begin\nproducing Bike, Bike+, and Tread products at POP starting in calendar 2023.\n\nWe also announced our latest step in making Peloton more attainable by lowering the price of\nour original Peloton Bike across all markets to $1,495 USD. We officially launched the Peloton\nCorporate Wellness program, with initial launch partners including Wayfair, Samsung, SAP,",
-            "Accenture Interactive, and Sky, and our first partnership with a health insurer, United\nHealthcare. We're pleased to report that on August 30th we will officially launch sales of the\nPeloton Tread in the U.S. while resuming sales in the U.K. and Canada.\n\nWe ended the quarter with 2.33 million Connected Fitness Subscriptions, representing 114%\nyear-over-year growth. Total platform workouts grew to over 154 million in the quarter from 83\nmillion in the year-ago quarter.\n\n### Internal Controls Update\nAs you will see in our upcoming Annual Report on Form 10-K, in the course of our fiscal 2021\naudit process, a material weakness was identified in our internal controls over financial\nreporting with respect to identification and valuation of inventory. This was a result of\ndiscovering an immaterial discrepancy in our year-end physical inventory counts. It did not\nresult in a material misstatement of our financial statements. We are committed to fully\nremediating these issues as soon as possible.\n\n### Q1 and Full Fiscal Year 2022 Business Outlook\n\n**FY2022 Q1 Guidance:**\n- 2.47 million ending Connected Fitness Subscriptions\n- Average Net Monthly Connected Fitness Churn of approximately 0.85%\n- $800 million total revenue\n- Gross profit margin of approximately 33%\n- $(285) million Adjusted EBITDA\n\n**Full Year FY2022 Guidance:**\n- 3.63 million ending Connected Fitness Subscriptions\n- **$5.4 billion total revenue**\n- Gross profit margin of approximately 34%\n- $(325) million Adjusted EBITDA, (6.0)% Adjusted EBITDA Margin\n\nOur FY2022 guide represents our continued prioritization of subscription growth over\nnear-term profitability, with objectives to maximize growth in Connected Fitness\nSubscriptions, democratize access to Connected Fitness, expand our content offering, launch\nTread successfully, and continue building a world-class team and infrastructure to support our\nglobal growth.\n\nWe are incredibly excited about the opportunity to continue our global leadership in fitness.\nIn the near term, these investments will help scale our operations following a year where we\ngrew our Membership base significantly beyond our previous expectations. Despite the deleverage\nin connected fitness margin and operating expenses, our unit economics remain highly\ncompelling as we expect hardware gross profit dollars to continue to largely offset our sales\nand marketing expenses.\n\nWe want to thank our entire Peloton team for their hard work this year under challenging\ncircumstances with the global pandemic. We continue to be inspired by our growing Peloton\ncommunity and remain committed to delivering the world's leading connected fitness experience.\n\nStay safe and well,\nTeam Peloton\n\n## Selected Financial Highlights (Fiscal Year Ended June 30, 2021)\n- Total revenue: $4,021.8 million (FY2021) vs. $1,825.9 million (FY2020)",
+          "documents": [
+            "peloton_2021-08-26_8k.md",
+            "peloton_2021-08-26_shareholder-letter_v2.md"
+          ],
+          "relation_notes": [
             "Peloton Interactive, Inc. uses its official Twitter feed (@onepeloton) to disclose material non-public information under Regulation FD.",
             "John Foley's Twitter feed (@keylargofoley) is used as a means of disclosing material non-public information for Peloton Interactive, Inc. under Regulation FD.",
             "Peloton Interactive, Inc. utilizes its Investor Relations website, the Peloton Press Newsroom, and specific Twitter feeds to disclose material non-public information under Regulation FD.",
             "Peloton provided FY2022 Q1 guidance projecting 2.47 million ending Connected Fitness Subscriptions, $800 million total revenue, gross margin of approximately 33%, and Adjusted EBITDA of $(285) million. (Date/Time: 2021-08-26)"
           ]
         }
-      ]
+      ],
+      "knowledge_graph": {
+        "documents": [
+          "peloton_2021-08-26_8k.md",
+          "peloton_2021-08-26_shareholder-letter_v2.md"
+        ],
+        "skipped_documents": [],
+        "nodes": [
+          {
+            "id": "peloton interactive, inc.",
+            "name": "peloton interactive, inc.",
+            "type": "ORGANIZATION",
+            "identifier": "NASDAQ: PTON",
+            "documents": [
+              "peloton_2021-08-26_8k.md",
+              "peloton_2021-08-26_shareholder-letter_v2.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "@keylargofoley",
+            "name": "@keylargofoley",
+            "type": "TECHNOLOGY",
+            "identifier": "@keylargofoley",
+            "documents": [
+              "peloton_2021-08-26_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "@onepeloton",
+            "name": "@onepeloton",
+            "type": "TECHNOLOGY",
+            "identifier": "@onepeloton",
+            "documents": [
+              "peloton_2021-08-26_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "accenture interactive",
+            "name": "accenture interactive",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_shareholder-letter_v2.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "cash, cash equivalents, and restricted cash",
+            "name": "cash, cash equivalents, and restricted cash",
+            "type": "METRIC",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_shareholder-letter_v2.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "chief financial officer",
+            "name": "chief financial officer",
+            "type": "ROLE",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "exhibit 99.1",
+            "name": "exhibit 99.1",
+            "type": "DOCUMENT",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "financial results for the year ended june 30, 2021",
+            "name": "financial results for the year ended june 30, 2021",
+            "type": "METRIC",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "full year fy2022 guidance",
+            "name": "full year fy2022 guidance",
+            "type": "DOCUMENT",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_shareholder-letter_v2.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "internal controls over financial reporting",
+            "name": "internal controls over financial reporting",
+            "type": "CONCEPT",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_shareholder-letter_v2.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "jill woodworth",
+            "name": "jill woodworth",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "john foley",
+            "name": "john foley",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "net loss",
+            "name": "net loss",
+            "type": "METRIC",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_shareholder-letter_v2.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "peloton bike",
+            "name": "peloton bike",
+            "type": "PRODUCT",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_shareholder-letter_v2.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "peloton corporate wellness program",
+            "name": "peloton corporate wellness program",
+            "type": "PRODUCT",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_shareholder-letter_v2.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "peloton output park",
+            "name": "peloton output park",
+            "type": "PROJECT",
+            "identifier": "pop",
+            "documents": [
+              "peloton_2021-08-26_shareholder-letter_v2.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "peloton press newsroom",
+            "name": "peloton press newsroom",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "peloton tread",
+            "name": "peloton tread",
+            "type": "PRODUCT",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_shareholder-letter_v2.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "precor",
+            "name": "precor",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_shareholder-letter_v2.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "q4 fy2021",
+            "name": "q4 fy2021",
+            "type": "EVENT",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_shareholder-letter_v2.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "subscription growth",
+            "name": "subscription growth",
+            "type": "CONCEPT",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_shareholder-letter_v2.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "total assets",
+            "name": "total assets",
+            "type": "METRIC",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_shareholder-letter_v2.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "total revenue",
+            "name": "total revenue",
+            "type": "METRIC",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_shareholder-letter_v2.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "troy township, ohio",
+            "name": "troy township, ohio",
+            "type": "LOCATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_shareholder-letter_v2.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "united healthcare",
+            "name": "united healthcare",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_shareholder-letter_v2.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "wayfair",
+            "name": "wayfair",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2021-08-26_shareholder-letter_v2.md"
+            ],
+            "doc_count": 1
+          }
+        ],
+        "edges": [
+          {
+            "id": "jill woodworth|holds role of|chief financial officer",
+            "source_id": "jill woodworth",
+            "target_id": "chief financial officer",
+            "predicate": "holds role of",
+            "evidence": [
+              {
+                "context": "Jill Woodworth serves as the Chief Financial Officer of Peloton Interactive, Inc., as indicated by her signature on the Form 8-K dated August 26, 2021.",
+                "document": "peloton_2021-08-26_8k.md",
+                "temporal_details": "2021-08-26",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "john foley|uses for disclosing material non-public information|@keylargofoley",
+            "source_id": "john foley",
+            "target_id": "@keylargofoley",
+            "predicate": "uses for disclosing material non-public information",
+            "evidence": [
+              {
+                "context": "John Foley's Twitter feed (@keylargofoley) is used as a means of disclosing material non-public information for Peloton Interactive, Inc. under Regulation FD.",
+                "document": "peloton_2021-08-26_8k.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton corporate wellness program|has launch partner|accenture interactive",
+            "source_id": "peloton corporate wellness program",
+            "target_id": "accenture interactive",
+            "predicate": "has launch partner",
+            "evidence": [
+              {
+                "context": "The Peloton Corporate Wellness program's initial launch partners include Accenture Interactive and Sky.",
+                "document": "peloton_2021-08-26_shareholder-letter_v2.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_shareholder-letter_chunk_0001"
+              }
+            ]
+          },
+          {
+            "id": "peloton corporate wellness program|has launch partner|wayfair",
+            "source_id": "peloton corporate wellness program",
+            "target_id": "wayfair",
+            "predicate": "has launch partner",
+            "evidence": [
+              {
+                "context": "The Peloton Corporate Wellness program officially launched with initial partners including Wayfair, Samsung, and SAP.",
+                "document": "peloton_2021-08-26_shareholder-letter_v2.md",
+                "temporal_details": "2021-08-26",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_shareholder-letter_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton corporate wellness program|partnered with|united healthcare",
+            "source_id": "peloton corporate wellness program",
+            "target_id": "united healthcare",
+            "predicate": "partnered with",
+            "evidence": [
+              {
+                "context": "Peloton established its first partnership with a health insurer, United Healthcare, for the Peloton Corporate Wellness program.",
+                "document": "peloton_2021-08-26_shareholder-letter_v2.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_shareholder-letter_chunk_0001"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|held|cash, cash equivalents, and restricted cash",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "cash, cash equivalents, and restricted cash",
+            "predicate": "held",
+            "evidence": [
+              {
+                "context": "Peloton held $1,135.7 million in cash, cash equivalents, and restricted cash at the end of FY2021.",
+                "document": "peloton_2021-08-26_shareholder-letter_v2.md",
+                "temporal_details": "FY2021",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_shareholder-letter_chunk_0003"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|held conference call regarding|financial results for the year ended june 30, 2021",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "financial results for the year ended june 30, 2021",
+            "predicate": "held conference call regarding",
+            "evidence": [
+              {
+                "context": "On August 26, 2021, Peloton Interactive, Inc. held a conference call to discuss its financial results for the year ended June 30, 2021.",
+                "document": "peloton_2021-08-26_8k.md",
+                "temporal_details": "2021-08-26",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|identified material weakness in|internal controls over financial reporting",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "internal controls over financial reporting",
+            "predicate": "identified material weakness in",
+            "evidence": [
+              {
+                "context": "During the fiscal 2021 audit process, Peloton identified a material weakness in its internal controls over financial reporting regarding the identification and valuation of inventory, caused by an immaterial discrepancy in year-end physical inventory counts.",
+                "document": "peloton_2021-08-26_shareholder-letter_v2.md",
+                "temporal_details": "fiscal 2021",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_shareholder-letter_chunk_0001"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|issued|exhibit 99.1",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "exhibit 99.1",
+            "predicate": "issued",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. issued a letter to its stockholders, known as the Shareholder Letter, announcing its financial results for the year ended June 30, 2021, on August 26, 2021.",
+                "document": "peloton_2021-08-26_8k.md",
+                "temporal_details": "2021-08-26",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|launched sales of|peloton tread",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "peloton tread",
+            "predicate": "launched sales of",
+            "evidence": [
+              {
+                "context": "Peloton officially launched sales of the Peloton Tread in the U.S. and resumed sales in the U.K. and Canada on August 30th.",
+                "document": "peloton_2021-08-26_shareholder-letter_v2.md",
+                "temporal_details": "2021-08-30",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_shareholder-letter_chunk_0001"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|lowered price of|peloton bike",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "peloton bike",
+            "predicate": "lowered price of",
+            "evidence": [
+              {
+                "context": "Peloton lowered the price of the original Peloton Bike across all markets to $1,495 USD to make it more attainable.",
+                "document": "peloton_2021-08-26_shareholder-letter_v2.md",
+                "temporal_details": "2021-08-26",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_shareholder-letter_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|prioritized|subscription growth",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "subscription growth",
+            "predicate": "prioritized",
+            "evidence": [
+              {
+                "context": "Peloton's FY2022 guidance reflects a continued prioritization of subscription growth over near-term profitability to maximize growth in Connected Fitness Subscriptions and democratize access.",
+                "document": "peloton_2021-08-26_shareholder-letter_v2.md",
+                "temporal_details": "FY2022",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_shareholder-letter_chunk_0002"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|provided|full year fy2022 guidance",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "full year fy2022 guidance",
+            "predicate": "provided",
+            "evidence": [
+              {
+                "context": "Peloton provided FY2022 Q1 guidance projecting 2.47 million ending Connected Fitness Subscriptions, $800 million total revenue, gross margin of approximately 33%, and Adjusted EBITDA of $(285) million.",
+                "document": "peloton_2021-08-26_shareholder-letter_v2.md",
+                "temporal_details": "2021-08-26",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_shareholder-letter_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|reported|net loss",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "net loss",
+            "predicate": "reported",
+            "evidence": [
+              {
+                "context": "Peloton reported a net loss of $(189.0) million for FY2021, compared to a net loss of $(71.6) million for FY2020.",
+                "document": "peloton_2021-08-26_shareholder-letter_v2.md",
+                "temporal_details": "FY2021",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_shareholder-letter_chunk_0003"
+              },
+              {
+                "context": "Peloton reported a Q4 Net Loss of $(313.2) million and an Adjusted EBITDA of $(45.1) million with a margin of (4.8)%.",
+                "document": "peloton_2021-08-26_shareholder-letter_v2.md",
+                "temporal_details": "2021-08-26",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_shareholder-letter_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|reported|q4 fy2021",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "q4 fy2021",
+            "predicate": "reported",
+            "evidence": [
+              {
+                "context": "For Q4 FY2021, Peloton reported that Connected Fitness Subscriptions grew 114% to over 2.33 million, paid Digital Subscriptions grew 176% to over 874,000, and total Members grew to over 5.9 million.",
+                "document": "peloton_2021-08-26_shareholder-letter_v2.md",
+                "temporal_details": "2021-08-26",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_shareholder-letter_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|reported|total assets",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "total assets",
+            "predicate": "reported",
+            "evidence": [
+              {
+                "context": "As of June 30, 2021, Peloton reported total assets of $4,485.6 million, compared to $2,981.8 million as of June 30, 2020.",
+                "document": "peloton_2021-08-26_shareholder-letter_v2.md",
+                "temporal_details": "2021-06-30",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_shareholder-letter_chunk_0003"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|reported|total revenue",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "total revenue",
+            "predicate": "reported",
+            "evidence": [
+              {
+                "context": "Peloton's Q4 total revenue grew 54% to $937 million.",
+                "document": "peloton_2021-08-26_shareholder-letter_v2.md",
+                "temporal_details": "2021-08-26",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_shareholder-letter_chunk_0000"
+              },
+              {
+                "context": "For the fiscal year ended June 30, 2021, Peloton reported total revenue of $4,021.8 million, compared to $1,825.9 million in FY2020.",
+                "document": "peloton_2021-08-26_shareholder-letter_v2.md",
+                "temporal_details": "2021-06-30",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_shareholder-letter_chunk_0002"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|uses for disclosing material non-public information|@onepeloton",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "@onepeloton",
+            "predicate": "uses for disclosing material non-public information",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. uses its official Twitter feed (@onepeloton) to disclose material non-public information under Regulation FD.",
+                "document": "peloton_2021-08-26_8k.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|uses for disclosing material non-public information|peloton press newsroom",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "peloton press newsroom",
+            "predicate": "uses for disclosing material non-public information",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. utilizes its Investor Relations website, the Peloton Press Newsroom, and specific Twitter feeds to disclose material non-public information under Regulation FD.",
+                "document": "peloton_2021-08-26_8k.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton output park|complements|precor",
+            "source_id": "peloton output park",
+            "target_id": "precor",
+            "predicate": "complements",
+            "evidence": [
+              {
+                "context": "Peloton Output Park will complement existing manufacturing assets in Taiwan and recently acquired Precor assets in North Carolina and Washington state.",
+                "document": "peloton_2021-08-26_shareholder-letter_v2.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_shareholder-letter_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton output park|located in|troy township, ohio",
+            "source_id": "peloton output park",
+            "target_id": "troy township, ohio",
+            "predicate": "located in",
+            "evidence": [
+              {
+                "context": "Peloton Output Park (POP) will be located on over 200 acres of land in Troy Township, Ohio, featuring more than a million square feet of manufacturing, office, and amenities space.",
+                "document": "peloton_2021-08-26_shareholder-letter_v2.md",
+                "temporal_details": "announced 2021-05-24",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2021-08-26_shareholder-letter_chunk_0000"
+              }
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -185,8 +1279,8 @@
         "2022-02-08"
       ],
       "question": "Based only on the provided documents, what did Peloton Interactive disclose, announce, or report during this period?",
-      "headline": "Peloton Interactive undergoes significant leadership and restructuring changes amid financial challenges.",
-      "detail": "On February 5, 2022, Peloton announced the resignation of Erik Blachford from the Board and the appointment of Barry McCarthy as CEO and President, with John Foley transitioning to Executive Chair. On February 8, 2022, Peloton revealed a comprehensive restructuring plan aimed at achieving at least $800 million in annual run-rate cost savings, which includes a workforce reduction of approximately 2,800 positions and a reduction in planned capital expenditures by about $150 million.",
+      "headline": "Peloton's leadership overhaul and restructuring plan signal a critical turning point amid financial challenges.",
+      "detail": "On February 5, 2022, Peloton announced the resignation of longtime director Erik Blachford and the appointment of Barry McCarthy as CEO and President, with John Foley transitioning to Executive Chair. On February 8, 2022, the company revealed a comprehensive restructuring plan aimed at achieving at least $800 million in annual cost savings, which includes a workforce reduction of approximately 2,800 positions and a significant cut in planned capital expenditures.",
       "source_titles": [
         "peloton_2022-02-05_8k.md",
         "peloton_2022-02-05_board-pr.md",
@@ -206,27 +1300,1539 @@
         {
           "date": "2022-02-05",
           "narrative_role": "reversal_marker",
-          "snippets": [
-            "# Press Release: Peloton Announces Appointment of New Directors to the Board\n**New York \u2014 February 8, 2022**\n\nAngel L. Mendez and Jonathan Mildenhall to Join the Peloton Board; Longtime Director Erik\nBlachford to Step Down. **Barry McCarthy, Newly Named CEO and President of Peloton, to Also\nJoin Board; John Foley to Become Executive Chair.**\n\nPeloton Interactive, Inc. (NASDAQ: PTON) today announced the appointment of two new directors\nto its Board: Angel L. Mendez, a supply chain leader, and Jonathan Mildenhall, a creative\nleader in marketing and advertising. Erik Blachford, a director since 2015, will step down.\n\nIn addition, **Barry McCarthy, Peloton's newly named CEO and President, will join the Board as\na director, and John Foley has been named Executive Chair.**\n\nWith these changes, Peloton's Board will comprise nine directors, four of whom will have been\nappointed in the past three years.\n\n**John Foley, Co-Founder of Peloton and Executive Chair, said:** \"We are pleased to welcome\nBarry, Angel and Jonathan as new directors to the Peloton Board at this important time. We are\nconfident they will provide valuable perspectives as we continue to execute our strategy,\ndrive profitability, and enhance value for all Peloton shareholders.\"\n\n**Pamela Thomas-Graham, Chair of the Nominating, Governance and Corporate Responsibility\nCommittee, said:** \"These appointments are the culmination of a robust search process that\nbegan several months ago.\"\n\nFoley concluded: \"On behalf of the entire Board, I thank Erik for his valuable perspective and\nincredible commitment to Peloton over the past nearly seven years.\"\n\n## About Angel L. Mendez\nExecutive Chairman of the Board of LevaData Inc. Previously EVP and COO of HERE Technologies\n(2016-2020), and senior executive at Cisco Systems (2005-2015).\n\n## About Jonathan Mildenhall\nCo-founder and Chair of TwentyFirstCenturyBrand. Previously CMO of Airbnb (2014-2018), during\nwhich Airbnb's valuation increased from $1 billion to more than $31 billion. Previously led\nCoca-Cola's marketing initiatives.\n\nAdditional information regarding McCarthy's appointment as Peloton's new CEO and President can\nbe found in a separate press release issued today.",
-            "# Peloton Interactive, Inc. \u2014 Form 8-K\n**Date of Report:** February 5, 2022\n\n## Item 5.02 \u2014 Departure of Directors or Certain Officers; Election of Directors; Appointment of Certain Officers\n\n### Director Changes\nOn February 5, 2022, Erik Blachford notified the Board of his resignation as a Class I\ndirector and from the Compensation and NCGR Committees, effective February 8, 2022. Mr.\nBlachford's resignation is not the result of any disagreement with the Company.\n\nOn February 7, 2022, the Board increased its size from seven to nine directors and appointed\nAngel L. Mendez and Jonathan Mildenhall to the Board.\n\n### CEO Transition; Executive Chair\nOn February 7, 2022, the Board appointed **Barry McCarthy as Chief Executive Officer and\nPresident**, succeeding **John Foley**, the Company's Co-Founder and former CEO, effective\nFebruary 9, 2022. Mr. Foley was appointed **Executive Chair** of the Board. Mr. McCarthy was\nalso appointed to the Board.\n\nMr. McCarthy, 68, most recently served as Spotify's Chief Financial Officer from 2015 to\nJanuary 2020. From 1999 to 2010, he served as CFO and Principal Accounting Officer of Netflix,\nInc. He has served on the boards of Spotify and Instacart, and previously served on the boards\nof Chegg, Eventbrite, MSD Acquisition Corp, Pandora, and Rent the Runway.\n\nUnder his Offer Letter, Mr. McCarthy is eligible for: (i) an annual base salary of $1,000,000,\n(ii) a stock option award to purchase 8,000,000 shares of Class A Common Stock, (iii) up to\n$150,000 relocation reimbursement, and (iv) up to $30,000 legal cost reimbursement.\n\n### President Transition\nIn connection with Mr. McCarthy's appointment as President, **William Lynch** will transition\nfrom this position to a non-executive director on the Board.\n\n## Item 9.01 \u2014 Financial Statements and Exhibits\n\n(d) Exhibits:\n- 10.1 \u2014 Offer Letter between Barry McCarthy and the Registrant, dated February 7, 2022\n- 99.1 \u2014 Press Release Announcing Board Appointments, dated February 8, 2022\n- 99.2 \u2014 Press Release Announcing Leadership Transitions, dated February 8, 2022\n\n**Signature:** Hisao Kushi, Chief Legal and Culture Officer",
-            "**Pamela Thomas-Graham, Chair of the Nominating, Governance and Corporate Responsibility\nCommittee, said:** \"These appointments are the culmination of a robust search process that\nbegan several months ago.\"\n\nFoley concluded: \"On behalf of the entire Board, I thank Erik for his valuable perspective and\nincredible commitment to Peloton over the past nearly seven years.\"\n\n## About Angel L. Mendez\nExecutive Chairman of the Board of LevaData Inc. Previously EVP and COO of HERE Technologies\n(2016-2020), and senior executive at Cisco Systems (2005-2015).\n\n## About Jonathan Mildenhall\nCo-founder and Chair of TwentyFirstCenturyBrand. Previously CMO of Airbnb (2014-2018), during\nwhich Airbnb's valuation increased from $1 billion to more than $31 billion. Previously led\nCoca-Cola's marketing initiatives.\n\nAdditional information regarding McCarthy's appointment as Peloton's new CEO and President can\nbe found in a separate press release issued today."
-          ]
+          "documents": [
+            "peloton_2022-02-05_8k.md",
+            "peloton_2022-02-05_board-pr.md"
+          ],
+          "relation_notes": []
         },
         {
           "date": "2022-02-08",
           "narrative_role": "reversal_content",
-          "snippets": [
-            "# Press Release: Peloton Announces Comprehensive Program to Reduce Costs and Drive Growth, Profitability, and Free Cash Flow\n**New York \u2014 February 8, 2022**\n\nRealigning Business Operations, Reducing Manufacturing Footprint, and Enhancing Capital and\nOperational Efficiency. **Expects to Deliver at Least $800 Million in Annual Run-Rate Cost\nSavings; Reduces Planned 2022 CapEx Spending by Approximately $150 Million.**\n\nPeloton Interactive, Inc. (NASDAQ: PTON) today announced a series of steps it is taking to\nposition the business for long-term growth while establishing a clear path to consistent\nprofitability and sustainable free cash flow. Once these actions are fully implemented, the\ncompany expects to achieve **at least $800 million of annual run-rate cost savings** through\noperating expense efficiencies and significant margin improvement in its Connected Fitness\ncategory. The company will also reduce its planned capital expenditures in 2022 by\napproximately $150 million. The restructuring program is expected to result in approximately\n$130 million in cash charges related to severance and other exit/restructuring activities, and\n$80 million in non-cash charges.\n\n**John Foley, Co-Founder of Peloton and newly appointed Executive Chair, said:** \"Peloton is at\nan important juncture, and we are taking decisive steps. Our focus is on building on the\nalready amazing Peloton Member experience, while optimizing our organization to deliver\nprofitable growth. This restructuring program is the result of diligent planning to address\nkey areas of the business and realign our operations.\"\n\nAs a result of the initiatives announced today, the company expects to:\n\n- **Improve the economics of its hardware business.** The company is winding down the\n  development of its Peloton Output Park (POP) manufacturing plan, resulting in $60 million in\n  restructuring capital expenditures. Peloton will also optimize its logistics network by\n  reducing its owned and operated warehousing and delivery footprint.\n- **Right-size the organization by enacting a workforce reduction.** The workforce reduction\n  will occur across nearly all business operations, resulting in the reduction of\n  **approximately 2,800 global positions**. Corporate positions will be reduced by\n  approximately 20%.\n\nPeloton's roster of instructors and breadth and depth of its content will not be impacted by\nthese initiatives.\n\nFoley added: \"These decisions, particularly those related to our impacted Peloton team\nmembers, were not taken lightly. We greatly value the contributions of our talented\ncolleagues and are committed to supporting impacted team members in their transitions.\"\n\nThe company also rescheduled its second quarter 2022 earnings conference call, previously",
-            "# Peloton Interactive, Inc. \u2014 Form 8-K\n**Date of Report:** February 8, 2022\n\n## Item 2.02 \u2014 Results of Operations and Financial Condition\n\nOn February 8, 2022, Peloton Interactive, Inc. will hold a conference call regarding its\nfinancial results for the quarter ended December 31, 2021. Peloton has issued a letter to its\nstockholders announcing its financial results for the quarterly period ended December 31, 2021\n(the \"Shareholder Letter\"), furnished as Exhibit 99.1.\n\n## Item 7.01 \u2014 Regulation FD Disclosure\n\nOn February 8, 2022, the Company issued a press release announcing **a restructuring plan**.\nThe full text of the press release is furnished as Exhibit 99.2.\n\n## Item 9.01 \u2014 Financial Statements and Exhibits\n\n(d) Exhibits:\n- 99.1 \u2014 Letter to Shareholders, dated February 8, 2022\n- 99.2 \u2014 Press Release Announcing Restructuring Plan, dated February 8, 2022\n\n**Signature:** Jill Woodworth, Chief Financial Officer",
-            "streamline our teams and reporting structures, increase P&L accountability, create a more\nefficient and flexible supply chain, and enforce greater investment discipline.\n\nAs part of this program, **we are announcing a meaningful reduction of our workforce**, which\nwill impact nearly all of our operations and across almost all levels. It is not easy to say\ngoodbye to valued colleagues and friends, each of whom have made important contributions to\nhelping build Peloton into the company it is today.\n\nWhen fully implemented, we expect our restructuring initiatives to yield **at least $800\nmillion in annual run-rate cost savings** across operating expense efficiencies and material\nimprovements in our Connected Fitness gross margin. We have also decided to **wind down the\ndevelopment of Peloton Output Park**. While we still see strategic merit in diversifying our\nmanufacturing footprint over the long term, we believe Tonic and our third party manufacturing\npartners can support our growth for the next few years.\n\nThis has been a humbling time for Peloton, but we remain confident in the fundamentals of our\nbusiness, the strength of our platform, and the significant growth potential for Connected\nFitness and our leadership position within it. Our operational restructuring will not\nnegatively impact our instructor roster, number of classes produced, or range of class\nmodalities.\n\nWhile not directly related to our restructuring, in addition to Barry joining the Board, we\nalso announced the appointment of two new Board members, Angel Mendez and Jonathan Mildenhall,\nand thanked Erik Blachford, who is stepping down from his role on the Board.\n\nIndeed, when I co-founded Peloton we were a five-person fitness group who aimed to bring the\ncommunity and excitement of boutique fitness into the home. Today, we are over 6.6 million\nMembers strong. As we look to execute on the next phase of our company's transformation, we\nare clear-eyed that it will not occur overnight and that our progress may not be linear.\n\nJohn\n\n## Introducing Peloton Guide\nWe are excited to officially announce the launch of Peloton Guide, our first connected\nfitness strength product, on April 5, priced at $495.\n\n## Q2 2022 Summary\nWe ended the quarter with 2.77 million Connected Fitness Subscriptions, representing 66%\nyear-over-year growth. Total revenue grew 6% to $1,133.9 million, driven by higher",
-            "together, we have decided that now is the right time to introduce the next phase of\nleadership at this great company. It is with great pride in what the Peloton team has built,\nand a recognition for where we need to go, that **I will be transitioning from my CEO role and\nwill assume the role of Executive Chair of the Board of Directors.**\n\nWhile I will always be Peloton's most loyal Member and biggest supporter, I couldn't think of\na better CEO for Peloton's next stage of growth than **Barry McCarthy**. Barry has served in\nsenior leadership roles at Spotify and Netflix. In addition, William Lynch is transitioning\nfrom his role as President of Peloton to a non-executive director on the Board.\n\nAs we work to unlock the tremendous value inherent in Peloton, there are a number of other\nimportant changes we're announcing today. These changes follow extensive work completed over\nthe last several months to better align our investments and organizational structure **with\nour updated view of the post-COVID demand landscape**. Our objective is clear: we are taking\nsteps to best position Peloton for sustainable growth, while also establishing a clear path to\nconsistent profitability. The comprehensive restructuring actions we are announcing today will\nstreamline our teams and reporting structures, increase P&L accountability, create a more\nefficient and flexible supply chain, and enforce greater investment discipline.\n\nAs part of this program, **we are announcing a meaningful reduction of our workforce**, which\nwill impact nearly all of our operations and across almost all levels. It is not easy to say\ngoodbye to valued colleagues and friends, each of whom have made important contributions to\nhelping build Peloton into the company it is today.\n\nWhen fully implemented, we expect our restructuring initiatives to yield **at least $800\nmillion in annual run-rate cost savings** across operating expense efficiencies and material\nimprovements in our Connected Fitness gross margin. We have also decided to **wind down the\ndevelopment of Peloton Output Park**. While we still see strategic merit in diversifying our\nmanufacturing footprint over the long term, we believe Tonic and our third party manufacturing\npartners can support our growth for the next few years.\n\nThis has been a humbling time for Peloton, but we remain confident in the fundamentals of our\nbusiness, the strength of our platform, and the significant growth potential for Connected",
-            "Fitness and our leadership position within it. Our operational restructuring will not\nnegatively impact our instructor roster, number of classes produced, or range of class\nmodalities.\n\nWhile not directly related to our restructuring, in addition to Barry joining the Board, we\nalso announced the appointment of two new Board members, Angel Mendez and Jonathan Mildenhall,\nand thanked Erik Blachford, who is stepping down from his role on the Board.\n\nIndeed, when I co-founded Peloton we were a five-person fitness group who aimed to bring the\ncommunity and excitement of boutique fitness into the home. Today, we are over 6.6 million\nMembers strong. As we look to execute on the next phase of our company's transformation, we\nare clear-eyed that it will not occur overnight and that our progress may not be linear.\n\nJohn\n\n## Introducing Peloton Guide\nWe are excited to officially announce the launch of Peloton Guide, our first connected\nfitness strength product, on April 5, priced at $495.\n\n## Q2 2022 Summary\nWe ended the quarter with 2.77 million Connected Fitness Subscriptions, representing 66%\nyear-over-year growth. Total revenue grew 6% to $1,133.9 million, driven by higher\nSubscription revenue and the contribution from Precor, partly offset by a decline in Connected\nFitness Product sales against a difficult year-ago comparison. Net loss was $(439.4) million\nand Adjusted EBITDA totaled $(266.5) million, yielding a (23.5)% Adjusted EBITDA margin,\ncompared to a year-ago margin of 11.0%.\n\n## Q3 and Full Fiscal Year 2022 Business Outlook\n\n**FY2022 Q3 Guidance:**\n- ~2.93 million ending Connected Fitness Subscriptions\n- $950 million to $1 billion total revenue\n- Gross profit margin of approximately 23%\n- $(140) million to $(125) million Adjusted EBITDA\n\n**Updated Full Year FY2022 Guidance:**\n- ~3.0 million ending Connected Fitness Subscriptions\n- **$3.7 billion to $3.8 billion total revenue**\n- Gross profit margin of approximately 28%\n- $(675) million to $(625) million Adjusted EBITDA\n\nWe expect approximately $950 million to $1 billion of revenue in Q3 and $3.7 billion to $3.8\nbillion for the full year \u2014 a reduction from our previous full-year forecast of $5.4 billion\nrevenue guidance and 34% gross margin given in August 2021, reflecting deleverage from our\nreduced demand plan.",
-            "an important juncture, and we are taking decisive steps. Our focus is on building on the\nalready amazing Peloton Member experience, while optimizing our organization to deliver\nprofitable growth. This restructuring program is the result of diligent planning to address\nkey areas of the business and realign our operations.\"\n\nAs a result of the initiatives announced today, the company expects to:\n\n- **Improve the economics of its hardware business.** The company is winding down the\n  development of its Peloton Output Park (POP) manufacturing plan, resulting in $60 million in\n  restructuring capital expenditures. Peloton will also optimize its logistics network by\n  reducing its owned and operated warehousing and delivery footprint.\n- **Right-size the organization by enacting a workforce reduction.** The workforce reduction\n  will occur across nearly all business operations, resulting in the reduction of\n  **approximately 2,800 global positions**. Corporate positions will be reduced by\n  approximately 20%.\n\nPeloton's roster of instructors and breadth and depth of its content will not be impacted by\nthese initiatives.\n\nFoley added: \"These decisions, particularly those related to our impacted Peloton team\nmembers, were not taken lightly. We greatly value the contributions of our talented\ncolleagues and are committed to supporting impacted team members in their transitions.\"\n\nThe company also rescheduled its second quarter 2022 earnings conference call, previously\nscheduled for today at 5:00 p.m. Eastern Time, to today at 8:30 a.m. Eastern Time.",
-            "# Peloton Q2 2022 Shareholder Letter\n**Second Quarter Fiscal Year 2022 \u2014 dated February 8, 2022**\n\n## Q2 FY2022 Highlights (all comparisons year-over-year)\n- Q2 ending Connected Fitness Subscriptions grew 66% to 2.77 million; paid Digital\n  Subscriptions grew 38% to 862 thousand; total Members grew to over 6.6 million\n- Q2 total revenue grew 6% to $1,133.9 million\n- Q2 Net Loss was $(439.4) million, $(1.39) per diluted share\n- Q2 Adjusted EBITDA was $(266.5) million, margin (23.5)%\n- **FY2022 Q3 guidance:** ~2.93 million ending Connected Fitness Subscriptions, $950 million to\n  $1 billion total revenue, gross margin ~23%, Adjusted EBITDA $(140) to $(125) million\n- **Updated Full FY2022 guidance:** ~3.0 million ending Connected Fitness Subscriptions,\n  **$3.7 billion to $3.8 billion total revenue** (down from the prior $5.4 billion guidance\n  given in the August 2021 shareholder letter), gross margin ~28%, Adjusted EBITDA $(675) to\n  $(625) million\n\n## Letter to Shareholders\n\nFellow Shareholders \u2013\n\nFor several months, I have been working closely with our Board of Directors, discussing how\nbest to ensure Peloton is built to last well into the future. Among other actions being taken,\ntogether, we have decided that now is the right time to introduce the next phase of\nleadership at this great company. It is with great pride in what the Peloton team has built,\nand a recognition for where we need to go, that **I will be transitioning from my CEO role and\nwill assume the role of Executive Chair of the Board of Directors.**\n\nWhile I will always be Peloton's most loyal Member and biggest supporter, I couldn't think of\na better CEO for Peloton's next stage of growth than **Barry McCarthy**. Barry has served in\nsenior leadership roles at Spotify and Netflix. In addition, William Lynch is transitioning\nfrom his role as President of Peloton to a non-executive director on the Board.\n\nAs we work to unlock the tremendous value inherent in Peloton, there are a number of other\nimportant changes we're announcing today. These changes follow extensive work completed over\nthe last several months to better align our investments and organizational structure **with\nour updated view of the post-COVID demand landscape**. Our objective is clear: we are taking\nsteps to best position Peloton for sustainable growth, while also establishing a clear path to\nconsistent profitability. The comprehensive restructuring actions we are announcing today will",
-            "Fitness Product sales against a difficult year-ago comparison. Net loss was $(439.4) million\nand Adjusted EBITDA totaled $(266.5) million, yielding a (23.5)% Adjusted EBITDA margin,\ncompared to a year-ago margin of 11.0%.\n\n## Q3 and Full Fiscal Year 2022 Business Outlook\n\n**FY2022 Q3 Guidance:**\n- ~2.93 million ending Connected Fitness Subscriptions\n- $950 million to $1 billion total revenue\n- Gross profit margin of approximately 23%\n- $(140) million to $(125) million Adjusted EBITDA\n\n**Updated Full Year FY2022 Guidance:**\n- ~3.0 million ending Connected Fitness Subscriptions\n- **$3.7 billion to $3.8 billion total revenue**\n- Gross profit margin of approximately 28%\n- $(675) million to $(625) million Adjusted EBITDA\n\nWe expect approximately $950 million to $1 billion of revenue in Q3 and $3.7 billion to $3.8\nbillion for the full year \u2014 a reduction from our previous full-year forecast of $5.4 billion\nrevenue guidance and 34% gross margin given in August 2021, reflecting deleverage from our\nreduced demand plan.\n\n## Selected Financial Highlights (Three Months Ended December 31, 2021)\n- Total revenue: $1,133.9 million (+6% Y/Y)\n- Connected Fitness segment revenue: $796.4 million (-8% Y/Y)\n- Subscription revenue: $337.5 million (+73% Y/Y)\n- Gross profit: $280.2 million, 24.7% of revenue (-34% Y/Y)\n- Net loss: $(439.4) million vs. net income of $63.6 million in the same period last year\n- Cash and cash equivalents: $1.6 billion"
-          ]
+          "documents": [
+            "peloton_2022-02-08_8k.md",
+            "peloton_2022-02-08_restructuring-pr.md",
+            "peloton_2022-02-08_shareholder-letter.md"
+          ],
+          "relation_notes": []
         }
-      ]
+      ],
+      "knowledge_graph": {
+        "documents": [
+          "peloton_2022-02-05_8k.md",
+          "peloton_2022-02-05_board-pr.md",
+          "peloton_2022-02-08_8k.md",
+          "peloton_2022-02-08_restructuring-pr.md",
+          "peloton_2022-02-08_shareholder-letter.md"
+        ],
+        "skipped_documents": [],
+        "nodes": [
+          {
+            "id": "peloton interactive, inc.",
+            "name": "peloton interactive, inc.",
+            "type": "ORGANIZATION",
+            "identifier": "NASDAQ: PTON",
+            "documents": [
+              "peloton_2022-02-05_8k.md",
+              "peloton_2022-02-05_board-pr.md",
+              "peloton_2022-02-08_8k.md",
+              "peloton_2022-02-08_restructuring-pr.md",
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 5
+          },
+          {
+            "id": "executive chair",
+            "name": "executive chair of the board of directors",
+            "type": "ROLE",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md",
+              "peloton_2022-02-05_board-pr.md",
+              "peloton_2022-02-08_restructuring-pr.md",
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 4
+          },
+          {
+            "id": "john foley",
+            "name": "john foley",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md",
+              "peloton_2022-02-05_board-pr.md",
+              "peloton_2022-02-08_restructuring-pr.md",
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 4
+          },
+          {
+            "id": "angel l. mendez",
+            "name": "angel l. mendez",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md",
+              "peloton_2022-02-05_board-pr.md",
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 3
+          },
+          {
+            "id": "barry mccarthy",
+            "name": "barry mccarthy",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md",
+              "peloton_2022-02-05_board-pr.md",
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 3
+          },
+          {
+            "id": "erik blachford",
+            "name": "erik blachford",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md",
+              "peloton_2022-02-05_board-pr.md",
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 3
+          },
+          {
+            "id": "jonathan mildenhall",
+            "name": "jonathan mildenhall",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md",
+              "peloton_2022-02-05_board-pr.md",
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 3
+          },
+          {
+            "id": "netflix, inc.",
+            "name": "netflix, inc.",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md",
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "non-executive director",
+            "name": "non-executive director",
+            "type": "ROLE",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md",
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "peloton output park",
+            "name": "peloton output park",
+            "type": "PROJECT",
+            "identifier": "pop",
+            "documents": [
+              "peloton_2022-02-08_restructuring-pr.md",
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "restructuring initiatives",
+            "name": "restructuring initiatives",
+            "type": "PROJECT",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_restructuring-pr.md",
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "spotify",
+            "name": "spotify",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md",
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "william lynch",
+            "name": "william lynch",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md",
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "workforce reduction",
+            "name": "workforce reduction",
+            "type": "EVENT",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_restructuring-pr.md",
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "150 million capex reduction",
+            "name": "150 million capex reduction",
+            "type": "METRIC",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_restructuring-pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "2,800 global positions",
+            "name": "2,800 global positions",
+            "type": "METRIC",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_restructuring-pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "210 million restructuring charges",
+            "name": "210 million restructuring charges",
+            "type": "METRIC",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_restructuring-pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "800 million annual run-rate cost savings",
+            "name": "800 million annual run-rate cost savings",
+            "type": "METRIC",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_restructuring-pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "airbnb",
+            "name": "airbnb",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_board-pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "ceo",
+            "name": "ceo",
+            "type": "ROLE",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "ceo and president",
+            "name": "ceo and president",
+            "type": "ROLE",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "chair of the nominating, governance and corporate responsibility committee",
+            "name": "chair of the nominating, governance and corporate responsibility committee",
+            "type": "ROLE",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_board-pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "chegg",
+            "name": "chegg",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "chief financial officer",
+            "name": "chief financial officer",
+            "type": "ROLE",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "chief legal and culture officer",
+            "name": "chief legal and culture officer",
+            "type": "ROLE",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "cisco systems",
+            "name": "cisco systems",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_board-pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "coca-cola",
+            "name": "coca-cola",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_board-pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "compensation package",
+            "name": "compensation package",
+            "type": "CONCEPT",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "eventbrite",
+            "name": "eventbrite",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "exhibit 99.1",
+            "name": "exhibit 99.1",
+            "type": "DOCUMENT",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "exhibit 99.2",
+            "name": "exhibit 99.2",
+            "type": "DOCUMENT",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "form 8-k",
+            "name": "form 8-k",
+            "type": "DOCUMENT",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "full year fy2022 guidance",
+            "name": "full year fy2022 guidance",
+            "type": "DOCUMENT",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "here technologies",
+            "name": "here technologies",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_board-pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "hisao kushi",
+            "name": "hisao kushi",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "instacart",
+            "name": "instacart",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "jill woodworth",
+            "name": "jill woodworth",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "logistics network",
+            "name": "logistics network",
+            "type": "CONCEPT",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_restructuring-pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "msd acquisition corp",
+            "name": "msd acquisition corp",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "pamela thomas-graham",
+            "name": "pamela thomas-graham",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_board-pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "pandora",
+            "name": "pandora",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "peloton board of directors",
+            "name": "peloton board of directors",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "peloton guide",
+            "name": "peloton guide",
+            "type": "PRODUCT",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "precor",
+            "name": "precor",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "president of peloton",
+            "name": "president of peloton",
+            "type": "ROLE",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "q2 fy2022",
+            "name": "q2 fy2022",
+            "type": "EVENT",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "q2 fy2022 earnings conference call",
+            "name": "q2 fy2022 earnings conference call",
+            "type": "EVENT",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_restructuring-pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "q3 fy2022",
+            "name": "q3 fy2022",
+            "type": "EVENT",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "rent the runway",
+            "name": "rent the runway",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-05_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "restructuring plan",
+            "name": "restructuring plan",
+            "type": "PROJECT",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "tonic",
+            "name": "tonic",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-02-08_shareholder-letter.md"
+            ],
+            "doc_count": 1
+          }
+        ],
+        "edges": [
+          {
+            "id": "angel l. mendez|is|executive chair",
+            "source_id": "angel l. mendez",
+            "target_id": "executive chair",
+            "predicate": "is",
+            "evidence": [
+              {
+                "context": "Angel L. Mendez is the Executive Chairman of the Board of LevaData Inc.",
+                "document": "peloton_2022-02-05_board-pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_board-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "angel l. mendez|joined the board of|peloton interactive, inc.",
+            "source_id": "angel l. mendez",
+            "target_id": "peloton interactive, inc.",
+            "predicate": "joined the board of",
+            "evidence": [
+              {
+                "context": "Angel L. Mendez, a supply chain leader, was appointed as a new director to the Peloton Board on February 8, 2022.",
+                "document": "peloton_2022-02-05_board-pr.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_board-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "angel l. mendez|worked at|cisco systems",
+            "source_id": "angel l. mendez",
+            "target_id": "cisco systems",
+            "predicate": "worked at",
+            "evidence": [
+              {
+                "context": "Angel L. Mendez was a senior executive at Cisco Systems from 2005 to 2015.",
+                "document": "peloton_2022-02-05_board-pr.md",
+                "temporal_details": "2005-2015",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_board-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "angel l. mendez|worked at|here technologies",
+            "source_id": "angel l. mendez",
+            "target_id": "here technologies",
+            "predicate": "worked at",
+            "evidence": [
+              {
+                "context": "Angel L. Mendez served as EVP and COO of HERE Technologies from 2016 to 2020.",
+                "document": "peloton_2022-02-05_board-pr.md",
+                "temporal_details": "2016-2020",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_board-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "barry mccarthy|appointed as|ceo",
+            "source_id": "barry mccarthy",
+            "target_id": "ceo",
+            "predicate": "appointed as",
+            "evidence": [
+              {
+                "context": "Barry McCarthy was appointed as the CEO of Peloton to lead the company's next stage of growth.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "barry mccarthy|appointed as|ceo and president",
+            "source_id": "barry mccarthy",
+            "target_id": "ceo and president",
+            "predicate": "appointed as",
+            "evidence": [
+              {
+                "context": "On February 7, 2022, the Board appointed Barry McCarthy as Chief Executive Officer and President of Peloton Interactive, Inc., effective February 9, 2022, succeeding John Foley.",
+                "document": "peloton_2022-02-05_8k.md",
+                "temporal_details": "2022-02-09",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "barry mccarthy|eligible for|compensation package",
+            "source_id": "barry mccarthy",
+            "target_id": "compensation package",
+            "predicate": "eligible for",
+            "evidence": [
+              {
+                "context": "Under his Offer Letter dated February 7, 2022, Barry McCarthy is eligible for an annual base salary of $1,000,000, a stock option award to purchase 8,000,000 shares of Class A Common Stock, up to $150,000 relocation reimbursement, and up to $30,000 legal cost reimbursement.",
+                "document": "peloton_2022-02-05_8k.md",
+                "temporal_details": "2022-02-07",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "barry mccarthy|joined the board of|peloton interactive, inc.",
+            "source_id": "barry mccarthy",
+            "target_id": "peloton interactive, inc.",
+            "predicate": "joined the board of",
+            "evidence": [
+              {
+                "context": "Barry McCarthy, the newly named CEO and President of Peloton, joined the Peloton Board as a director on February 8, 2022.",
+                "document": "peloton_2022-02-05_board-pr.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_board-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "barry mccarthy|served as|netflix, inc.",
+            "source_id": "barry mccarthy",
+            "target_id": "netflix, inc.",
+            "predicate": "served as",
+            "evidence": [
+              {
+                "context": "From 1999 to 2010, Barry McCarthy served as CFO and Principal Accounting Officer of Netflix, Inc.",
+                "document": "peloton_2022-02-05_8k.md",
+                "temporal_details": "1999 to 2010",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "barry mccarthy|served as|spotify",
+            "source_id": "barry mccarthy",
+            "target_id": "spotify",
+            "predicate": "served as",
+            "evidence": [
+              {
+                "context": "Barry McCarthy served as Spotify's Chief Financial Officer from 2015 to January 2020.",
+                "document": "peloton_2022-02-05_8k.md",
+                "temporal_details": "2015 to 2020-01",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "barry mccarthy|served in senior leadership roles at|netflix, inc.",
+            "source_id": "barry mccarthy",
+            "target_id": "netflix, inc.",
+            "predicate": "served in senior leadership roles at",
+            "evidence": [
+              {
+                "context": "Barry McCarthy previously served in senior leadership roles at Netflix.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "barry mccarthy|served in senior leadership roles at|spotify",
+            "source_id": "barry mccarthy",
+            "target_id": "spotify",
+            "predicate": "served in senior leadership roles at",
+            "evidence": [
+              {
+                "context": "Barry McCarthy previously served in senior leadership roles at Spotify and Netflix.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "barry mccarthy|served on board of|chegg",
+            "source_id": "barry mccarthy",
+            "target_id": "chegg",
+            "predicate": "served on board of",
+            "evidence": [
+              {
+                "context": "Barry McCarthy previously served on the boards of Chegg, Eventbrite, MSD Acquisition Corp, Pandora, and Rent the Runway.",
+                "document": "peloton_2022-02-05_8k.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "barry mccarthy|served on board of|eventbrite",
+            "source_id": "barry mccarthy",
+            "target_id": "eventbrite",
+            "predicate": "served on board of",
+            "evidence": [
+              {
+                "context": "Barry McCarthy previously served on the boards of Chegg, Eventbrite, MSD Acquisition Corp, Pandora, and Rent the Runway.",
+                "document": "peloton_2022-02-05_8k.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "barry mccarthy|served on board of|instacart",
+            "source_id": "barry mccarthy",
+            "target_id": "instacart",
+            "predicate": "served on board of",
+            "evidence": [
+              {
+                "context": "Barry McCarthy has served on the boards of Spotify and Instacart.",
+                "document": "peloton_2022-02-05_8k.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "barry mccarthy|served on board of|msd acquisition corp",
+            "source_id": "barry mccarthy",
+            "target_id": "msd acquisition corp",
+            "predicate": "served on board of",
+            "evidence": [
+              {
+                "context": "Barry McCarthy previously served on the boards of Chegg, Eventbrite, MSD Acquisition Corp, Pandora, and Rent the Runway.",
+                "document": "peloton_2022-02-05_8k.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "barry mccarthy|served on board of|pandora",
+            "source_id": "barry mccarthy",
+            "target_id": "pandora",
+            "predicate": "served on board of",
+            "evidence": [
+              {
+                "context": "Barry McCarthy previously served on the boards of Chegg, Eventbrite, MSD Acquisition Corp, Pandora, and Rent the Runway.",
+                "document": "peloton_2022-02-05_8k.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "barry mccarthy|served on board of|rent the runway",
+            "source_id": "barry mccarthy",
+            "target_id": "rent the runway",
+            "predicate": "served on board of",
+            "evidence": [
+              {
+                "context": "Barry McCarthy previously served on the boards of Chegg, Eventbrite, MSD Acquisition Corp, Pandora, and Rent the Runway.",
+                "document": "peloton_2022-02-05_8k.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "barry mccarthy|served on board of|spotify",
+            "source_id": "barry mccarthy",
+            "target_id": "spotify",
+            "predicate": "served on board of",
+            "evidence": [
+              {
+                "context": "Barry McCarthy has served on the boards of Spotify and Instacart.",
+                "document": "peloton_2022-02-05_8k.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "erik blachford|resigned from|peloton interactive, inc.",
+            "source_id": "erik blachford",
+            "target_id": "peloton interactive, inc.",
+            "predicate": "resigned from",
+            "evidence": [
+              {
+                "context": "Erik Blachford notified the Board of his resignation as a Class I director and from the Compensation and NCGR Committees, effective February 8, 2022. His resignation was not the result of any disagreement with the Company.",
+                "document": "peloton_2022-02-05_8k.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "erik blachford|stepped down from|peloton interactive, inc.",
+            "source_id": "erik blachford",
+            "target_id": "peloton interactive, inc.",
+            "predicate": "stepped down from",
+            "evidence": [
+              {
+                "context": "Erik Blachford, who had been a director since 2015, stepped down from the Peloton Board on February 8, 2022.",
+                "document": "peloton_2022-02-05_board-pr.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_board-pr_chunk_0000"
+              },
+              {
+                "context": "Erik Blachford stepped down from his role on the Board of Peloton.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0002"
+              }
+            ]
+          },
+          {
+            "id": "hisao kushi|serves as|chief legal and culture officer",
+            "source_id": "hisao kushi",
+            "target_id": "chief legal and culture officer",
+            "predicate": "serves as",
+            "evidence": [
+              {
+                "context": "Hisao Kushi serves as the Chief Legal and Culture Officer for Peloton Interactive, Inc.",
+                "document": "peloton_2022-02-05_8k.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "jill woodworth|works as|chief financial officer",
+            "source_id": "jill woodworth",
+            "target_id": "chief financial officer",
+            "predicate": "works as",
+            "evidence": [
+              {
+                "context": "Jill Woodworth serves as the Chief Financial Officer of Peloton Interactive, Inc., as evidenced by her signature on the Form 8-K dated February 8, 2022.",
+                "document": "peloton_2022-02-08_8k.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "john foley|appointed as|executive chair",
+            "source_id": "john foley",
+            "target_id": "executive chair",
+            "predicate": "appointed as",
+            "evidence": [
+              {
+                "context": "John Foley, the Company's Co-Founder and former CEO, was appointed Executive Chair of the Board on February 7, 2022.",
+                "document": "peloton_2022-02-05_8k.md",
+                "temporal_details": "2022-02-07",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "john foley|assumed role of|executive chair",
+            "source_id": "john foley",
+            "target_id": "executive chair",
+            "predicate": "assumed role of",
+            "evidence": [
+              {
+                "context": "John Foley assumed the role of Executive Chair of the Board of Directors at Peloton.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "john foley|became|executive chair",
+            "source_id": "john foley",
+            "target_id": "executive chair",
+            "predicate": "became",
+            "evidence": [
+              {
+                "context": "John Foley, Co-Founder of Peloton, was named Executive Chair on February 8, 2022.",
+                "document": "peloton_2022-02-05_board-pr.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_board-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "john foley|co-founded|peloton interactive, inc.",
+            "source_id": "john foley",
+            "target_id": "peloton interactive, inc.",
+            "predicate": "co-founded",
+            "evidence": [
+              {
+                "context": "John Foley co-founded Peloton, starting as a five-person fitness group aiming to bring boutique fitness into the home.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0002"
+              }
+            ]
+          },
+          {
+            "id": "john foley|is|executive chair",
+            "source_id": "john foley",
+            "target_id": "executive chair",
+            "predicate": "is",
+            "evidence": [
+              {
+                "context": "John Foley is the Co-Founder of Peloton and was newly appointed as Executive Chair.",
+                "document": "peloton_2022-02-08_restructuring-pr.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_restructuring-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "john foley|transitioned from|ceo",
+            "source_id": "john foley",
+            "target_id": "ceo",
+            "predicate": "transitioned from",
+            "evidence": [
+              {
+                "context": "John Foley transitioned from his role as CEO of Peloton to assume the role of Executive Chair of the Board of Directors.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "jonathan mildenhall|is|executive chair",
+            "source_id": "jonathan mildenhall",
+            "target_id": "executive chair",
+            "predicate": "is",
+            "evidence": [
+              {
+                "context": "Jonathan Mildenhall is the Co-founder and Chair of TwentyFirstCenturyBrand.",
+                "document": "peloton_2022-02-05_board-pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_board-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "jonathan mildenhall|joined the board of|peloton interactive, inc.",
+            "source_id": "jonathan mildenhall",
+            "target_id": "peloton interactive, inc.",
+            "predicate": "joined the board of",
+            "evidence": [
+              {
+                "context": "Jonathan Mildenhall, a creative leader in marketing and advertising, was appointed as a new director to the Peloton Board on February 8, 2022.",
+                "document": "peloton_2022-02-05_board-pr.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_board-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "jonathan mildenhall|led marketing for|coca-cola",
+            "source_id": "jonathan mildenhall",
+            "target_id": "coca-cola",
+            "predicate": "led marketing for",
+            "evidence": [
+              {
+                "context": "Jonathan Mildenhall previously led the marketing initiatives for Coca-Cola.",
+                "document": "peloton_2022-02-05_board-pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_board-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "jonathan mildenhall|worked at|airbnb",
+            "source_id": "jonathan mildenhall",
+            "target_id": "airbnb",
+            "predicate": "worked at",
+            "evidence": [
+              {
+                "context": "Jonathan Mildenhall served as the CMO of Airbnb from 2014 to 2018, during which time Airbnb's valuation grew from $1 billion to over $31 billion.",
+                "document": "peloton_2022-02-05_board-pr.md",
+                "temporal_details": "2014-2018",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_board-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "pamela thomas-graham|is|chair of the nominating, governance and corporate responsibility committee",
+            "source_id": "pamela thomas-graham",
+            "target_id": "chair of the nominating, governance and corporate responsibility committee",
+            "predicate": "is",
+            "evidence": [
+              {
+                "context": "Pamela Thomas-Graham serves as the Chair of the Nominating, Governance and Corporate Responsibility Committee.",
+                "document": "peloton_2022-02-05_board-pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_board-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton board of directors|appointed|angel l. mendez",
+            "source_id": "peloton board of directors",
+            "target_id": "angel l. mendez",
+            "predicate": "appointed",
+            "evidence": [
+              {
+                "context": "On February 7, 2022, the Board increased its size from seven to nine directors and appointed Angel L. Mendez and Jonathan Mildenhall to the Board.",
+                "document": "peloton_2022-02-05_8k.md",
+                "temporal_details": "2022-02-07",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton board of directors|appointed|jonathan mildenhall",
+            "source_id": "peloton board of directors",
+            "target_id": "jonathan mildenhall",
+            "predicate": "appointed",
+            "evidence": [
+              {
+                "context": "On February 7, 2022, the Board increased its size from seven to nine directors and appointed Angel L. Mendez and Jonathan Mildenhall to the Board.",
+                "document": "peloton_2022-02-05_8k.md",
+                "temporal_details": "2022-02-07",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|announced|restructuring initiatives",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "restructuring initiatives",
+            "predicate": "announced",
+            "evidence": [
+              {
+                "context": "On February 8, 2022, Peloton Interactive, Inc. announced a comprehensive program to reduce costs and drive growth, profitability, and free cash flow.",
+                "document": "peloton_2022-02-08_restructuring-pr.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_restructuring-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|announced|restructuring plan",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "restructuring plan",
+            "predicate": "announced",
+            "evidence": [
+              {
+                "context": "On February 8, 2022, Peloton Interactive, Inc. issued a press release announcing a restructuring plan.",
+                "document": "peloton_2022-02-08_8k.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|announced|workforce reduction",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "workforce reduction",
+            "predicate": "announced",
+            "evidence": [
+              {
+                "context": "Peloton announced a meaningful reduction of its workforce impacting nearly all operations and almost all levels as part of a comprehensive restructuring program to align with the post-COVID demand landscape.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0001"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|appointed to board|angel l. mendez",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "angel l. mendez",
+            "predicate": "appointed to board",
+            "evidence": [
+              {
+                "context": "Peloton announced the appointment of Angel Mendez and Jonathan Mildenhall as new Board members.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0002"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|appointed to board|jonathan mildenhall",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "jonathan mildenhall",
+            "predicate": "appointed to board",
+            "evidence": [
+              {
+                "context": "Peloton announced the appointment of Jonathan Mildenhall as a new Board member.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0002"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|decided to wind down|peloton output park",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "peloton output park",
+            "predicate": "decided to wind down",
+            "evidence": [
+              {
+                "context": "Peloton decided to wind down the development of Peloton Output Park, believing that Tonic and third-party manufacturing partners can support growth for the next few years.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0001"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|enacting|workforce reduction",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "workforce reduction",
+            "predicate": "enacting",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. is right-sizing the organization by enacting a workforce reduction across nearly all business operations.",
+                "document": "peloton_2022-02-08_restructuring-pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_restructuring-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|expects cost savings from|restructuring initiatives",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "restructuring initiatives",
+            "predicate": "expects cost savings from",
+            "evidence": [
+              {
+                "context": "Peloton expects its restructuring initiatives to yield at least $800 million in annual run-rate cost savings through operating expense efficiencies and improvements in Connected Fitness gross margin.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0001"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|expects to achieve|800 million annual run-rate cost savings",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "800 million annual run-rate cost savings",
+            "predicate": "expects to achieve",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. expects to achieve at least $800 million of annual run-rate cost savings through operating expense efficiencies and significant margin improvement in its Connected Fitness category.",
+                "document": "peloton_2022-02-08_restructuring-pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_restructuring-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|filed|form 8-k",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "form 8-k",
+            "predicate": "filed",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. filed a Form 8-K on February 8, 2022, regarding its financial results for the quarter ended December 31, 2021, and the announcement of a restructuring plan.",
+                "document": "peloton_2022-02-08_8k.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|issued|exhibit 99.1",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "exhibit 99.1",
+            "predicate": "issued",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. issued a letter to its stockholders (Exhibit 99.1) on February 8, 2022, announcing financial results for the quarterly period ended December 31, 2021.",
+                "document": "peloton_2022-02-08_8k.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|issued|exhibit 99.2",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "exhibit 99.2",
+            "predicate": "issued",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. issued a press release (Exhibit 99.2) on February 8, 2022, announcing a restructuring plan.",
+                "document": "peloton_2022-02-08_8k.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|launched|peloton guide",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "peloton guide",
+            "predicate": "launched",
+            "evidence": [
+              {
+                "context": "Peloton officially announced the launch of Peloton Guide, its first connected fitness strength product, on April 5, priced at $495.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": "2022-04-05",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0002"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|optimizing|logistics network",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "logistics network",
+            "predicate": "optimizing",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. will optimize its logistics network by reducing its owned and operated warehousing and delivery footprint.",
+                "document": "peloton_2022-02-08_restructuring-pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_restructuring-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|provided guidance for|q3 fy2022",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "q3 fy2022",
+            "predicate": "provided guidance for",
+            "evidence": [
+              {
+                "context": "Peloton provided Q3 FY2022 guidance expecting approximately 2.93 million ending Connected Fitness Subscriptions, total revenue between $950 million and $1 billion, a gross margin of approximately 23%, and Adjusted EBITDA between negative $140 million and negative $125 million.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|received revenue contribution from|precor",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "precor",
+            "predicate": "received revenue contribution from",
+            "evidence": [
+              {
+                "context": "Peloton's total revenue growth in Q2 2022 was driven by higher Subscription revenue and the contribution from Precor, though offset by a decline in Connected Fitness Product sales.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0003"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|reduces planned spending|150 million capex reduction",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "150 million capex reduction",
+            "predicate": "reduces planned spending",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. will reduce its planned capital expenditures in 2022 by approximately $150 million.",
+                "document": "peloton_2022-02-08_restructuring-pr.md",
+                "temporal_details": "2022",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_restructuring-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|reported financials for|q2 fy2022",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "q2 fy2022",
+            "predicate": "reported financials for",
+            "evidence": [
+              {
+                "context": "For the three months ended December 31, 2021, Peloton reported total revenue of $1,133.9 million, Connected Fitness segment revenue of $796.4 million, Subscription revenue of $337.5 million, and gross profit of $280.2 million (24.7% of revenue). The company had a net loss of $439.4 million and cash and cash equivalents of $1.6 billion.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": "2021-12-31",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0004"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|reported q2 fy2022 metrics|q2 fy2022",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "q2 fy2022",
+            "predicate": "reported q2 fy2022 metrics",
+            "evidence": [
+              {
+                "context": "For the second quarter of fiscal year 2022, ending February 8, 2022, Peloton reported that Connected Fitness Subscriptions grew 66% to 2.77 million, paid Digital Subscriptions grew 38% to 862 thousand, and total Members grew to over 6.6 million. Total revenue grew 6% to $1,133.9 million, while the company saw a Net Loss of $439.4 million ($1.39 per diluted share) and Adjusted EBITDA of negative $266.5 million with a margin of negative 23.5%.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|rescheduled|q2 fy2022 earnings conference call",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "q2 fy2022 earnings conference call",
+            "predicate": "rescheduled",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. rescheduled its second quarter 2022 earnings conference call from 5:00 p.m. Eastern Time to 8:30 a.m. Eastern Time on the day of the announcement.",
+                "document": "peloton_2022-02-08_restructuring-pr.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_restructuring-pr_chunk_0001"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|updated guidance for|full year fy2022 guidance",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "full year fy2022 guidance",
+            "predicate": "updated guidance for",
+            "evidence": [
+              {
+                "context": "Peloton updated its full FY2022 guidance to expect approximately 3.0 million ending Connected Fitness Subscriptions, total revenue between $3.7 billion and $3.8 billion (down from the prior $5.4 billion guidance given in August 2021), a gross margin of approximately 28%, and Adjusted EBITDA between negative $675 million and negative $625 million.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|uses manufacturing partner|tonic",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "tonic",
+            "predicate": "uses manufacturing partner",
+            "evidence": [
+              {
+                "context": "Peloton utilizes Tonic as a manufacturing partner to support its growth.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0001"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|winding down|peloton output park",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "peloton output park",
+            "predicate": "winding down",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. is winding down the development of its Peloton Output Park (POP) manufacturing plan, resulting in $60 million in restructuring capital expenditures.",
+                "document": "peloton_2022-02-08_restructuring-pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_restructuring-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "restructuring initiatives|expected to result in|210 million restructuring charges",
+            "source_id": "restructuring initiatives",
+            "target_id": "210 million restructuring charges",
+            "predicate": "expected to result in",
+            "evidence": [
+              {
+                "context": "The restructuring program is expected to result in approximately $130 million in cash charges related to severance and other exit/restructuring activities, and $80 million in non-cash charges.",
+                "document": "peloton_2022-02-08_restructuring-pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_restructuring-pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "william lynch|assumed role of|non-executive director",
+            "source_id": "william lynch",
+            "target_id": "non-executive director",
+            "predicate": "assumed role of",
+            "evidence": [
+              {
+                "context": "William Lynch transitioned to the role of non-executive director on the Board of Peloton.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "william lynch|transitioned from|president of peloton",
+            "source_id": "william lynch",
+            "target_id": "president of peloton",
+            "predicate": "transitioned from",
+            "evidence": [
+              {
+                "context": "William Lynch transitioned from his role as President of Peloton to become a non-executive director on the Board.",
+                "document": "peloton_2022-02-08_shareholder-letter.md",
+                "temporal_details": "2022-02-08",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_shareholder-letter_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "william lynch|transitioned to|non-executive director",
+            "source_id": "william lynch",
+            "target_id": "non-executive director",
+            "predicate": "transitioned to",
+            "evidence": [
+              {
+                "context": "In connection with Barry McCarthy's appointment as President, William Lynch will transition from the position of President to a non-executive director on the Board.",
+                "document": "peloton_2022-02-05_8k.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-05_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "workforce reduction|results in|2,800 global positions",
+            "source_id": "workforce reduction",
+            "target_id": "2,800 global positions",
+            "predicate": "results in",
+            "evidence": [
+              {
+                "context": "The workforce reduction will occur across nearly all business operations, resulting in the reduction of approximately 2,800 global positions, with corporate positions reduced by approximately 20%.",
+                "document": "peloton_2022-02-08_restructuring-pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-02-08_restructuring-pr_chunk_0001"
+              }
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -265,7 +2871,7 @@
       ],
       "question": "Based only on the provided documents, what did Peloton Interactive disclose, announce, or report during this period?",
       "headline": "Peloton Interactive announces CFO transition as Liz Coddington replaces Jill Woodworth amid leadership changes.",
-      "detail": "On June 6, 2022, Peloton appointed Liz Coddington as Chief Financial Officer, effective June 13, 2022, succeeding Jill Woodworth, who is stepping down after serving since 2018. Coddington brings over 20 years of experience, including roles at Amazon Web Services, Adara, and Walmart.com. Woodworth will assist in a consulting capacity until September 13, 2022, to support the preparation of fiscal year 2022 financial results.",
+      "detail": "On June 6, 2022, Peloton appointed Liz Coddington as Chief Financial Officer, effective June 13, 2022, succeeding Jill Woodworth, who is stepping down after serving since 2018. Coddington brings over 20 years of experience, including her most recent role as Vice President of Finance for Amazon Web Services. Woodworth will provide consulting services through September 13, 2022, to assist in reporting the company's fiscal year 2022 financial results.",
       "source_titles": [
         "peloton_2022-06-06_8k.md",
         "peloton_2022-06-06_pr.md"
@@ -279,13 +2885,458 @@
         {
           "date": "2022-06-06",
           "narrative_role": "reversal_marker",
-          "snippets": [
-            "# Press Release: Peloton Appoints Liz Coddington as Chief Financial Officer\n**New York \u2014 June 6, 2022**\n\nPeloton Interactive, Inc. (NASDAQ: PTON) today announced it has appointed **Liz Coddington**\nas the company's Chief Financial Officer, effective June 13, 2022. Ms. Coddington brings more\nthan 20 years of experience in financial planning and analysis and operational finance. **She\nsucceeds Jill Woodworth, who has decided to step down as Peloton's Chief Financial Officer\nafter serving the company since 2018.**\n\nMs. Woodworth will serve as a consultant for Peloton on an interim basis, ensuring a smooth\ntransition and supporting the company in preparation to report its FY2022 financial results.\n\nMost recently, Ms. Coddington served as Vice President of Finance for Amazon Web Services.\nPrior to AWS, she held senior leadership roles including CFO of Adara and Walmart.com, as well\nas Vice President, Financial Planning and Analysis of Netflix.\n\n**Peloton CEO Barry McCarthy said:** \"Liz is a deeply talented finance executive and will be\nan invaluable addition to Peloton's leadership team. Having worked at some of the strongest and\nmost recognizable technology brands, she not only brings the expertise needed to run our\nfinance organization, but she has a critical understanding of what it takes to drive growth\nand operational excellence.\"\n\nMr. McCarthy continued: \"I would like to thank Jill for four years of dedicated service. She\nscaled the global finance function through an extraordinary period, led the company through\nits IPO, and has been an integral member of the leadership team. We wish Jill well in the next\nphase of her career.\"\n\n**About Peloton:** Peloton is the leading interactive fitness platform in the world with a\nloyal community of more than 7 million Members. Founded in 2012, headquartered in New York\nCity.",
-            "# Peloton Interactive, Inc. \u2014 Form 8-K\n**Date of Report:** June 6, 2022\n\n## Item 5.02 \u2014 Departure of Directors or Certain Officers; Election of Directors; Appointment of Certain Officers\n\n### CFO Transition\nOn June 6, 2022, the Board of Directors appointed **Elizabeth Coddington as Chief Financial\nOfficer**, to succeed **Jill Woodworth**, who is stepping down from that role, effective June\n13, 2022.\n\nMs. Coddington, 45, brings more than 20 years of experience in financial planning and\noperational finance. She most recently served as Vice President of Finance for Amazon Web\nServices (January 2021 to June 2022). Prior to Amazon, she served as CFO of Adara, Inc., VP\nFinance and CFO at Walmart.com, and VP Financial Planning and Analysis at Netflix, Inc.\n\nUnder her Offer Letter, Ms. Coddington is eligible for: (i) an annual base salary of\n$1,000,000, (ii) an equity award valued at $9,000,000 on the date of grant, (iii) up to\n$150,000 relocation reimbursement.\n\n### Transition Agreement\nIn connection with Ms. Woodworth's employment separation, the Company entered into a\ntransition and consulting agreement with Ms. Woodworth on June 6, 2022. She will provide\nconsulting services through September 13, 2022, supporting the company in preparation to\nreport its fiscal year 2022 financial results. **Ms. Woodworth's departure is not the result of\nany disagreement with the Company on any subject, including its operations, policies or\npractices.**\n\n## Item 7.01 \u2014 Regulation FD Disclosure\nOn June 6, 2022, the Company issued a press release announcing Ms. Coddington's appointment\nand Ms. Woodworth's departure, filed as Exhibit 99.1.\n\n## Item 9.01 \u2014 Financial Statements and Exhibits\n\n(d) Exhibits:\n- 10.1 \u2014 Offer Letter between Ms. Coddington and the Registrant, dated June 6, 2022\n- 10.2 \u2014 Transition and Consulting Agreement with Jill Woodworth, dated June 6, 2022\n- 99.1 \u2014 Press Release Announcing Leadership Transition, dated June 6, 2022\n\n**Signature:** Hisao Kushi, Chief Legal Officer and Secretary",
+          "documents": [
+            "peloton_2022-06-06_8k.md",
+            "peloton_2022-06-06_pr.md"
+          ],
+          "relation_notes": [
             "Peloton Interactive, Inc. entered into a transition and consulting agreement with Jill Woodworth on June 6, 2022, under which she will provide consulting services through September 13, 2022, to support the reporting of fiscal year 2022 financial results. (Date/Time: 2022-06-06)"
           ]
         }
-      ]
+      ],
+      "knowledge_graph": {
+        "documents": [
+          "peloton_2022-06-06_8k.md",
+          "peloton_2022-06-06_pr.md"
+        ],
+        "skipped_documents": [],
+        "nodes": [
+          {
+            "id": "amazon web services",
+            "name": "amazon web services",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-06-06_8k.md",
+              "peloton_2022-06-06_pr.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "chief financial officer",
+            "name": "chief financial officer",
+            "type": "ROLE",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-06-06_8k.md",
+              "peloton_2022-06-06_pr.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "elizabeth coddington",
+            "name": "elizabeth coddington",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-06-06_8k.md",
+              "peloton_2022-06-06_pr.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "jill woodworth",
+            "name": "jill woodworth",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-06-06_8k.md",
+              "peloton_2022-06-06_pr.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "netflix, inc.",
+            "name": "netflix, inc.",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-06-06_8k.md",
+              "peloton_2022-06-06_pr.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "peloton interactive, inc.",
+            "name": "peloton interactive, inc.",
+            "type": "ORGANIZATION",
+            "identifier": "NASDAQ: PTON",
+            "documents": [
+              "peloton_2022-06-06_8k.md",
+              "peloton_2022-06-06_pr.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "walmart.com",
+            "name": "walmart.com",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-06-06_8k.md",
+              "peloton_2022-06-06_pr.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "2012",
+            "name": "2012",
+            "type": "CONCEPT",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-06-06_pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "adara",
+            "name": "adara",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-06-06_pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "adara, inc.",
+            "name": "adara, inc.",
+            "type": "ORGANIZATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-06-06_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "chief legal officer and secretary",
+            "name": "chief legal officer and secretary",
+            "type": "ROLE",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-06-06_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "compensation package",
+            "name": "compensation package",
+            "type": "CONCEPT",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-06-06_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "hisao kushi",
+            "name": "hisao kushi",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-06-06_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "new york city",
+            "name": "new york city",
+            "type": "LOCATION",
+            "identifier": null,
+            "documents": [
+              "peloton_2022-06-06_pr.md"
+            ],
+            "doc_count": 1
+          }
+        ],
+        "edges": [
+          {
+            "id": "elizabeth coddington|appointed as|peloton interactive, inc.",
+            "source_id": "elizabeth coddington",
+            "target_id": "peloton interactive, inc.",
+            "predicate": "appointed as",
+            "evidence": [
+              {
+                "context": "Liz Coddington was appointed as the Chief Financial Officer of Peloton Interactive, Inc., effective June 13, 2022. She brings over 20 years of experience in financial planning, analysis, and operational finance.",
+                "document": "peloton_2022-06-06_pr.md",
+                "temporal_details": "2022-06-13",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "elizabeth coddington|eligible for|compensation package",
+            "source_id": "elizabeth coddington",
+            "target_id": "compensation package",
+            "predicate": "eligible for",
+            "evidence": [
+              {
+                "context": "Under her offer letter dated June 6, 2022, Elizabeth Coddington is eligible for an annual base salary of $1,000,000, an equity award valued at $9,000,000 on the date of grant, and up to $150,000 in relocation reimbursement.",
+                "document": "peloton_2022-06-06_8k.md",
+                "temporal_details": "2022-06-06",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "elizabeth coddington|holds role|chief financial officer",
+            "source_id": "elizabeth coddington",
+            "target_id": "chief financial officer",
+            "predicate": "holds role",
+            "evidence": [
+              {
+                "context": "Elizabeth Coddington was appointed as the Chief Financial Officer of Peloton Interactive, Inc. on June 6, 2022, succeeding Jill Woodworth.",
+                "document": "peloton_2022-06-06_8k.md",
+                "temporal_details": "2022-06-06",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "elizabeth coddington|previously served as|adara, inc.",
+            "source_id": "elizabeth coddington",
+            "target_id": "adara, inc.",
+            "predicate": "previously served as",
+            "evidence": [
+              {
+                "context": "Elizabeth Coddington previously served as the CFO of Adara, Inc.",
+                "document": "peloton_2022-06-06_8k.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "elizabeth coddington|previously served as|amazon web services",
+            "source_id": "elizabeth coddington",
+            "target_id": "amazon web services",
+            "predicate": "previously served as",
+            "evidence": [
+              {
+                "context": "Elizabeth Coddington served as Vice President of Finance for Amazon Web Services from January 2021 to June 2022.",
+                "document": "peloton_2022-06-06_8k.md",
+                "temporal_details": "January 2021 to June 2022",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "elizabeth coddington|previously served as|netflix, inc.",
+            "source_id": "elizabeth coddington",
+            "target_id": "netflix, inc.",
+            "predicate": "previously served as",
+            "evidence": [
+              {
+                "context": "Elizabeth Coddington previously served as VP Financial Planning and Analysis at Netflix, Inc.",
+                "document": "peloton_2022-06-06_8k.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "elizabeth coddington|previously served as|walmart.com",
+            "source_id": "elizabeth coddington",
+            "target_id": "walmart.com",
+            "predicate": "previously served as",
+            "evidence": [
+              {
+                "context": "Elizabeth Coddington previously served as VP Finance and CFO at Walmart.com.",
+                "document": "peloton_2022-06-06_8k.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "elizabeth coddington|served as|adara",
+            "source_id": "elizabeth coddington",
+            "target_id": "adara",
+            "predicate": "served as",
+            "evidence": [
+              {
+                "context": "Liz Coddington previously held the role of CFO at Adara.",
+                "document": "peloton_2022-06-06_pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "elizabeth coddington|served as|amazon web services",
+            "source_id": "elizabeth coddington",
+            "target_id": "amazon web services",
+            "predicate": "served as",
+            "evidence": [
+              {
+                "context": "Most recently, Liz Coddington served as Vice President of Finance for Amazon Web Services.",
+                "document": "peloton_2022-06-06_pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "elizabeth coddington|served as|netflix, inc.",
+            "source_id": "elizabeth coddington",
+            "target_id": "netflix, inc.",
+            "predicate": "served as",
+            "evidence": [
+              {
+                "context": "Liz Coddington previously served as Vice President of Financial Planning and Analysis at Netflix.",
+                "document": "peloton_2022-06-06_pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "elizabeth coddington|served as|walmart.com",
+            "source_id": "elizabeth coddington",
+            "target_id": "walmart.com",
+            "predicate": "served as",
+            "evidence": [
+              {
+                "context": "Liz Coddington previously held the role of CFO at Walmart.com.",
+                "document": "peloton_2022-06-06_pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "hisao kushi|holds role|chief legal officer and secretary",
+            "source_id": "hisao kushi",
+            "target_id": "chief legal officer and secretary",
+            "predicate": "holds role",
+            "evidence": [
+              {
+                "context": "Hisao Kushi serves as the Chief Legal Officer and Secretary for Peloton Interactive, Inc.",
+                "document": "peloton_2022-06-06_8k.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "jill woodworth|serves as|peloton interactive, inc.",
+            "source_id": "jill woodworth",
+            "target_id": "peloton interactive, inc.",
+            "predicate": "serves as",
+            "evidence": [
+              {
+                "context": "Jill Woodworth will serve as a consultant for Peloton on an interim basis to ensure a smooth transition and support the company in reporting its FY2022 financial results.",
+                "document": "peloton_2022-06-06_pr.md",
+                "temporal_details": "2022-06-06",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "jill woodworth|stepped down as|chief financial officer",
+            "source_id": "jill woodworth",
+            "target_id": "chief financial officer",
+            "predicate": "stepped down as",
+            "evidence": [
+              {
+                "context": "Jill Woodworth decided to step down as Peloton's Chief Financial Officer after serving the company since 2018.",
+                "document": "peloton_2022-06-06_pr.md",
+                "temporal_details": "2022-06-06",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "jill woodworth|stepped down from|chief financial officer",
+            "source_id": "jill woodworth",
+            "target_id": "chief financial officer",
+            "predicate": "stepped down from",
+            "evidence": [
+              {
+                "context": "Jill Woodworth stepped down from her role as Chief Financial Officer of Peloton Interactive, Inc., effective June 13, 2022.",
+                "document": "peloton_2022-06-06_8k.md",
+                "temporal_details": "2022-06-13",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|appointed|elizabeth coddington",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "elizabeth coddington",
+            "predicate": "appointed",
+            "evidence": [
+              {
+                "context": "On June 6, 2022, the Board of Directors of Peloton Interactive, Inc. appointed Elizabeth Coddington as Chief Financial Officer.",
+                "document": "peloton_2022-06-06_8k.md",
+                "temporal_details": "2022-06-06",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|entered into agreement with|jill woodworth",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "jill woodworth",
+            "predicate": "entered into agreement with",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. entered into a transition and consulting agreement with Jill Woodworth on June 6, 2022, under which she will provide consulting services through September 13, 2022, to support the reporting of fiscal year 2022 financial results.",
+                "document": "peloton_2022-06-06_8k.md",
+                "temporal_details": "2022-06-06",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|founded in|2012",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "2012",
+            "predicate": "founded in",
+            "evidence": [
+              {
+                "context": "Peloton was founded in 2012.",
+                "document": "peloton_2022-06-06_pr.md",
+                "temporal_details": "2012",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|headquartered in|new york city",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "new york city",
+            "predicate": "headquartered in",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. is headquartered in New York City.",
+                "document": "peloton_2022-06-06_pr.md",
+                "temporal_details": null,
+                "confidence": 0.8,
+                "chunk_id": "peloton_2022-06-06_pr_chunk_0000"
+              }
+            ]
+          }
+        ]
+      }
     }
   },
   {
@@ -475,8 +3526,8 @@
         "2024-05-20"
       ],
       "question": "Based only on the provided documents, what did Peloton Interactive disclose, announce, or report during this period?",
-      "headline": "Peloton Interactive announces global refinancing plan to restructure debt and raise capital.",
-      "detail": "On May 20, 2024, Peloton Interactive, Inc. announced its intention to launch a global refinancing effort, proposing to offer $275.0 million aggregate principal amount of convertible senior notes due 2029 and enter into a $1.0 billion five-year term loan facility and a $100.0 million five-year revolving credit facility. The company intends to use the net proceeds to repurchase approximately $800.0 million of its 0.00% convertible senior notes due 2026, refinance existing debt, and cover related fees and expenses.",
+      "headline": "Peloton Interactive announces global refinancing effort to repurchase existing notes and secure new credit facilities.",
+      "detail": "On May 20, 2024, Peloton Interactive, Inc. announced its intention to launch a global refinancing effort, proposing to offer $275.0 million aggregate principal amount of convertible senior notes due 2029 and enter into a $1.0 billion five-year term loan facility and a $100.0 million five-year revolving credit facility. The company intends to use the net proceeds to repurchase approximately $800.0 million of its 0.00% convertible senior notes due 2026, refinance existing facilities, and pay related fees and expenses.",
       "source_titles": [
         "peloton_2024-05-20_8k.md",
         "peloton_2024-05-20_pr.md"
@@ -490,14 +3541,304 @@
         {
           "date": "2024-05-20",
           "narrative_role": "resolution",
-          "snippets": [
-            "# Press Release: Peloton Interactive, Inc. Announces Launch of Global Refinancing\n**New York \u2014 May 20, 2024**\n\nPeloton Interactive, Inc. (\"Peloton\") (Nasdaq: PTON) today announced that it intends to launch\na global refinancing, pursuant to which it will offer **$275.0 million aggregate principal\namount of convertible senior notes due 2029** (the \"notes\") in a private offering and enter\ninto a **$1.0 billion five-year term loan facility** and a **$100.0 million five-year revolving\ncredit facility** (together with the new term loan facility, the \"new credit facilities\").\nPeloton also expects to grant the initial purchasers of the notes a 13-day option to purchase\nup to an additional $41.3 million aggregate principal amount of the notes.\n\nPeloton intends to use the net proceeds of the offering and the new credit facilities,\ntogether with cash on hand, to **repurchase approximately $800.0 million of its 0.00%\nconvertible senior notes due 2026** (the \"Existing Notes\"), to refinance its existing term\nloan and revolving credit facilities, and to pay fees and expenses related thereto. The\nclosing of the offering, the entry into the new credit facilities, and the repurchase of the\nExisting Notes are not cross-conditioned upon each other, except that entry into the new\ncredit facilities is conditioned upon repurchasing at least $800.0 million aggregate principal\namount of the Existing Notes.\n\nThe notes will be senior, unsecured obligations of Peloton, convertible into cash, shares of\nPeloton's Class A common stock, or a combination thereof, at Peloton's election. The notes\nwill only be offered and sold to persons reasonably believed to be qualified institutional\nbuyers pursuant to Rule 144A under the Securities Act of 1933.\n\nThis announcement is neither an offer to sell nor a solicitation of an offer to buy any of the\nnotes or any shares of Class A common stock potentially issuable upon conversion of the notes.\n\n**Investor Relations Contact:** James Marsh\n**Press Contact:** Letena Lindsay",
-            "# Peloton Interactive, Inc. \u2014 Form 8-K\n**Date of Report:** May 20, 2024\n\n## Item 7.01 \u2014 Regulation FD Disclosure\nIn connection with the proposed global refinancing referred to in Item 8.01 below, Peloton\nInteractive, Inc. has made available an investor presentation on its investor relations\nwebsite.\n\n## Item 8.01 \u2014 Other Events\n\nOn May 20, 2024, the Company issued a press release to announce the launch of a **global\nrefinancing**, pursuant to which it is proposing to offer $275.0 million aggregate principal\namount of **convertible senior notes due 2029** (the \"Notes\") and enter into a **$1.0 billion\nfive-year term loan facility** and a **$100.0 million five-year revolving credit facility**\n(together, the \"New Credit Facilities\"). The Notes will be sold to qualified institutional\nbuyers pursuant to Rule 144A under the Securities Act of 1933.\n\nThe Company intends to use the net proceeds of the Offering and the New Credit Facilities,\ntogether with cash on hand, to **repurchase approximately $800.0 million aggregate principal\namount of its 0.00% convertible senior notes due 2026** (the \"Existing Notes\"), to refinance\nits existing term loan and revolving credit facilities, and to pay related fees and expenses.\nThe entry into the New Credit Facilities is conditioned upon the repurchase of at least $800.0\nmillion aggregate principal amount of the Existing Notes.\n\n## Item 9.01 \u2014 Financial Statements and Exhibits\n\n(d) Exhibits: Exhibit 99.1 \u2014 Press Release, dated May 20, 2024, announcing the launch of the\nproposed offering of the Notes and entry into the New Credit Facilities.\n\n**Signature:** Tammy Albarr\u00e1n, Chief Legal Officer",
+          "documents": [
+            "peloton_2024-05-20_8k.md",
+            "peloton_2024-05-20_pr.md"
+          ],
+          "relation_notes": [
             "On May 20, 2024, Peloton Interactive, Inc. announced its intention to launch a global refinancing effort. (Date/Time: 2024-05-20)",
             "On May 20, 2024, Peloton Interactive, Inc. announced the launch of a global refinancing effort. (Date/Time: 2024-05-20)"
           ]
         }
-      ]
+      ],
+      "knowledge_graph": {
+        "documents": [
+          "peloton_2024-05-20_8k.md",
+          "peloton_2024-05-20_pr.md"
+        ],
+        "skipped_documents": [],
+        "nodes": [
+          {
+            "id": "0.00 convertible senior notes due 2026",
+            "name": "0.00 convertible senior notes due 2026",
+            "type": "PRODUCT",
+            "identifier": null,
+            "documents": [
+              "peloton_2024-05-20_8k.md",
+              "peloton_2024-05-20_pr.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "convertible senior notes due 2029",
+            "name": "convertible senior notes due 2029",
+            "type": "PRODUCT",
+            "identifier": null,
+            "documents": [
+              "peloton_2024-05-20_8k.md",
+              "peloton_2024-05-20_pr.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "global refinancing",
+            "name": "global refinancing",
+            "type": "PROJECT",
+            "identifier": null,
+            "documents": [
+              "peloton_2024-05-20_8k.md",
+              "peloton_2024-05-20_pr.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "new credit facilities",
+            "name": "new credit facilities",
+            "type": "PRODUCT",
+            "identifier": null,
+            "documents": [
+              "peloton_2024-05-20_8k.md",
+              "peloton_2024-05-20_pr.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "peloton interactive, inc.",
+            "name": "peloton interactive, inc.",
+            "type": "ORGANIZATION",
+            "identifier": "NASDAQ: PTON",
+            "documents": [
+              "peloton_2024-05-20_8k.md",
+              "peloton_2024-05-20_pr.md"
+            ],
+            "doc_count": 2
+          },
+          {
+            "id": "chief legal officer",
+            "name": "chief legal officer",
+            "type": "ROLE",
+            "identifier": null,
+            "documents": [
+              "peloton_2024-05-20_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "exhibit 99.1",
+            "name": "exhibit 99.1",
+            "type": "DOCUMENT",
+            "identifier": null,
+            "documents": [
+              "peloton_2024-05-20_8k.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "james marsh",
+            "name": "james marsh",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2024-05-20_pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "letena lindsay",
+            "name": "letena lindsay",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2024-05-20_pr.md"
+            ],
+            "doc_count": 1
+          },
+          {
+            "id": "tammy albarr\u00e1n",
+            "name": "tammy albarr\u00e1n",
+            "type": "PERSON",
+            "identifier": null,
+            "documents": [
+              "peloton_2024-05-20_8k.md"
+            ],
+            "doc_count": 1
+          }
+        ],
+        "edges": [
+          {
+            "id": "james marsh|is investor relations contact for|peloton interactive, inc.",
+            "source_id": "james marsh",
+            "target_id": "peloton interactive, inc.",
+            "predicate": "is investor relations contact for",
+            "evidence": [
+              {
+                "context": "James Marsh is the designated Investor Relations Contact for Peloton Interactive, Inc.",
+                "document": "peloton_2024-05-20_pr.md",
+                "temporal_details": "2024-05-20",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2024-05-20_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "letena lindsay|is press contact for|peloton interactive, inc.",
+            "source_id": "letena lindsay",
+            "target_id": "peloton interactive, inc.",
+            "predicate": "is press contact for",
+            "evidence": [
+              {
+                "context": "Letena Lindsay is the designated Press Contact for Peloton Interactive, Inc.",
+                "document": "peloton_2024-05-20_pr.md",
+                "temporal_details": "2024-05-20",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2024-05-20_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|announces launch of|global refinancing",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "global refinancing",
+            "predicate": "announces launch of",
+            "evidence": [
+              {
+                "context": "On May 20, 2024, Peloton Interactive, Inc. announced its intention to launch a global refinancing effort.",
+                "document": "peloton_2024-05-20_pr.md",
+                "temporal_details": "2024-05-20",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2024-05-20_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|entering into|new credit facilities",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "new credit facilities",
+            "predicate": "entering into",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. is entering into New Credit Facilities, which consist of a $1.0 billion five-year term loan facility and a $100.0 million five-year revolving credit facility.",
+                "document": "peloton_2024-05-20_8k.md",
+                "temporal_details": "2024-05-20",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2024-05-20_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|enters into|new credit facilities",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "new credit facilities",
+            "predicate": "enters into",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. is entering into new credit facilities, which consist of a $1.0 billion five-year term loan facility and a $100.0 million five-year revolving credit facility.",
+                "document": "peloton_2024-05-20_pr.md",
+                "temporal_details": "2024-05-20",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2024-05-20_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|intends to repurchase|0.00 convertible senior notes due 2026",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "0.00 convertible senior notes due 2026",
+            "predicate": "intends to repurchase",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. intends to use net proceeds from the offering and New Credit Facilities, along with cash on hand, to repurchase approximately $800.0 million aggregate principal amount of its 0.00% convertible senior notes due 2026.",
+                "document": "peloton_2024-05-20_8k.md",
+                "temporal_details": "2024-05-20",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2024-05-20_8k_chunk_0000"
+              },
+              {
+                "context": "Peloton Interactive, Inc. intends to use net proceeds from the offering and new credit facilities, along with cash on hand, to repurchase approximately $800.0 million of its 0.00% convertible senior notes due 2026.",
+                "document": "peloton_2024-05-20_pr.md",
+                "temporal_details": "2024-05-20",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2024-05-20_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|issued|exhibit 99.1",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "exhibit 99.1",
+            "predicate": "issued",
+            "evidence": [
+              {
+                "context": "Peloton Interactive, Inc. issued Exhibit 99.1, a press release dated May 20, 2024, announcing the proposed offering of Notes and entry into the New Credit Facilities.",
+                "document": "peloton_2024-05-20_8k.md",
+                "temporal_details": "2024-05-20",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2024-05-20_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|launched|global refinancing",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "global refinancing",
+            "predicate": "launched",
+            "evidence": [
+              {
+                "context": "On May 20, 2024, Peloton Interactive, Inc. announced the launch of a global refinancing effort.",
+                "document": "peloton_2024-05-20_8k.md",
+                "temporal_details": "2024-05-20",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2024-05-20_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|offers|convertible senior notes due 2029",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "convertible senior notes due 2029",
+            "predicate": "offers",
+            "evidence": [
+              {
+                "context": "As part of its global refinancing, Peloton Interactive, Inc. will offer $275.0 million aggregate principal amount of convertible senior notes due 2029 in a private offering.",
+                "document": "peloton_2024-05-20_pr.md",
+                "temporal_details": "2024-05-20",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2024-05-20_pr_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "peloton interactive, inc.|proposing to offer|convertible senior notes due 2029",
+            "source_id": "peloton interactive, inc.",
+            "target_id": "convertible senior notes due 2029",
+            "predicate": "proposing to offer",
+            "evidence": [
+              {
+                "context": "As part of its global refinancing, Peloton Interactive, Inc. is proposing to offer $275.0 million aggregate principal amount of convertible senior notes due 2029.",
+                "document": "peloton_2024-05-20_8k.md",
+                "temporal_details": "2024-05-20",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2024-05-20_8k_chunk_0000"
+              }
+            ]
+          },
+          {
+            "id": "tammy albarr\u00e1n|holds role of|chief legal officer",
+            "source_id": "tammy albarr\u00e1n",
+            "target_id": "chief legal officer",
+            "predicate": "holds role of",
+            "evidence": [
+              {
+                "context": "Tammy Albarr\u00e1n serves as the Chief Legal Officer for Peloton Interactive, Inc., as evidenced by her signature on the Form 8-K dated May 20, 2024.",
+                "document": "peloton_2024-05-20_8k.md",
+                "temporal_details": "2024-05-20",
+                "confidence": 0.8,
+                "chunk_id": "peloton_2024-05-20_8k_chunk_0000"
+              }
+            ]
+          }
+        ]
+      }
     }
   }
 ]

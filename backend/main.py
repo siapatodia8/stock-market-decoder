@@ -1,10 +1,18 @@
 """
 FastAPI backend for the Stock Story Explainer (Peloton edition).
 
-Two real endpoints, matching the "timeline + chat + evidence panel" shape from
-03_project_stock_explainer.md:
+Four real endpoints, matching the "timeline + chat + evidence panel" shape
+from 03_project_stock_explainer.md:
   - GET  /api/timeline  — reads the precomputed cache (data/timeline_cache.json),
     built by `python timeline.py` from live HydraDB queries + price_data.py
+  - GET  /api/documents/{filename} — serves one source document's full clean
+    text from data/ for the evidence panel, so it can show the real document
+    a chunk came from instead of just the retrieved fragment
+  - GET  /api/knowledge-graph — live, on-demand version of the same merged
+    graph that's precomputed into every /api/timeline event's
+    "knowledge_graph" field (via timeline.py) — dev/fallback tool, not the
+    frontend's primary path. See backend/knowledge_graph.py and finding #24
+    in hydradb_findings_log.md for why the merge step exists
   - POST /api/chat      — live HydraDB retrieval + synthesis.py answer generation
 Plus /api/health for a quick "is HydraDB reachable" check during dev.
 
@@ -15,6 +23,8 @@ api.hydradb.com — see CONTEXT_UPDATES.md's "Operating constraint" section):
     python timeline.py          # builds/refreshes the timeline cache
     uvicorn main:app --reload --port 8000
 """
+import re
+from pathlib import Path
 from typing import Literal, Optional
 
 from fastapi import FastAPI, HTTPException
@@ -22,10 +32,18 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 import hydradb_client
+import knowledge_graph
 import synthesis
 import timeline
 
 app = FastAPI(title="Stock Story Explainer API")
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = REPO_ROOT / "data"
+# source_titles coming back from HydraDB are always this dataset's own
+# filenames (e.g. peloton_2020-12-21_8k.md) — reject anything else so this
+# endpoint can't be used to read arbitrary files off disk.
+SAFE_FILENAME_RE = re.compile(r"^[\w.-]+\.md$")
 
 # Dev-friendly CORS: allow local frontend dev servers (Vite default 5173, CRA
 # default 3000). Tighten this before any real deployment.
@@ -73,6 +91,32 @@ def get_timeline():
         return {"months": timeline.load_cache()}
     except FileNotFoundError:
         raise HTTPException(status_code=503, detail="Timeline cache not built yet — run `python timeline.py`.")
+
+
+@app.get("/api/documents/{filename}")
+def get_document(filename: str):
+    if not SAFE_FILENAME_RE.match(filename):
+        raise HTTPException(status_code=400, detail="Invalid document filename.")
+    path = DATA_DIR / filename
+    if not path.is_file():
+        raise HTTPException(status_code=404, detail=f"Document not found: {filename}")
+    return {"filename": filename, "content": path.read_text()}
+
+
+@app.get("/api/knowledge-graph")
+def get_knowledge_graph(documents: str):
+    """Live/on-demand only — the frontend's normal path reads
+    event.knowledge_graph straight out of /api/timeline (precomputed by
+    timeline.py). This exists for testing document sets ad hoc, or as a
+    fallback if the cache hasn't been rebuilt since new documents were
+    added. documents: comma-separated filenames."""
+    filenames = [f.strip() for f in documents.split(",") if f.strip()]
+    if not filenames:
+        raise HTTPException(status_code=400, detail="documents must include at least one filename.")
+    try:
+        return knowledge_graph.build_graph(filenames)
+    except Exception as e:
+        raise HTTPException(status_code=502, detail=f"HydraDB knowledge-graph lookup failed: {e}")
 
 
 @app.post("/api/chat", response_model=ChatResponse)

@@ -37,28 +37,36 @@ def get_context_snippets(chunks=None, chunk_relations=None, query_paths=None, li
     actual transition sentence, which likely was sitting in the raw chunk).
 
     Raw chunk text field is chunk_content — confirmed against the response
-    schema in docs.hydradb.com/essentials/v2/api-results.md."""
+    schema in docs.hydradb.com/essentials/v2/api-results.md.
+
+    Returns a list of {"text": str, "source_title": str|None} — source_title
+    is the real document filename for raw-chunk-derived text (chunk_content
+    is a genuine substring of that document), or None for relation-derived
+    combined_context text, which is HydraDB's own graph-LLM summary — often
+    paraphrased, not a verbatim quote of any single document, so it isn't
+    attributable to one source the way a raw chunk is."""
     candidates = []
     for p in (chunk_relations or []) + (query_paths or []):
         text = getattr(p, "combined_context", None)
         score = getattr(p, "relevancy_score", 0) or 0
         if text:
-            candidates.append((score, text.strip()))
+            candidates.append((score, text.strip(), None))
 
     for c in (chunks or []):
         text = getattr(c, "chunk_content", None)
         score = getattr(c, "relevancy_score", 0) or 0
+        source_title = getattr(c, "source_title", None)
         if text:
-            candidates.append((score, text.strip()))
+            candidates.append((score, text.strip(), source_title))
 
     candidates.sort(key=lambda x: x[0], reverse=True)
     seen = set()
     snippets = []
-    for _, text in candidates:
+    for _, text, source_title in candidates:
         if text in seen:
             continue
         seen.add(text)
-        snippets.append(text)
+        snippets.append({"text": text, "source_title": source_title})
         if len(snippets) >= limit:
             break
     return snippets
@@ -71,7 +79,7 @@ def synthesize_answer(question: str, chunks=None, chunk_relations=None, query_pa
     if not snippets or _client is None:
         return None
 
-    context_block = "\n\n".join(f"- {s}" for s in snippets)
+    context_block = "\n\n".join(f"- {s['text']}" for s in snippets)
     prompt = _CHAT_PROMPT.format(context_block=context_block, question=question)
     response = _client.chat.completions.create(
         model=MODEL,
@@ -83,20 +91,21 @@ def synthesize_answer(question: str, chunks=None, chunk_relations=None, query_pa
 
 def synthesize_timeline_event(question: str, date_groups: list, company: str, industry: str) -> Optional[dict]:
     """Timeline event synthesis. date_groups is a list of
-    {"date": "YYYY-MM-DD", "narrative_role": str|None, "snippets": [str]},
-    one entry per filing_date-scoped query (kept separate per date so the
-    prompt can anchor the headline on the reversal_marker fact and order
-    detail chronologically). company/industry are passed through from the
-    caller, not hardcoded here, so this isn't tied to one dataset. Returns
-    {"headline": str, "detail": str}, or None if there's no evidence or no
-    OpenAI key configured."""
+    {"date": "YYYY-MM-DD", "narrative_role": str|None, "snippets": [dict]},
+    where each snippet is {"text": str, "source_title": str|None} (see
+    get_context_snippets), one entry per filing_date-scoped query (kept
+    separate per date so the prompt can anchor the headline on the
+    reversal_marker fact and order detail chronologically). company/industry
+    are passed through from the caller, not hardcoded here, so this isn't
+    tied to one dataset. Returns {"headline": str, "detail": str}, or None if
+    there's no evidence or no OpenAI key configured."""
     non_empty = [g for g in date_groups if g.get("snippets")]
     if not non_empty or _client is None:
         return None
 
     context_block = "\n\n".join(
         f"[{g['narrative_role'] or 'unknown'}, {g['date']}]\n"
-        + "\n".join(f"- {s}" for s in g["snippets"])
+        + "\n".join(f"- {s['text']}" for s in g["snippets"])
         for g in non_empty
     )
     prompt = _TIMELINE_PROMPT.format(
