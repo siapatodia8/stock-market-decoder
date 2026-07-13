@@ -12,12 +12,12 @@ from 03_project_stock_explainer.md:
     graph that's precomputed into every /api/timeline event's
     "knowledge_graph" field (via timeline.py) — dev/fallback tool, not the
     frontend's primary path. See backend/knowledge_graph.py and finding #24
-    in hydradb_findings_log.md for why the merge step exists
+    in docs/hydradb_findings_log.md for why the merge step exists
   - POST /api/chat      — live HydraDB retrieval + synthesis.py answer generation
 Plus /api/health for a quick "is HydraDB reachable" check during dev.
 
 Run locally (not in a sandboxed environment without network access to
-api.hydradb.com — see CONTEXT_UPDATES.md's "Operating constraint" section):
+api.hydradb.com — see docs/CONTEXT_UPDATES.md's "Operating constraint" section):
     cd backend
     pip install -r requirements.txt
     python timeline.py          # builds/refreshes the timeline cache

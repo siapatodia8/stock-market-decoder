@@ -37,7 +37,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
 RESULTS_PATH = REPO_ROOT / "outputs" / "_ingestion_results.json"
 
-# Per-document metadata, from PELOTON_DATASET.md
+# Per-document metadata, from docs/PELOTON_DATASET.md
 DOCUMENTS = [
     {"id": "peloton_2020-12-21_8k", "file": "peloton_2020-12-21_8k.md", "doc_type": "8-K", "narrative_role": "claim", "filing_date": "2020-12-21",
      "doc_summary": "Peloton announces agreement to acquire Precor for $420M to establish U.S. manufacturing capacity"},
@@ -234,7 +234,7 @@ def step_subtenant_test():
     """Full comparison: ingest one test doc under a custom sub_tenant_id, poll its
     processing status, then boolean_recall for 'Precor' scoped to that sub-tenant.
     We already know boolean_recall for 'Precor' under sub_tenant_id='default'
-    returns 0 chunks (see hydradb_findings_log.md) — this isolates whether 'default'
+    returns 0 chunks (see docs/hydradb_findings_log.md) — this isolates whether 'default'
     specifically is the problem, or whether it's tenant-wide regardless of
     sub-tenant naming."""
     ingest_resp = ingest_test_doc_custom_subtenant()
@@ -256,7 +256,7 @@ def step_subtenant_test():
 
 def test_recall(query, mode="thinking", graph_context=True, max_results=10):
     """POST /recall/full_recall — the actual search/synthesis endpoint. Used here
-    specifically to test finding #3 in hydradb_findings_log.md: does recall work
+    specifically to test finding #3 in docs/hydradb_findings_log.md: does recall work
     correctly even though verify_processing never reported 'completed'? A query
     that specifically requires connecting facts ACROSS documents (not just
     matching one) is the real test of graph_context, not just basic search."""

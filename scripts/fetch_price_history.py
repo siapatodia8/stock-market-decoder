@@ -8,7 +8,7 @@ cited by any event, so it was removed as dead output rather than kept around
 unused.
 
 Must be run LOCALLY, not in the sandbox — same network restriction we hit with
-HydraDB (see CONTEXT_UPDATES.md "Blocker" section): the sandbox's proxy can't
+HydraDB (see docs/CONTEXT_UPDATES.md "Blocker" section): the sandbox's proxy can't
 reach pypi.org to install yfinance, and Yahoo Finance's JSON chart API returns
 nothing over a plain HTML fetch tool. This mirrors that workaround.
 
