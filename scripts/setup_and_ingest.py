@@ -35,7 +35,7 @@ AUTH_ONLY_HEADERS = {
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
-RESULTS_PATH = REPO_ROOT / "data" / "_ingestion_results.json"
+RESULTS_PATH = REPO_ROOT / "outputs" / "_ingestion_results.json"
 
 # Per-document metadata, from PELOTON_DATASET.md
 DOCUMENTS = [
@@ -550,7 +550,7 @@ def main():
     parser.add_argument(
         "--step", choices=STEPS.keys(), default="all",
         help="Run just one step (create/poll/ingest/status/recall) instead of the full "
-             "sequence. Each step reads/writes data/_ingestion_results.json so you can "
+             "sequence. Each step reads/writes outputs/_ingestion_results.json so you can "
              "run them separately, one at a time, and still have 'status' pick up ids "
              "from a previous 'ingest' run.",
     )

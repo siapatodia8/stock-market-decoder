@@ -2,7 +2,7 @@ import DetailPanel from './DetailPanel'
 
 // months: full /api/timeline array — renders every event month, in order,
 // with no chart at all. Read-the-narrative mode.
-export default function StoryView({ months }) {
+export default function StoryView({ months, onAskAgent }) {
   const eventMonths = months.filter((m) => m.event)
 
   if (eventMonths.length === 0) {
@@ -12,7 +12,7 @@ export default function StoryView({ months }) {
   return (
     <div className="story-list">
       {eventMonths.map((m) => (
-        <DetailPanel key={m.month} monthEntry={m} />
+        <DetailPanel key={m.month} monthEntry={m} onAskAgent={onAskAgent} />
       ))}
     </div>
   )

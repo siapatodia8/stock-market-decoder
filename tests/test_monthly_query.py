@@ -60,7 +60,7 @@ if not API_KEY:
 client = HydraDB(token=API_KEY)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-RESULTS_PATH = REPO_ROOT / "data" / "_monthly_query_test_results.json"
+RESULTS_PATH = REPO_ROOT / "outputs" / "_monthly_query_test_results.json"
 
 GENERIC_TEMPLATE = (
     "Based only on the provided documents, what did Peloton disclose or "

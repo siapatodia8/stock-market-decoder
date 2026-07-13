@@ -40,7 +40,7 @@ client = HydraDB(token=API_KEY)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
-RESULTS_PATH = REPO_ROOT / "data" / "_ingestion_results_sdk.json"
+RESULTS_PATH = REPO_ROOT / "outputs" / "_ingestion_results_sdk.json"
 
 # Same 13 documents/metadata as setup_and_ingest.py — kept in sync manually since
 # this is a hedge script, not the primary path.

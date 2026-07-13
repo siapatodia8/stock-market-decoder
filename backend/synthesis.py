@@ -72,14 +72,23 @@ def get_context_snippets(chunks=None, chunk_relations=None, query_paths=None, li
     return snippets
 
 
-def synthesize_answer(question: str, chunks=None, chunk_relations=None, query_paths=None) -> Optional[str]:
+def synthesize_answer(question: str, chunks=None, chunk_relations=None, query_paths=None,
+                      price_context: Optional[str] = None) -> Optional[str]:
     """Chat endpoint synthesis. Returns a grounded answer string, or None if
-    there's no evidence to ground on or no OpenAI key configured."""
+    there's no evidence to ground on or no OpenAI key configured.
+
+    price_context, when given, is a plain-language price/volatility sentence
+    (from price_stats.describe()) — numerical market data that isn't in any
+    filing. It's appended as an extra, clearly-labeled context line so the
+    answer can cite figures like volatility; the prompt instructs the model to
+    treat it as background context, never as a proven effect of the events."""
     snippets = get_context_snippets(chunks, chunk_relations, query_paths)
     if not snippets or _client is None:
         return None
 
     context_block = "\n\n".join(f"- {s['text']}" for s in snippets)
+    if price_context:
+        context_block += f"\n\n- Price context: {price_context}"
     prompt = _CHAT_PROMPT.format(context_block=context_block, question=question)
     response = _client.chat.completions.create(
         model=MODEL,

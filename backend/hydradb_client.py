@@ -67,7 +67,7 @@ def source_id_map() -> dict:
     Built from context.list()'s .title field, which holds the exact filename
     string (e.g. "peloton_2022-02-08_8k.md") — confirmed against
     metadata.source_title/additional_metadata.source_title (both null) via
-    scripts/test_knowledge_graph_relations.py, task #41. Needed to resolve a
+    tests/test_knowledge_graph_relations.py, task #41. Needed to resolve a
     document filename (as already used throughout the evidence panel) to the
     source ID context.relations() requires — relations() takes a source ID,
     not a filename."""

@@ -3,7 +3,7 @@ FastAPI backend for the Stock Story Explainer (Peloton edition).
 
 Four real endpoints, matching the "timeline + chat + evidence panel" shape
 from 03_project_stock_explainer.md:
-  - GET  /api/timeline  — reads the precomputed cache (data/timeline_cache.json),
+  - GET  /api/timeline  — reads the precomputed cache (outputs/timeline_cache.json),
     built by `python timeline.py` from live HydraDB queries + price_data.py
   - GET  /api/documents/{filename} — serves one source document's full clean
     text from data/ for the evidence panel, so it can show the real document
@@ -31,6 +31,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
+import chat as chat_pipeline
 import hydradb_client
 import knowledge_graph
 import synthesis
@@ -58,17 +59,26 @@ app.add_middleware(
 class ChatRequest(BaseModel):
     question: str
     mode: Optional[str] = "thinking"  # multi-query expansion + reranking + graph relations
-    max_results: Optional[int] = 10
+    max_results: Optional[int] = 20  # matches retrieval.MAX_RESULTS (finding: 10 drops boundary chunks)
 
 
 class ChatResponse(BaseModel):
     question: str
     mode: str
+    # Scope decided by the events orchestrator (chat.py stage 1), before any
+    # retrieval — this is what replaced the old unscoped whole-tenant query.
+    query_type: Optional[str]          # single | multi | comparative | range
+    event_ids: list
+    filing_dates: list
+    reasoning: str
     answer: Optional[str]
     answer_source: Literal["llm_synthesis", "none"]
     chunks: list
     graph_paths: list
     chunk_relations: list
+    # Price stats computed from the CSV (not HydraDB) over the scoped window.
+    price_window: Optional[list] = None
+    price_stats: Optional[dict] = None
     warning: Optional[str] = None
 
 
@@ -124,37 +134,29 @@ def chat(req: ChatRequest):
     if not req.question.strip():
         raise HTTPException(status_code=400, detail="question must not be empty")
 
+    # Scoped pipeline: orchestrator classifies the question to events, retrieval
+    # queries only those events (metadata_filters), synthesis answers over the
+    # result. Replaces the old single unscoped whole-tenant query (finding #22).
     try:
-        data = hydradb_client.query(req.question, mode=req.mode, max_results=req.max_results)
+        result = chat_pipeline.run_chat(
+            req.question, mode=req.mode, max_results=req.max_results
+        )
     except Exception as e:
         raise HTTPException(status_code=502, detail=f"HydraDB query failed: {e}")
 
-    graph_context = data.graph_context
-    query_paths = graph_context.query_paths if graph_context and graph_context.query_paths else []
-    chunk_relations = graph_context.chunk_relations if graph_context and graph_context.chunk_relations else []
-    chunks = data.chunks or []
-
-    answer = synthesis.synthesize_answer(
-        req.question, chunks=chunks, chunk_relations=chunk_relations, query_paths=query_paths
-    )
-
-    if answer:
-        answer_source = "llm_synthesis"
-        warning = None
-    else:
-        answer_source = "none"
-        if not (chunks or chunk_relations or query_paths):
-            warning = "No chunks or graph relationships were found for this question."
-        else:
-            warning = "Evidence was retrieved but synthesis failed — check OPENAI_API_KEY is set."
-
     return ChatResponse(
-        question=req.question,
+        question=result["question"],
         mode=req.mode,
-        answer=answer,
-        answer_source=answer_source,
-        chunks=[_dump(c) for c in chunks],
-        graph_paths=[_dump(p) for p in query_paths],
-        chunk_relations=[_dump(p) for p in chunk_relations],
-        warning=warning,
+        query_type=result["query_type"],
+        event_ids=result["event_ids"],
+        filing_dates=result["filing_dates"],
+        reasoning=result["reasoning"],
+        answer=result["answer"],
+        answer_source=result["answer_source"],
+        chunks=[_dump(c) for c in result["chunks"]],
+        graph_paths=[_dump(p) for p in result["query_paths"]],
+        chunk_relations=[_dump(p) for p in result["chunk_relations"]],
+        price_window=result["price_window"],
+        price_stats=result["price_stats"],
+        warning=result["warning"],
     )

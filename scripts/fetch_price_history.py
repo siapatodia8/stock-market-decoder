@@ -1,8 +1,11 @@
 """
 Fetches PTON weekly price history 2020-01-01 through 2024-12-31 via yfinance, and
-saves it as both a CSV (data/pton_price_history.csv) and a markdown document
-(data/peloton_price_history_weekly.md) formatted for ingestion into HydraDB
-alongside the other Knowledge documents.
+saves it as a CSV (data/pton_price_history.csv) — the only price source the app
+actually reads (see backend/price_data.py). This used to also write a markdown
+copy (data/peloton_price_history_weekly.md) for ingestion into HydraDB, but that
+was never actually ingested by either setup_and_ingest*.py script and was never
+cited by any event, so it was removed as dead output rather than kept around
+unused.
 
 Must be run LOCALLY, not in the sandbox — same network restriction we hit with
 HydraDB (see CONTEXT_UPDATES.md "Blocker" section): the sandbox's proxy can't
@@ -43,29 +46,6 @@ def main():
     csv_path = DATA_DIR / "pton_price_history.csv"
     hist.to_csv(csv_path, index=False)
     print(f"Saved {len(hist)} rows to {csv_path}")
-
-    # Also build a markdown doc, same style as the other Knowledge documents, so
-    # it can be ingested the same way (one row per week is too granular for prose;
-    # this instead calls out notable moves + a compact table).
-    lines = [
-        "# Peloton Interactive (PTON) — Weekly Stock Price History (2020-2024)",
-        "",
-        f"Source: yfinance, ticker {TICKER}, interval={INTERVAL}, "
-        f"{START} to {END}. Fetched locally (sandbox network can't reach "
-        "Yahoo Finance directly).",
-        "",
-        "| Date | Open | High | Low | Close | Volume |",
-        "|------|------|------|-----|-------|--------|",
-    ]
-    for _, row in hist.iterrows():
-        date_str = row["Date"].strftime("%Y-%m-%d")
-        lines.append(
-            f"| {date_str} | {row['Open']:.2f} | {row['High']:.2f} | "
-            f"{row['Low']:.2f} | {row['Close']:.2f} | {int(row['Volume'])} |"
-        )
-    md_path = DATA_DIR / "peloton_price_history_weekly.md"
-    md_path.write_text("\n".join(lines) + "\n")
-    print(f"Saved markdown doc to {md_path}")
 
 
 if __name__ == "__main__":

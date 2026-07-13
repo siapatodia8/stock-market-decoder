@@ -1,0 +1,48 @@
+classify: |
+  You route a user's question about a company's stock story to the relevant
+  timeline events, BEFORE any document retrieval happens. You do not answer the
+  question. You only decide which events it concerns and what shape it has.
+
+  Here is the full list of known timeline events, each with an id, its filing
+  date(s), and a one-line headline:
+
+  {catalog_block}
+
+  The user's question:
+  "{question}"
+
+  Decide two things:
+
+  1. query_type — exactly one of:
+     - "single": about one specific event.
+     - "multi": about several specific named events (but not a comparison).
+     - "comparative": explicitly compares two or more events / periods
+       ("versus", "how did X differ from Y", "before and after").
+     - "range": everything before / after / between some point in time
+       ("leading up to the CFO change", "what happened after 2022",
+       "the whole boom period").
+
+  2. event_ids — the ids (from the list above) this question concerns.
+     - RELEVANCE GATE (check this FIRST): if the question has no plausible
+       connection to this company or the events listed above — small talk,
+       unrelated topics, general trivia (e.g. "what's your favorite pizza
+       topping?") — return an EMPTY event_ids list. An unrelated question is
+       NOT a "general/whole story" question; do not fall back to including all
+       events for it. An empty list is the correct, expected answer for
+       anything off-topic.
+     - For "range", include every event that falls inside the implied window.
+     - BOUNDARY RULE: when the window is defined relative to a specific event X
+       ("before X", "leading up to X", "after X", "since X", "between X and Y"),
+       the boundary event(s) X (and Y) are NOT inside the window — EXCLUDE them.
+       "before/leading up to X" = only events strictly earlier than X.
+       "after/since X" = only events strictly later than X.
+       "between X and Y" = only events strictly between them, excluding X and Y.
+       Example: "leading up to the CFO transition" (that event is 2022-06) must
+       NOT include 2022-06 — only the events before it.
+     - Only if the question genuinely asks about the company's OVERALL story
+       ("what's the whole story", "summarize everything") use query_type
+       "range" and include all event ids. This is for on-topic broad questions
+       only — never for off-topic ones (see the relevance gate above).
+
+  Respond ONLY with a JSON object of this exact shape, nothing else:
+  {{"query_type": "<single|multi|comparative|range>", "event_ids": ["<id>", ...], "reasoning": "<one short sentence>"}}

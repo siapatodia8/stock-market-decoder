@@ -2,7 +2,7 @@
 Builds the full monthly timeline (Dec 2020 - May 2024): every month gets a
 real price % change, and any month with a real filing_date also gets a
 synthesized event summary from HydraDB. Writes the result to
-data/timeline_cache.json. Run standalone to (re)build the cache; the
+outputs/timeline_cache.json. Run standalone to (re)build the cache; the
 /api/timeline endpoint just reads the cached file.
 """
 import json
@@ -14,7 +14,7 @@ import price_data
 import synthesis
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-CACHE_PATH = REPO_ROOT / "data" / "timeline_cache.json"
+CACHE_PATH = REPO_ROOT / "outputs" / "timeline_cache.json"
 
 START_MONTH = "2020-12"
 END_MONTH = "2024-05"
@@ -77,7 +77,7 @@ def _build_event(dates_with_roles: dict) -> dict:
             mode="thinking",
             max_results=20,  # default (10) missed real chunks near the ranking
             # boundary under thinking-mode's rerank volatility — confirmed via
-            # scripts/test_chunk_retrieval_stability.py (2/8 hits at 10 vs 8/8 at 20)
+            # tests/test_chunk_retrieval_stability.py (2/8 hits at 10 vs 8/8 at 20)
             metadata_filters={"filing_date": date},
         )
         chunks = data.chunks or []

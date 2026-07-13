@@ -23,7 +23,7 @@ import hydradb_client  # noqa: E402
 import synthesis  # noqa: E402
 from timeline import GENERIC_QUESTION  # noqa: E402
 
-RESULTS_PATH = REPO_ROOT / "data" / "_retrieval_determinism_test_results.json"
+RESULTS_PATH = REPO_ROOT / "outputs" / "_retrieval_determinism_test_results.json"
 
 # Dates that showed different-looking evidence between two prior timeline.py runs.
 TEST_DATES = ["2021-08-26", "2022-02-05"]

@@ -40,7 +40,7 @@ if not API_KEY:
 client = HydraDB(token=API_KEY)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-RESULTS_PATH = REPO_ROOT / "data" / "_multivalue_filter_test_results.json"
+RESULTS_PATH = REPO_ROOT / "outputs" / "_multivalue_filter_test_results.json"
 
 PROBE_QUERY = "Based only on the provided documents, what did Peloton disclose or announce around this period?"
 DATE_A = "2022-02-05"

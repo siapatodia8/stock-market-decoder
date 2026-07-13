@@ -5,13 +5,18 @@ import { formatMonth, formatPct } from '../utils'
 import { formatDocumentLabel } from '../documentLabels'
 
 // monthEntry: one full entry from /api/timeline's months array, must have .event
-export default function DetailPanel({ monthEntry }) {
+// onAskAgent: (question:string) => void — opens the shared decoder chat with a
+// scoped starter question (the stage-3 hand-off).
+export default function DetailPanel({ monthEntry, onAskAgent }) {
   if (!monthEntry || !monthEntry.event) {
     return <p className="muted">Select a filing above to see what happened.</p>
   }
 
   const { event, price } = monthEntry
   const documents = uniqueDocuments(event.evidence)
+  // Reference the headline so the orchestrator scopes to this event (the
+  // headline carries the distinguishing terms, e.g. "CFO transition").
+  const seedQuestion = `${event.headline} Explain what happened here and how the story changed.`
 
   return (
     <div className="detail-card">
@@ -30,11 +35,13 @@ export default function DetailPanel({ monthEntry }) {
 
       {documents.length > 0 && (
         <div className="evidence">
-          <DecodePanel documents={documents} />
+          <DecodePanel
+            documents={documents}
+            graph={event.knowledge_graph}
+            onAskAgent={onAskAgent ? () => onAskAgent(seedQuestion) : null}
+          />
         </div>
       )}
-
-      <KnowledgeGraphSection graph={event.knowledge_graph} />
     </div>
   )
 }
@@ -61,7 +68,10 @@ function uniqueDocuments(evidence) {
 // document(s). When there's more than one, a dropdown (labeled with the
 // filing date so same-type documents filed days apart stay distinguishable)
 // picks which one shows in the viewer below, one at a time, PDF-viewer style.
-function DecodePanel({ documents }) {
+// The knowledge graph lives inside this same collapsed/expanded state too —
+// it only renders once decoded, directly below the document viewer, instead
+// of always showing regardless of whether the documents panel is open.
+function DecodePanel({ documents, graph, onAskAgent }) {
   const [open, setOpen] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState(0)
 
@@ -73,6 +83,7 @@ function DecodePanel({ documents }) {
 
       {open && (
         <div className="doc-window">
+          <p className="decode-step-label">1 · Source document</p>
           {documents.length > 1 && (
             <select
               className="doc-select"
@@ -90,6 +101,22 @@ function DecodePanel({ documents }) {
             filename={documents[selectedIndex]}
             label={formatDocumentLabel(documents[selectedIndex])}
           />
+
+          <p className="decode-step-label">2 · Knowledge graph</p>
+          <KnowledgeGraphSection graph={graph} />
+
+          {onAskAgent && (
+            <div className="decode-step3">
+              <p className="decode-step-label">3 · Decode with the agent</p>
+              <p className="muted decode-step3-hint">
+                Hand this event to the decoder to explain it, connect it to the rest of the story,
+                or compare it with other events.
+              </p>
+              <button type="button" className="btn btn-active decode-agent-btn" onClick={onAskAgent}>
+                Decode with the agent →
+              </button>
+            </div>
+          )}
         </div>
       )}
     </div>

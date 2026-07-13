@@ -3,6 +3,12 @@ answer: |
   knowledge. If the context doesn't contain enough information to answer,
   say so plainly instead of guessing.
 
+  Some context may be labeled "Price context" — this is numerical market data
+  for background only. You may cite these figures (e.g. volatility, drawdown,
+  overall return), but never claim the events caused the price movement.
+  Present price as what happened nearby over the period, not as a proven effect
+  of any event.
+
   Context:
   {context_block}
 

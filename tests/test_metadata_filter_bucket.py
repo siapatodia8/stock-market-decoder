@@ -51,12 +51,15 @@ client = HydraDB(token=API_KEY)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
-RESULTS_PATH = REPO_ROOT / "data" / "_metadata_filter_diagnostic_results.json"
-INGEST_RESULTS_PATH = REPO_ROOT / "data" / "_ingestion_results_sdk.json"
+RESULTS_PATH = REPO_ROOT / "outputs" / "_metadata_filter_diagnostic_results.json"
+INGEST_RESULTS_PATH = REPO_ROOT / "outputs" / "_ingestion_results_sdk.json"
 
 # Import DOCUMENTS so we can look up each completed document's real
 # filing_date/doc_type by our own tracking id, without hardcoding one.
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+# setup_and_ingest_sdk.py lives in scripts/, not this file's own directory
+# (this file was moved into tests/ to separate diagnostics from setup/ingest
+# utilities) — path inserted explicitly rather than assuming same-directory.
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
 from setup_and_ingest_sdk import DOCUMENTS  # noqa: E402
 
 

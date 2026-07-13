@@ -14,3 +14,16 @@ export async function fetchDocument(filename) {
   if (!res.ok) throw new Error(`${res.status} ${res.statusText}`)
   return res.json()
 }
+
+// Sends one question to the scoped chat pipeline (orchestrator -> retrieval ->
+// synthesis + price blend). Returns the full ChatResponse: answer, query_type,
+// event_ids, filing_dates, reasoning, price_stats, chunks, warning, etc.
+export async function sendChat(question) {
+  const res = await fetch(`${API_BASE}/api/chat`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ question }),
+  })
+  if (!res.ok) throw new Error(`${res.status} ${res.statusText}`)
+  return res.json()
+}

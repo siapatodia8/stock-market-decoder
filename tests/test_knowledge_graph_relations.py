@@ -10,7 +10,7 @@ five need the same live API access:
      what GraphEntity.type values appear, are context/temporal_details/
      confidence populated?
   3. Multi-document merge: pull relations for all 5 real documents cited by
-     the Feb 2022 event (from data/timeline_cache.json) and check whether
+     the Feb 2022 event (from outputs/timeline_cache.json) and check whether
      the same entity (e.g. "Peloton") comes back with a consistent name
      string across documents, or needs normalization before node-merging.
   4. Truncation/pagination: is_truncated / next_cursor on the densest doc.
@@ -44,8 +44,8 @@ if not API_KEY:
 client = HydraDB(token=API_KEY)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-RESULTS_PATH = REPO_ROOT / "data" / "_knowledge_graph_relations_test_results.json"
-CACHE_PATH = REPO_ROOT / "data" / "timeline_cache.json"
+RESULTS_PATH = REPO_ROOT / "outputs" / "_knowledge_graph_relations_test_results.json"
+CACHE_PATH = REPO_ROOT / "outputs" / "timeline_cache.json"
 
 # The real Feb 2022 event cites 5 documents across two filing dates — the
 # richest multi-document case in the dataset, and the one that prompted the

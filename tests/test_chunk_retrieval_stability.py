@@ -27,7 +27,7 @@ sys.path.insert(0, str(REPO_ROOT / "backend"))
 import hydradb_client  # noqa: E402
 from timeline import GENERIC_QUESTION  # noqa: E402
 
-RESULTS_PATH = REPO_ROOT / "data" / "_chunk_retrieval_stability_results.json"
+RESULTS_PATH = REPO_ROOT / "outputs" / "_chunk_retrieval_stability_results.json"
 TARGET_DATE = "2022-02-05"
 TARGET_DOC = "peloton_2022-02-05_8k.md"
 N_REPEATS = 8

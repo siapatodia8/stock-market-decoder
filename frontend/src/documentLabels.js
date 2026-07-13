@@ -27,9 +27,6 @@ const TYPE_LABELS = {
   'restructuring-pr': 'Restructuring Press Release',
   'shareholder-letter': 'Shareholder Letter',
   'shareholder-letter_v2': 'Shareholder Letter (Amended)',
-  wikipedia: 'Wikipedia Overview',
-  price_history_annual: 'Price History (Annual)',
-  price_history_weekly: 'Price History (Weekly)',
 }
 
 function titleCase(slug) {
@@ -47,7 +44,7 @@ export function formatDocumentLabel(filename) {
   const match = base.match(/^([a-z]+)_(\d{4}-\d{2}-\d{2})_(.+)$/i)
 
   if (!match) {
-    // No date segment (e.g. peloton_wikipedia) — split off the company only.
+    // No date segment in the filename — split off the company only.
     const [company, ...rest] = base.split('_')
     const companyLabel = COMPANY_LABELS[company.toLowerCase()] || titleCase(company)
     const typeSlug = rest.join('_')
