@@ -1,6 +1,6 @@
 // Backend runs locally via `uvicorn main:app --reload --port 8000` (backend/).
 // Called directly (not proxied through Vite), matching main.py's CORS allowlist
-// for http://localhost:5173.
+// for http://localhost:5173 (this app's dev port, Vite's default).
 const API_BASE = 'http://localhost:8000'
 
 export async function fetchTimeline() {

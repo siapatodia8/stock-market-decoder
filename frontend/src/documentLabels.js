@@ -29,6 +29,19 @@ const TYPE_LABELS = {
   'shareholder-letter_v2': 'Shareholder Letter (Amended)',
 }
 
+// Short badge form of TYPE_LABELS for dense UI (terminal source tabs) where
+// the full "Form 8-K" label doesn't fit — same keys, compact values.
+const KIND_LABELS = {
+  '8k': '8-K',
+  '10k': '10-K',
+  '10q': '10-Q',
+  pr: 'PR',
+  'board-pr': 'BOARD PR',
+  'restructuring-pr': 'RESTRUCT PR',
+  'shareholder-letter': 'LETTER',
+  'shareholder-letter_v2': 'LETTER v2',
+}
+
 function titleCase(slug) {
   return slug
     .replace(/[-_]+/g, ' ')
@@ -38,22 +51,30 @@ function titleCase(slug) {
     .join(' ')
 }
 
+function parseFilename(filename) {
+  const base = (filename || '').replace(/\.md$/i, '')
+  const match = base.match(/^([a-z]+)_(\d{4}-\d{2}-\d{2})_(.+)$/i)
+  if (!match) {
+    const [company, ...rest] = base.split('_')
+    return { company, dateStr: null, typeSlug: rest.join('_') }
+  }
+  const [, company, dateStr, typeSlug] = match
+  return { company, dateStr, typeSlug }
+}
+
 export function formatDocumentLabel(filename) {
   if (!filename) return ''
-  const base = filename.replace(/\.md$/i, '')
-  const match = base.match(/^([a-z]+)_(\d{4}-\d{2}-\d{2})_(.+)$/i)
-
-  if (!match) {
-    // No date segment in the filename — split off the company only.
-    const [company, ...rest] = base.split('_')
-    const companyLabel = COMPANY_LABELS[company.toLowerCase()] || titleCase(company)
-    const typeSlug = rest.join('_')
-    const typeLabel = TYPE_LABELS[typeSlug.toLowerCase()] || titleCase(typeSlug) || filename
-    return `${companyLabel} – ${typeLabel}`
-  }
-
-  const [, company, dateStr, typeSlug] = match
+  const { company, dateStr, typeSlug } = parseFilename(filename)
   const companyLabel = COMPANY_LABELS[company.toLowerCase()] || titleCase(company)
-  const typeLabel = TYPE_LABELS[typeSlug.toLowerCase()] || titleCase(typeSlug)
+  const typeLabel = TYPE_LABELS[typeSlug.toLowerCase()] || titleCase(typeSlug) || filename
+  if (!dateStr) return `${companyLabel} – ${typeLabel}`
   return `${companyLabel} – ${typeLabel} (${formatDateShort(dateStr)})`
+}
+
+// Compact "kind" badge, e.g. "8-K" — used by the terminal source tabs
+// instead of the full formatDocumentLabel string.
+export function formatDocumentKind(filename) {
+  if (!filename) return ''
+  const { typeSlug } = parseFilename(filename)
+  return KIND_LABELS[typeSlug.toLowerCase()] || titleCase(typeSlug).toUpperCase()
 }

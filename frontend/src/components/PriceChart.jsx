@@ -104,8 +104,8 @@ export default function PriceChart({ months, selectedMonth, onSelectEvent }) {
       >
         <defs>
           <linearGradient id="areaGradient" gradientUnits="userSpaceOnUse" x1="0" y1={PAD_T} x2="0" y2={BASELINE_Y}>
-            <stop offset="0%" stopColor="#378add" stopOpacity="0.3" />
-            <stop offset="100%" stopColor="#378add" stopOpacity="0" />
+            <stop offset="0%" stopColor="#8fd4c0" stopOpacity="0.28" />
+            <stop offset="100%" stopColor="#8fd4c0" stopOpacity="0" />
           </linearGradient>
         </defs>
 
@@ -114,10 +114,6 @@ export default function PriceChart({ months, selectedMonth, onSelectEvent }) {
             <line x1={PAD_L} y1={yFor(t)} x2={PAD_L + INNER_W} y2={yFor(t)} className="gridline" />
             <text x={2} y={yFor(t) + 4} className="axis-label">${t}</text>
           </g>
-        ))}
-
-        {xTicks.map((i) => (
-          <line key={priced[i].month} x1={xFor(i)} y1={PAD_T} x2={xFor(i)} y2={BASELINE_Y} className="gridline" />
         ))}
 
         <line x1={PAD_L} y1={PAD_T} x2={PAD_L} y2={BASELINE_Y} className="axis-line" />

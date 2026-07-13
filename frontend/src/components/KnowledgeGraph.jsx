@@ -236,7 +236,7 @@ function fitTransform(nodes) {
 // (from /api/timeline, see backend/knowledge_graph.py). Selection (of either
 // a node or an edge/relationship) is lifted up so the Selected
 // Node/Relationship panel below can share it — only one of the two is ever
-// active at a time, enforced by the parent (KnowledgeGraphSection).
+// active at a time, enforced by the parent (App.jsx).
 export default function KnowledgeGraph({ graph, selectedNodeId, selectedEdgeId, onSelectNode, onSelectEdge }) {
   const svgRef = useRef(null)
   const zoomBehaviorRef = useRef(null)

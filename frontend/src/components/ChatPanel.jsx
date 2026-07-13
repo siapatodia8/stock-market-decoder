@@ -2,25 +2,18 @@ import { useEffect, useRef, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { sendChat } from '../api'
 
-// Placement-agnostic chat core. The same component is dropped into whichever
-// shell (sidebar / drawer / bottom section) — it owns all the chat behaviour,
-// the shells only own layout.
-//
-// Each turn is one Q&A pair (the backend pipeline is stateless per question:
-// classify -> scoped retrieval -> synthesis + price blend), rendered with its
-// scope, price stat, and an expandable "how we found this" provenance block.
-//
-// seed: { question, key } — when `key` changes (an event's "Decode with the
-// agent" CTA), the question is auto-sent, so the hand-off from an event's
-// evidence into the shared decoder feels like a real continuation.
+// Placement-agnostic chat core, styled for the terminal's "02 · DECODER"
+// panel. Each turn is one Q&A pair (the backend pipeline is stateless per
+// question: classify -> scoped retrieval -> synthesis + price blend),
+// rendered with its price stat and an expandable "how we found this"
+// provenance block.
 
 const EXAMPLES = [
   'What did Peloton announce in December 2020?',
   "Compare Peloton's 2020 boom to the 2022 restructuring.",
-  'How volatile was the stock leading up to the CFO transition?',
 ]
 
-export default function ChatPanel({ seed }) {
+export default function ChatPanel() {
   const [input, setInput] = useState('')
   const [turns, setTurns] = useState([]) // [{ question, loading, result?, error? }]
   const [pending, setPending] = useState(false)
@@ -42,11 +35,12 @@ export default function ChatPanel({ seed }) {
     }
   }
 
-  // Auto-send a seeded question from an event's stage-3 CTA.
-  useEffect(() => {
-    if (seed?.question) ask(seed.question)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [seed?.key])
+  function handleKeyDown(e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      ask()
+    }
+  }
 
   // Keep the newest turn in view.
   useEffect(() => {
@@ -54,18 +48,14 @@ export default function ChatPanel({ seed }) {
   }, [turns])
 
   return (
-    <div className="chat-panel">
-      <div className="chat-scroll" ref={scrollRef}>
+    <div className="term-chat">
+      <div className="term-chat-scroll" ref={scrollRef}>
         {turns.length === 0 && (
-          <div className="chat-empty">
-            <p className="chat-empty-title">Ask the decoder</p>
-            <p className="muted">
-              Ask about one event, compare two, or ask across a whole period — it figures out
-              the scope from your question.
-            </p>
-            <div className="chat-examples">
+          <div className="term-chat-empty">
+            <p>Hand this event to the decoder — explain it, or compare across the timeline.</p>
+            <div className="term-chat-examples">
               {EXAMPLES.map((ex) => (
-                <button key={ex} type="button" className="chat-example" onClick={() => ask(ex)}>
+                <button key={ex} type="button" className="term-chat-example" onClick={() => ask(ex)}>
                   {ex}
                 </button>
               ))}
@@ -78,24 +68,19 @@ export default function ChatPanel({ seed }) {
         ))}
       </div>
 
-      <form
-        className="chat-input-row"
-        onSubmit={(e) => {
-          e.preventDefault()
-          ask()
-        }}
-      >
+      <div className="term-chat-input-row">
         <input
-          className="chat-input"
+          className="term-chat-input"
           value={input}
-          placeholder="Ask about the story…"
+          placeholder="> ask the decoder…"
           onChange={(e) => setInput(e.target.value)}
+          onKeyDown={handleKeyDown}
           disabled={pending}
         />
-        <button type="submit" className="btn btn-active" disabled={pending || !input.trim()}>
-          {pending ? '…' : 'Ask'}
+        <button type="button" className="term-chat-send" onClick={() => ask()} disabled={pending || !input.trim()}>
+          RUN
         </button>
-      </form>
+      </div>
     </div>
   )
 }
@@ -103,16 +88,16 @@ export default function ChatPanel({ seed }) {
 function ChatTurn({ turn }) {
   const { question, loading, result, error } = turn
   return (
-    <div className="chat-turn">
-      <p className="chat-q">{question}</p>
+    <div className="term-chat-turn">
+      <p className="term-chat-q">{question}</p>
 
-      {loading && <p className="muted chat-a">Decoding…</p>}
-      {error && <p className="muted chat-a">Couldn't reach the decoder: {error}</p>}
+      {loading && <p className="term-chat-thinking">decoding<span className="dd1">.</span><span className="dd2">.</span><span className="dd3">.</span></p>}
+      {error && <p className="muted">Couldn't reach the decoder: {error}</p>}
 
       {result && (
-        <div className="chat-a">
+        <div className="term-chat-a">
           {result.answer ? (
-            <div className="chat-answer">
+            <div className="term-chat-answer">
               <ReactMarkdown>{result.answer}</ReactMarkdown>
             </div>
           ) : (
@@ -132,7 +117,7 @@ function PriceChip({ stats }) {
   const ret = stats.total_return_pct
   const sign = ret >= 0 ? '+' : ''
   return (
-    <div className="chat-price">
+    <div className="term-chat-price">
       <span className={ret >= 0 ? 'pct pct-pos' : 'pct pct-neg'}>
         {sign}
         {ret}%
@@ -150,14 +135,14 @@ function Provenance({ result }) {
   const [open, setOpen] = useState(false)
   const sources = uniqueSources(result.chunks)
   return (
-    <div className="chat-prov">
-      <button type="button" className="decode-btn" onClick={() => setOpen((o) => !o)}>
-        {open ? 'Hide how we found this' : 'How we found this →'}
+    <div className="term-chat-prov">
+      <button type="button" className="term-decode-btn" onClick={() => setOpen((o) => !o)}>
+        {open ? 'hide how we found this' : 'how we found this →'}
       </button>
       {open && (
-        <div className="chat-prov-body">
-          <p className="chat-prov-line">
-            <span className="chat-tag">{result.query_type}</span>
+        <div className="term-chat-prov-body">
+          <p className="term-chat-prov-line">
+            <span className="term-chat-tag">{result.query_type}</span>
             {' '}scope: {result.event_ids.join(', ')}
           </p>
           {result.reasoning && <p className="muted">Why these: {result.reasoning}</p>}
@@ -168,9 +153,7 @@ function Provenance({ result }) {
             Evidence: {result.chunks?.length || 0} chunks, {result.chunk_relations?.length || 0} graph
             relationships
           </p>
-          {sources.length > 0 && (
-            <p className="muted">Sources: {sources.join(', ')}</p>
-          )}
+          {sources.length > 0 && <p className="muted">Sources: {sources.join(', ')}</p>}
         </div>
       )}
     </div>
