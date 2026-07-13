@@ -9,19 +9,19 @@ from 03_project_stock_explainer.md:
     text from data/ for the evidence panel, so it can show the real document
     a chunk came from instead of just the retrieved fragment
   - POST /api/highlight — locates a chat answer's cited chunk_text within its
-    source document (backend/highlight.py; finding #16 — HydraDB's chunk
-    schema carries no offset/position field, so this is app-side text
-    matching over data we already have, not a HydraDB call)
+    source document (backend/highlight.py — HydraDB's chunk schema carries no
+    offset/position field, so this is app-side text matching over data we
+    already have, not a HydraDB call; see docs/limitations_and_future_considerations.md)
   - GET  /api/knowledge-graph — live, on-demand version of the same merged
     graph that's precomputed into every /api/timeline event's
     "knowledge_graph" field (via timeline.py) — dev/fallback tool, not the
-    frontend's primary path. See backend/knowledge_graph.py and finding #14
-    in docs/hydradb_findings_log.md for why the merge step exists
+    frontend's primary path. See backend/knowledge_graph.py and
+    docs/findings/knowledge_graph.md for why the merge step exists
   - POST /api/chat      — live HydraDB retrieval + synthesis.py answer generation
 Plus /api/health for a quick "is HydraDB reachable" check during dev.
 
 Run locally (not in a sandboxed environment without network access to
-api.hydradb.com — see docs/CONTEXT_UPDATES.md's "Operating constraint" section):
+api.hydradb.com):
     cd backend
     pip install -r requirements.txt
     python timeline.py          # builds/refreshes the timeline cache

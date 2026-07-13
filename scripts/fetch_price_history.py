@@ -7,10 +7,9 @@ was never actually ingested by either setup_and_ingest*.py script and was never
 cited by any event, so it was removed as dead output rather than kept around
 unused.
 
-Must be run LOCALLY, not in the sandbox — same network restriction we hit with
-HydraDB (see docs/CONTEXT_UPDATES.md "Blocker" section): the sandbox's proxy can't
-reach pypi.org to install yfinance, and Yahoo Finance's JSON chart API returns
-nothing over a plain HTML fetch tool. This mirrors that workaround.
+Must be run LOCALLY, not in a network-restricted sandbox: a sandboxed proxy
+may not be able to reach pypi.org to install yfinance, or Yahoo Finance's
+JSON chart API may return nothing over a plain HTML fetch tool.
 
 Usage:
     pip install yfinance --break-system-packages   # or just `pip install yfinance`

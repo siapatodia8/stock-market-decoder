@@ -129,7 +129,7 @@ def _build_event(dates_with_roles: dict) -> dict:
     # app. Built from source_titles — the same deduplicated document list
     # already used for the evidence panel's decode dropdown, so the graph
     # always covers exactly the documents a user can already open. See
-    # knowledge_graph.py and finding #14 (docs/hydradb_findings_log.md) for the
+    # knowledge_graph.py and docs/findings/knowledge_graph.md for the
     # entity-alias step this goes through.
     graph = knowledge_graph.build_graph(source_titles) if source_titles else {
         "documents": [], "skipped_documents": [], "nodes": [], "edges": []

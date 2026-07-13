@@ -1,7 +1,7 @@
 # SDK Rerun Test Log — Schema
 
 Defines how every test in the end-to-end SDK rerun (`00_rerun_plan.md`, topics 1–14) gets
-logged in this folder. Distinct from `docs/hydradb_findings_log.md` (confirmed HydraDB
+logged in this folder. Distinct from `docs/findings/` (confirmed HydraDB
 defects, promoted from here once confirmed) — this log captures the **full rerun
 experience**: every command run, what happened, and any file changed to make it work.
 

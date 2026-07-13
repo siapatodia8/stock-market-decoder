@@ -9,9 +9,9 @@ The alias/dedup step below exists because HydraDB's own cross-document
 entity resolution (a claimed Tier 4 feature) does not reliably merge the
 same real-world entity when documents refer to it differently (e.g. "Peloton"
 vs. "Peloton Interactive, Inc."), confirmed via both the SDK and the live
-dashboard's own Graph view. Full writeup: finding #14 in
-docs/hydradb_findings_log.md. There is no HydraDB API to fix this at the source
-(checked — see the same finding), so it's handled here, at render time,
+dashboard's own Graph view. Full writeup: docs/findings/knowledge_graph.md.
+There is no HydraDB API to fix this at the source
+(checked — see the same doc), so it's handled here, at render time,
 scoped only to this feature. Does not touch synthesis.py/timeline.py.
 """
 import hydradb_client

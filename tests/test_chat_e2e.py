@@ -16,7 +16,7 @@ above each block in CASES for the full rationale):
      on query_type / required event_ids / forbidden event_ids / at-least-one
      expected source, same lenient style as test_orchestrator.py. These count
      toward the overall pass/fail tally. NOTE: the `forbidden` checks
-     predate the orchestrator redesign (see docs/CONTEXT_UPDATES.md) — the
+     predate the orchestrator redesign (see docs/workflow_overview.md) — the
      adopted stage 1 (retrieval_router.py) deliberately errs toward
      inclusion, so a `forbidden` failure here isn't necessarily a real bug;
      re-check against that design intent before treating one as a
@@ -33,12 +33,11 @@ above each block in CASES for the full rationale):
   3. Headline-distance stress cases (group "headline_distance") — questions
      deliberately built from real document facts using none of the actual
      catalog headline's own vocabulary. ORIGINALLY written to stress-test
-     orchestrator.classify()'s headline-only limitation (see
-     docs/CONTEXT_UPDATES.md: "Chat scoping was headline-limited, not
-     document-limited — since fixed"). That limitation no longer describes the pipeline
+     orchestrator.classify()'s headline-only limitation, since fixed (see
+     docs/workflow_overview.md). That limitation no longer describes the pipeline
      actually running here — chat.py's stage 1 is now
-     retrieval_router.route_via_retrieval() (see CONTEXT_UPDATES.md's
-     "Orchestrator redesign" section), which sees real retrieved excerpts,
+     retrieval_router.route_via_retrieval() (see docs/workflow_overview.md's
+     chat workflow table), which sees real retrieved excerpts,
      not just a headline. This group is kept as an end-to-end confirmatory
      check (through the full chat.run_chat() pipeline, including price_stats
      and synthesis) that these cases still route correctly under the new

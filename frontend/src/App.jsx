@@ -136,7 +136,7 @@ function App() {
         <header className="term-header">
           <div className="term-brand">
             <span className="term-logo">◆</span>
-            <span className="term-title">DECODER TERMINAL</span>
+            <span className="term-title">STOCK MARKET DECODER</span>
             <span className="term-subtitle">/ PTON · PELOTON INTERACTIVE</span>
           </div>
           {lastPriced && (
@@ -223,7 +223,7 @@ function App() {
             <Resizer axis="x" value={sourceWidth} onChange={setSourceWidth} min={200} max={640} />
 
             <div className="term-panel term-panel-decoder">
-              <div className="term-panel-title term-panel-title-accent">02 · DECODER</div>
+              <div className="term-panel-title term-panel-title-accent">02 · DECODER TERMINAL</div>
               <ChatPanel onViewSource={viewSource} />
             </div>
 

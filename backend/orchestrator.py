@@ -1,7 +1,7 @@
 """
 Chat stage 1, ORIGINAL approach — the headline-only events orchestrator.
 
-SUPERSEDED as of docs/CONTEXT_UPDATES.md's "Orchestrator redesign" section —
+SUPERSEDED — see docs/workflow_overview.md for the current pipeline.
 chat.py no longer calls classify() here, it calls
 retrieval_router.route_via_retrieval() instead. This module is kept for
 reference and as a fallback path (its own test coverage,

@@ -1,9 +1,9 @@
 """
 Stage 1 (redesigned) — routes a question to timeline events using REAL
 retrieved evidence, not a bare headline. Supersedes orchestrator.classify()
-per docs/CONTEXT_UPDATES.md's "Orchestrator redesign" section — see that
-writeup for the full experiment history (tests/test_retrieval_based_routing.py,
-tests/test_retrieval_llm_hybrid.py) behind this decision.
+— see docs/workflow_overview.md for how this fits into the pipeline, and
+tests/test_retrieval_based_routing.py / tests/test_retrieval_llm_hybrid.py
+for the experiment history behind this decision.
 
 Two-step pipeline, both grounded in the real HydraDB corpus, not a summary:
   1. One unscoped HydraDB query() across the whole tenant (no
@@ -17,7 +17,7 @@ the codebase as the prior approach / fallback reference — chat.py no longer
 calls it, but it still has its own test coverage (tests/test_orchestrator.py,
 tests/test_prompt_grounding.py) in case this redesign needs to be reverted.
 
-Known, accepted gap (not fixed — see CONTEXT_UPDATES.md): range/before-after
+Known, accepted gap (not fixed — see docs/limitations_and_future_considerations.md): range/before-after
 questions can under-include the correct boundary window, since this router
 has no explicit date-arithmetic rule the way classify()'s BOUNDARY RULE did
 (tests/test_retrieval_llm_hybrid.py's one failing case). Over-inclusion

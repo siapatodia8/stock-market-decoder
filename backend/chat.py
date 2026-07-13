@@ -8,16 +8,17 @@ Chat pipeline — composes the three stages into one call.
         3. synthesis.synthesize_answer   -> grounded answer      (our LLM)
 
 This is the scoped replacement for /api/chat's old single unscoped
-whole-tenant query (finding #12). Scope is decided by stage 1 and enforced by
-stage 2's metadata_filters — never by a blind tenant-wide retrieval.
+whole-tenant query (see docs/findings/query_and_retrieval_quality.md for the
+reranking-instability finding this avoids). Scope is decided by stage 1 and
+enforced by stage 2's metadata_filters — never by a blind tenant-wide retrieval.
 
 Division of labour, to keep it honest: HydraDB stores/relates/retrieves
 (stages 1 and 2 both touch it now). It does NOT generate the answer — stage
 3, our own LLM over what HydraDB returned, does. Stage 1 used to be pure
 app-layer routing over a headline-only catalog (orchestrator.classify(),
-never touched HydraDB) — redesigned per docs/CONTEXT_UPDATES.md's
-"Orchestrator redesign" section: headline-only routing couldn't ground on
-facts absent from the one-line headline, so stage 1 now runs one unscoped
+never touched HydraDB) — redesigned (see docs/workflow_overview.md):
+headline-only routing couldn't ground on facts absent from the one-line
+headline, so stage 1 now runs one unscoped
 HydraDB query() first and has an LLM confirm event_ids/query_type from the
 real retrieved excerpts. orchestrator.classify() is kept in the codebase as
 the prior approach, not called here.

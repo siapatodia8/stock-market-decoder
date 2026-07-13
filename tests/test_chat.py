@@ -30,8 +30,8 @@ CASES = [
         "type": "multi", "required": {"2022-06", "2024-05"}, "forbidden": set(), "expect_price": True,
     },
     {
-        # Known, accepted gap — see docs/CONTEXT_UPDATES.md's "Orchestrator
-        # redesign" section. retrieval_router.py (the adopted stage 1,
+        # Known, accepted gap — see docs/limitations_and_future_considerations.md.
+        # retrieval_router.py (the adopted stage 1,
         # superseding orchestrator.classify()) has no boundary/date-window
         # logic the way classify()'s BOUNDARY RULE did — "leading up to X"
         # tends to collapse onto the anchor event X itself instead of

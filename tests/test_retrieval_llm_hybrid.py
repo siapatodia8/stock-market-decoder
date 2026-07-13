@@ -53,7 +53,7 @@ CASES = [
      "classify_result": "multi, ['2022-06','2024-05'] — PASS"},
     {"q": "How volatile was the stock in the period before the CFO transition?", "required": {"2020-12"},
      "note": "Boundary case — over-inclusion of 2022-06 is now acceptable, not graded against. "
-             "Known, accepted gap — see docs/CONTEXT_UPDATES.md.",
+             "Known, accepted gap — see docs/limitations_and_future_considerations.md.",
      "classify_result": "range, boundary correctly excludes 2022-06 — PASS"},
     {"q": "What's your favorite pizza topping?", "required": set(),
      "note": "Off-topic — not graded on rejection; observing what the router does with real off-topic retrieval.",

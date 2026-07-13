@@ -1,7 +1,7 @@
 """
 Stage 3: turns HydraDB's retrieved evidence (chunks, graph relationships)
 into an actual answer via GPT-4o-mini. HydraDB only returns evidence, not an
-answer (see docs/CONTEXT_UPDATES.md's pipeline structure section) — this is the
+answer (see docs/workflow_overview.md) — this is the
 app-layer synthesis step that fills that gap. Prompts live in prompts/*.yaml,
 not inline, so wording changes don't require touching this file.
 """
