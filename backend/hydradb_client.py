@@ -83,6 +83,29 @@ def source_id_map() -> dict:
     }
 
 
+def filename_to_filing_date() -> dict:
+    """Returns {filename: filing_date} for every live document in the tenant.
+    Live lookup via context.list(), same call source_id_map() uses — not a
+    static manifest, so it always matches what's actually ingested. Needed by
+    retrieval_router.py to map an unscoped query()'s returned chunks
+    (identified only by source_title) back to which timeline event they
+    belong to, without depending on scripts/setup_and_ingest_sdk.py's
+    DOCUMENTS list as a runtime import (that list is a one-off setup
+    manifest, not meant to be a backend dependency)."""
+    result = _client.context.list(
+        tenant_id=TENANT_ID,
+        sub_tenant_id=SUB_TENANT_ID,
+        type="knowledge",
+    )
+    mapping = {}
+    for doc in result.data.sources:
+        title = doc.get("title")
+        filing_date = (doc.get("metadata") or {}).get("filing_date")
+        if title and filing_date:
+            mapping[title] = filing_date
+    return mapping
+
+
 def get_relations_for_source(source_id: str, limit: int = 200) -> list:
     """Returns every knowledge-graph relation (GraphTripletWithEvidence)
     HydraDB extracted from a single source document — independent of any

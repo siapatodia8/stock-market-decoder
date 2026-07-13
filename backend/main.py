@@ -8,10 +8,14 @@ from 03_project_stock_explainer.md:
   - GET  /api/documents/{filename} — serves one source document's full clean
     text from data/ for the evidence panel, so it can show the real document
     a chunk came from instead of just the retrieved fragment
+  - POST /api/highlight — locates a chat answer's cited chunk_text within its
+    source document (backend/highlight.py; finding #16 — HydraDB's chunk
+    schema carries no offset/position field, so this is app-side text
+    matching over data we already have, not a HydraDB call)
   - GET  /api/knowledge-graph — live, on-demand version of the same merged
     graph that's precomputed into every /api/timeline event's
     "knowledge_graph" field (via timeline.py) — dev/fallback tool, not the
-    frontend's primary path. See backend/knowledge_graph.py and finding #24
+    frontend's primary path. See backend/knowledge_graph.py and finding #14
     in docs/hydradb_findings_log.md for why the merge step exists
   - POST /api/chat      — live HydraDB retrieval + synthesis.py answer generation
 Plus /api/health for a quick "is HydraDB reachable" check during dev.
@@ -32,6 +36,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 import chat as chat_pipeline
+import highlight
 import hydradb_client
 import knowledge_graph
 import synthesis
@@ -113,6 +118,27 @@ def get_document(filename: str):
     return {"filename": filename, "content": path.read_text()}
 
 
+class HighlightRequest(BaseModel):
+    filename: str
+    chunk_text: str
+
+
+@app.post("/api/highlight")
+def get_highlight(req: HighlightRequest):
+    """Returns {"match": {start, end, matched_text, score, method}} or
+    {"match": None} if no reasonable match was found (see
+    backend/highlight.py's docstring for the three-strategy matching order).
+    Pure text matching over data/{filename} — no HydraDB call."""
+    if not SAFE_FILENAME_RE.match(req.filename):
+        raise HTTPException(status_code=400, detail="Invalid document filename.")
+    path = DATA_DIR / req.filename
+    if not path.is_file():
+        raise HTTPException(status_code=404, detail=f"Document not found: {req.filename}")
+    document_text = path.read_text()
+    match = highlight.find_chunk_span(document_text, req.chunk_text)
+    return {"match": match}
+
+
 @app.get("/api/knowledge-graph")
 def get_knowledge_graph(documents: str):
     """Live/on-demand only — the frontend's normal path reads
@@ -136,7 +162,7 @@ def chat(req: ChatRequest):
 
     # Scoped pipeline: orchestrator classifies the question to events, retrieval
     # queries only those events (metadata_filters), synthesis answers over the
-    # result. Replaces the old single unscoped whole-tenant query (finding #22).
+    # result. Replaces the old single unscoped whole-tenant query (finding #12).
     try:
         result = chat_pipeline.run_chat(
             req.question, mode=req.mode, max_results=req.max_results

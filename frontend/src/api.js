@@ -27,3 +27,16 @@ export async function sendChat(question) {
   if (!res.ok) throw new Error(`${res.status} ${res.statusText}`)
   return res.json()
 }
+
+// Locates chunk_text's span within filename's full document (backend/highlight.py
+// — app-side text matching, no HydraDB call; see finding #16). Returns
+// { match: { start, end, matched_text, score, method } | null }.
+export async function fetchHighlight(filename, chunkText) {
+  const res = await fetch(`${API_BASE}/api/highlight`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ filename, chunk_text: chunkText }),
+  })
+  if (!res.ok) throw new Error(`${res.status} ${res.statusText}`)
+  return res.json()
+}

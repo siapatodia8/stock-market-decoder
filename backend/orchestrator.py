@@ -1,19 +1,30 @@
 """
-Chat stage 1 — the events orchestrator.
+Chat stage 1, ORIGINAL approach — the headline-only events orchestrator.
+
+SUPERSEDED as of docs/CONTEXT_UPDATES.md's "Orchestrator redesign" section —
+chat.py no longer calls classify() here, it calls
+retrieval_router.route_via_retrieval() instead. This module is kept for
+reference and as a fallback path (its own test coverage,
+tests/test_orchestrator.py + tests/test_prompt_grounding.py, still passes and
+still runs standalone) in case the redesign needs to be reverted. Everything
+below describes how THIS approach worked, not what chat.py currently does.
 
 Given a free-text user question, decide WHICH timeline events it concerns and
 WHAT SHAPE the question has (single / multi / comparative / range), BEFORE any
 HydraDB retrieval runs.
 
-This is deliberately our own app-layer code, not a HydraDB call, for two
+This was deliberately our own app-layer code, not a HydraDB call, for two
 reasons:
   1. "event" is a grouping we defined ourselves (one event per filing month in
      the timeline cache). HydraDB only knows individual documents and their
      metadata — it has no notion of "the CFO transition event".
   2. Deciding scope with an unscoped whole-tenant query() is exactly the
-     instability documented as finding #22. Classifying over ~5 known event
+     instability documented as finding #12. Classifying over ~5 known event
      summaries instead is a far easier and more reliable problem, and it never
      touches HydraDB.
+Reason 2 is exactly what the redesign revisited: real retrieved evidence
+turned out to matter enough (see the redesign write-up) that the tradeoff
+was worth taking back on.
 
 The output ({query_type, event_ids}) feeds two downstream consumers:
   - HydraDB retrieval, scoped to the chosen events' filing_dates.

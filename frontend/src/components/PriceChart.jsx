@@ -17,6 +17,12 @@ const INNER_W = W - PAD_L - PAD_R
 const INNER_H = H - PAD_T - PAD_B
 const BASELINE_Y = PAD_T + INNER_H
 
+// Approx rendered height (px) of .chart-tooltip, plus its 10px gap off the
+// point — if the hovered point sits closer to the top of the chart than
+// this, the default above-point placement would push the tooltip past the
+// container edge and get clipped, so we flip it below the point instead.
+const TOOLTIP_FLIP_MARGIN_PX = 72
+
 // "1-2-5" tick sequence, the standard pattern for log-scale axes — roughly
 // even spacing in log space, round-looking numbers. Returns ticks strictly
 // between min/max; the exact min/max are labeled separately.
@@ -50,6 +56,7 @@ function xTickIndices(n, target = 7) {
 export default function PriceChart({ months, selectedMonth, onSelectEvent }) {
   const svgRef = useRef(null)
   const [hoverIndex, setHoverIndex] = useState(null)
+  const [containerH, setContainerH] = useState(0)
 
   const priced = months.filter((m) => m.price)
   if (priced.length === 0) {
@@ -82,6 +89,7 @@ export default function PriceChart({ months, selectedMonth, onSelectEvent }) {
     const svgX = ((e.clientX - rect.left) / rect.width) * W
     const idx = Math.min(priced.length - 1, Math.max(0, Math.floor((svgX - PAD_L) / slot)))
     setHoverIndex(idx)
+    setContainerH(rect.height)
   }
 
   function handleMouseLeave() {
@@ -91,6 +99,8 @@ export default function PriceChart({ months, selectedMonth, onSelectEvent }) {
   const hovered = hoverIndex != null ? priced[hoverIndex] : null
   const hoverX = hovered ? xFor(hoverIndex) : null
   const hoverY = hovered ? yFor(hovered.price.close) : null
+  const hoverPxFromTop = hovered && containerH ? (hoverY / H) * containerH : null
+  const flipTooltipBelow = hoverPxFromTop != null && hoverPxFromTop < TOOLTIP_FLIP_MARGIN_PX
 
   return (
     <div className="chart-wrap">
@@ -110,16 +120,11 @@ export default function PriceChart({ months, selectedMonth, onSelectEvent }) {
         </defs>
 
         {midTicks.map((t) => (
-          <g key={t}>
-            <line x1={PAD_L} y1={yFor(t)} x2={PAD_L + INNER_W} y2={yFor(t)} className="gridline" />
-            <text x={2} y={yFor(t) + 4} className="axis-label">${t}</text>
-          </g>
+          <line key={t} x1={PAD_L} y1={yFor(t)} x2={PAD_L + INNER_W} y2={yFor(t)} className="gridline" />
         ))}
 
         <line x1={PAD_L} y1={PAD_T} x2={PAD_L} y2={BASELINE_Y} className="axis-line" />
         <line x1={PAD_L} y1={BASELINE_Y} x2={PAD_L + INNER_W} y2={BASELINE_Y} className="axis-line" />
-        <text x={2} y={PAD_T + 6} className="axis-label">${Math.round(maxP)}</text>
-        <text x={2} y={BASELINE_Y} className="axis-label">${Math.round(minP)}</text>
 
         {/* invisible full-height hit target */}
         <rect x={PAD_L} y={PAD_T} width={INNER_W} height={INNER_H} fill="transparent" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} />
@@ -165,22 +170,45 @@ export default function PriceChart({ months, selectedMonth, onSelectEvent }) {
             </circle>
           )
         })}
+      </svg>
+
+      {/* Real HTML text, positioned at the same %-based coordinates as the
+          SVG plot — see the .chart-axis-labels CSS comment for why these
+          aren't <text> elements inside the (non-uniformly scaled) SVG. */}
+      <div className="chart-axis-labels">
+        {midTicks.map((t) => (
+          <span key={t} className="chart-axis-label chart-axis-label-y" style={{ top: `${(yFor(t) / H) * 100}%` }}>
+            ${t}
+          </span>
+        ))}
+        <span className="chart-axis-label chart-axis-label-y-top" style={{ top: `${(PAD_T / H) * 100}%` }}>
+          ${Math.round(maxP)}
+        </span>
+        <span className="chart-axis-label chart-axis-label-y-bottom" style={{ top: `${(BASELINE_Y / H) * 100}%` }}>
+          ${Math.round(minP)}
+        </span>
 
         {xTicks.map((i, idx) => {
           const isFirst = idx === 0
           const isLast = idx === xTicks.length - 1
-          const anchorX = isLast ? xFor(i) - 8 : isFirst ? xFor(i) + 8 : xFor(i)
-          const anchor = isLast ? 'end' : isFirst ? 'start' : 'middle'
+          const anchorCls = isLast ? 'chart-axis-label-x-end' : isFirst ? 'chart-axis-label-x-start' : 'chart-axis-label-x-middle'
           return (
-            <text key={priced[i].month} x={anchorX} y={H - 8} textAnchor={anchor} className="axis-label">
+            <span
+              key={priced[i].month}
+              className={`chart-axis-label ${anchorCls}`}
+              style={{ left: `${(xFor(i) / W) * 100}%` }}
+            >
               {formatMonth(priced[i].month)}
-            </text>
+            </span>
           )
         })}
-      </svg>
+      </div>
 
       {hovered && (
-        <div className="chart-tooltip" style={{ left: `${(hoverX / W) * 100}%`, top: `${(hoverY / H) * 100}%` }}>
+        <div
+          className={flipTooltipBelow ? 'chart-tooltip chart-tooltip-below' : 'chart-tooltip'}
+          style={{ left: `${(hoverX / W) * 100}%`, top: `${(hoverY / H) * 100}%` }}
+        >
           <p className="tooltip-month">{formatMonth(hovered.month)}</p>
           <p className="tooltip-price">${hovered.price.close.toFixed(2)}</p>
           {hovered.price.pct_change != null && (

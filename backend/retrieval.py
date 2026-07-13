@@ -7,10 +7,10 @@ filing_date — then merges the results into a single bundle for synthesis.
 
 This reuses timeline.py's proven per-date fan-out pattern instead of the
 unscoped whole-tenant query the current /api/chat still uses (that unscoped
-shape is the instability documented as finding #22).
+shape is the instability documented as finding #12).
 
 Constraints this respects, both already established in the findings log:
-  - metadata_filters is exact-match on a single filing_date (finding #20), so
+  - metadata_filters is exact-match on a single filing_date (finding #10), so
     we fan out one query per date and merge — never one range query.
   - max_results=20, not the default 10: thinking-mode reranking drops real
     chunks near the ranking boundary at 10 (test_chunk_retrieval_stability.py

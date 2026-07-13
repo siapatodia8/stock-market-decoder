@@ -2,23 +2,30 @@
 Chat pipeline — composes the three stages into one call.
 
     run_chat(question)
-        1. orchestrator.classify   -> {query_type, event_ids}   (our code, no HydraDB)
+        1. retrieval_router.route_via_retrieval -> {query_type, event_ids}
+           (real HydraDB evidence + a lightweight LLM confirmation step)
         2. retrieval.retrieve_for_events -> scoped evidence bundle (HydraDB)
         3. synthesis.synthesize_answer   -> grounded answer      (our LLM)
 
 This is the scoped replacement for /api/chat's old single unscoped
-whole-tenant query (finding #22). Scope is decided by stage 1 and enforced by
+whole-tenant query (finding #12). Scope is decided by stage 1 and enforced by
 stage 2's metadata_filters — never by a blind tenant-wide retrieval.
 
 Division of labour, to keep it honest: HydraDB stores/relates/retrieves
-(stage 2). It does NOT generate the answer — stage 3, our own LLM over what
-HydraDB returned, does. Stage 1 is pure app-layer routing over our own event
-catalog.
+(stages 1 and 2 both touch it now). It does NOT generate the answer — stage
+3, our own LLM over what HydraDB returned, does. Stage 1 used to be pure
+app-layer routing over a headline-only catalog (orchestrator.classify(),
+never touched HydraDB) — redesigned per docs/CONTEXT_UPDATES.md's
+"Orchestrator redesign" section: headline-only routing couldn't ground on
+facts absent from the one-line headline, so stage 1 now runs one unscoped
+HydraDB query() first and has an LLM confirm event_ids/query_type from the
+real retrieved excerpts. orchestrator.classify() is kept in the codebase as
+the prior approach, not called here.
 
 Fallbacks are explicit and never silently widen scope:
-  - can't classify (no key / empty question) -> no answer + warning
-  - classified but no events matched          -> no answer + warning
-  - evidence retrieved but synthesis empty     -> no answer + warning
+  - can't route (no key / empty question) -> no answer + warning
+  - routed but no events matched           -> no answer + warning
+  - evidence retrieved but synthesis empty  -> no answer + warning
 Each returns a structured result with answer=None and answer_source="none",
 so the caller/UI can show why nothing came back instead of a blank reply.
 """
@@ -27,6 +34,7 @@ from typing import Optional
 import orchestrator
 import price_stats
 import retrieval
+import retrieval_router
 import synthesis
 
 
@@ -68,8 +76,10 @@ def run_chat(question: str, catalog: Optional[list] = None,
         "warning": None,
     }
 
-    # Stage 1 — scope.
-    scope = orchestrator.classify(question, catalog=catalog)
+    # Stage 1 — scope, via real retrieved evidence + LLM confirmation
+    # (retrieval_router.py) — see chat.py's module docstring for why this
+    # replaced the old headline-only orchestrator.classify().
+    scope = retrieval_router.route_via_retrieval(question, catalog=catalog)
     if scope is None:
         base["warning"] = ("Couldn't interpret the question (or no OpenAI key set). "
                            "Try naming a company event or a time period.")

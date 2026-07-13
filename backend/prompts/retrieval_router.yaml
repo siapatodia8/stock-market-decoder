@@ -1,0 +1,40 @@
+route_from_evidence: |
+  You are deciding which of a company's known timeline events a user's
+  question concerns. Unlike a headline-only router, you have REAL retrieved
+  evidence — actual excerpts from the underlying documents — as your source
+  of truth, grouped by which event each excerpt came from.
+
+  The user's question:
+  "{question}"
+
+  RETRIEVED EVIDENCE (grouped by event; an event may have more than one
+  excerpt; scores are the retrieval system's own relevance ranking — higher
+  is more relevant, but the grouping itself, not the score, is what tells you
+  which event an excerpt belongs to):
+  {evidence_block}
+
+  RULES:
+  - GROUNDING: Base your decision only on the retrieved evidence above. Do
+    not use prior/outside knowledge of this company to decide relevance — if
+    an event's evidence above doesn't actually relate to the question, do not
+    include it just because you recognize the event from somewhere else.
+  - Err toward inclusion, not exclusion. It is fine, and expected, for an
+    event to be included even if only part of its evidence is relevant, or
+    if its evidence is thinner than another event's — a downstream step
+    reads the full excerpts and decides what's actually usable. Only exclude
+    an event if NONE of its evidence above relates to the question at all.
+  - query_type — exactly one of:
+      - "single": about one specific event.
+      - "multi": about several specific named events (but not a comparison).
+      - "comparative": explicitly compares two or more events / periods.
+      - "range": everything before / after / between some point in time.
+    Judge query_type from the QUESTION's own phrasing (comparison language,
+    before/after language, etc.) — not from the evidence groupings.
+
+  FORMATTING:
+  - reasoning must cite which retrieved excerpt(s) (by event) support each
+    included event. Do not justify inclusion with a fact that isn't present
+    in the evidence above.
+
+  Respond ONLY with a JSON object of this exact shape, nothing else:
+  {{"query_type": "<single|multi|comparative|range>", "event_ids": ["<id>", ...], "reasoning": "<one short sentence, per FORMATTING above>"}}

@@ -25,10 +25,18 @@ PROMPTS_DIR = Path(__file__).resolve().parent / "prompts"
 _CHAT_PROMPT = yaml.safe_load((PROMPTS_DIR / "chat_answer.yaml").read_text())["answer"]
 _TIMELINE_PROMPT = yaml.safe_load((PROMPTS_DIR / "timeline_event.yaml").read_text())["event"]
 
+# Same values timeline.py uses for its own {company}/{industry} template
+# vars (COMPANY_NAME/COMPANY_INDUSTRY there) — duplicated here rather than
+# imported, so this module doesn't take on a runtime dependency on
+# timeline.py (a separate one-off cache-building script) just for two
+# constants.
+COMPANY_NAME = "Peloton Interactive"
+COMPANY_INDUSTRY = "connected fitness"
+
 
 def get_context_snippets(chunks=None, chunk_relations=None, query_paths=None, limit=8) -> list:
     """Combines chunk_relations/query_paths combined_context strings (proven
-    reliable — finding #19) with raw chunk text, ranked together by
+    reliable — finding #9) with raw chunk text, ranked together by
     relevancy_score. Previously only used raw chunk text as a last resort
     when relations were completely empty — meaning a single thin/off-target
     relation result could silently block a stronger fact sitting in a raw
@@ -89,7 +97,8 @@ def synthesize_answer(question: str, chunks=None, chunk_relations=None, query_pa
     context_block = "\n\n".join(f"- {s['text']}" for s in snippets)
     if price_context:
         context_block += f"\n\n- Price context: {price_context}"
-    prompt = _CHAT_PROMPT.format(context_block=context_block, question=question)
+    prompt = _CHAT_PROMPT.format(context_block=context_block, question=question,
+                                 company=COMPANY_NAME, industry=COMPANY_INDUSTRY)
     response = _client.chat.completions.create(
         model=MODEL,
         messages=[{"role": "user", "content": prompt}],

@@ -1,6 +1,6 @@
 """
 Diagnostic-only script (not part of the production pipeline). Follow-up to
-findings log #20 — confirms `metadata_filters` works for a single filing_date
+findings log #10 — confirms `metadata_filters` works for a single filing_date
 value, but doesn't yet answer whether a list of MULTIPLE DIFFERENT values for
 one field matches "any of" them. Needed for timeline.py: February 2022 has
 two real filing dates (2022-02-05 and 2022-02-08), so a per-month query has

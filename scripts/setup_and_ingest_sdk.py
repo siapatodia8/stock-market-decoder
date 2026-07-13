@@ -1,15 +1,15 @@
 """
 Creates the HydraDB tenant (`stock-market-decoder`) with our metadata schema,
 waits for it to be ready, then ingests the 13 Peloton documents as Knowledge via
-the Python SDK. Alternative to scripts/setup_and_ingest.py (REST) — use this path
-when REST ingestion is stuck or failing.
+the Python SDK. This is the only setup/ingest path for this project — it's
+SDK-only end to end, no REST comparison.
 
 SDK namespaces are `.databases`, `.context`, `.query` (not `.tenants`). Ingests
-one document per call, unlike REST's batch upload. Ingest ids are deterministic
-(derived from filename + tenant/sub-tenant), so re-ingesting the same filename
-safely updates the existing record.
+one document per call. Ingest ids are deterministic (derived from filename +
+tenant/sub-tenant), so re-ingesting the same filename safely updates the
+existing record.
 
-Reads HYDRA_DB_API_KEY / HYDRA_DB_TENANT_ID from .env, same as the REST script.
+Reads HYDRA_DB_API_KEY / HYDRA_DB_TENANT_ID from .env.
 Does NOT delete any existing tenant — delete `stock-market-decoder` via the
 dashboard (dashboard.hydradb.com/databases) first if starting fresh.
 """
@@ -42,8 +42,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
 RESULTS_PATH = REPO_ROOT / "outputs" / "_ingestion_results_sdk.json"
 
-# Same 13 documents/metadata as setup_and_ingest.py — kept in sync manually since
-# this is a hedge script, not the primary path.
+# The 13 Peloton documents + metadata this project ingests.
 DOCUMENTS = [
     {"id": "peloton_2020-12-21_8k", "file": "peloton_2020-12-21_8k.md", "doc_type": "8-K", "narrative_role": "claim", "filing_date": "2020-12-21",
      "doc_summary": "Peloton announces agreement to acquire Precor for $420M to establish U.S. manufacturing capacity"},
@@ -52,7 +51,7 @@ DOCUMENTS = [
     {"id": "peloton_2021-08-26_8k", "file": "peloton_2021-08-26_8k.md", "doc_type": "8-K", "narrative_role": "claim", "filing_date": "2021-08-26",
      "doc_summary": "8-K cover filing referencing FY2021 Q4 results and attached shareholder letter"},
     # Note: file is _v2 — original filename's id got stuck after a delete+
-    # re-ingest cycle (findings log #17); re-ingested under a new filename
+    # re-ingest cycle (findings log #7); re-ingested under a new filename
     # instead. Our own "id" stays the same since it's just our tracking key.
     {"id": "peloton_2021-08-26_shareholder-letter", "file": "peloton_2021-08-26_shareholder-letter_v2.md", "doc_type": "shareholder_letter", "narrative_role": "claim", "filing_date": "2021-08-26",
      "doc_summary": "Confident Q4 FY21 letter: announces new Peloton Output Park factory, sets aggressive FY2022 guidance ($5.4B revenue, 3.63M subscriptions)"},
@@ -146,7 +145,7 @@ def step_ingest(doc_id=None):
     for doc in docs_to_ingest:
         path = DATA_DIR / doc["file"]
         # Must be a JSON array even for one document — server expects
-        # file_metadata as []json.RawMessage (findings log #13). Each entry
+        # file_metadata as []json.RawMessage (findings log #3). Each entry
         # needs an "id" plus the actual fields nested under "metadata" (per
         # api-reference/v2/endpoint/ingest-context.md) — a flat object with
         # no "id"/"metadata" wrapper silently attaches nothing.
@@ -222,7 +221,7 @@ DEFAULT_RECALL_QUERY = (
 def step_recall(query=None, mode="thinking"):
     """mode="thinking" is required for a populated synthesis_context.
     sub_tenant_id must be passed explicitly — omitting it returns empty
-    results even for fully-indexed documents (findings log #14/#18)."""
+    results even for fully-indexed documents (findings log #4/#8)."""
     result = client.query(
         tenant_id=TENANT_ID,
         sub_tenant_id=SUB_TENANT_ID,

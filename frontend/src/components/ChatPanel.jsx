@@ -1,19 +1,24 @@
 import { useEffect, useRef, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { sendChat } from '../api'
+import { formatDocumentLabel } from '../documentLabels'
 
 // Placement-agnostic chat core, styled for the terminal's "02 · DECODER"
 // panel. Each turn is one Q&A pair (the backend pipeline is stateless per
 // question: classify -> scoped retrieval -> synthesis + price blend),
-// rendered with its price stat and an expandable "how we found this"
-// provenance block.
+// rendered with its price stat and a row of clickable source chips —
+// clicking one jumps the "01 · SOURCE" panel to that exact filing via
+// onViewSource (passed down from App.jsx, which owns the selected
+// event/document state). Deliberately no scope/reasoning/filing-dates/chunk
+// counts here — that's debug info useful while testing the pipeline, not to
+// someone using the app to understand the stock's story.
 
 const EXAMPLES = [
   'What did Peloton announce in December 2020?',
   "Compare Peloton's 2020 boom to the 2022 restructuring.",
 ]
 
-export default function ChatPanel() {
+export default function ChatPanel({ onViewSource }) {
   const [input, setInput] = useState('')
   const [turns, setTurns] = useState([]) // [{ question, loading, result?, error? }]
   const [pending, setPending] = useState(false)
@@ -64,7 +69,7 @@ export default function ChatPanel() {
         )}
 
         {turns.map((turn, i) => (
-          <ChatTurn key={i} turn={turn} />
+          <ChatTurn key={i} turn={turn} onViewSource={onViewSource} />
         ))}
       </div>
 
@@ -85,7 +90,7 @@ export default function ChatPanel() {
   )
 }
 
-function ChatTurn({ turn }) {
+function ChatTurn({ turn, onViewSource }) {
   const { question, loading, result, error } = turn
   return (
     <div className="term-chat-turn">
@@ -106,7 +111,7 @@ function ChatTurn({ turn }) {
 
           {result.price_stats && <PriceChip stats={result.price_stats} />}
 
-          {result.event_ids?.length > 0 && <Provenance result={result} />}
+          <SourcesRow chunks={result.chunks} onViewSource={onViewSource} />
         </div>
       )}
     </div>
@@ -131,40 +136,53 @@ function PriceChip({ stats }) {
   )
 }
 
-function Provenance({ result }) {
+// Learner-facing provenance: just the real documents this answer came from,
+// each one a click away from the actual filing in the Source panel. No
+// scope/reasoning/filing-dates/chunk-counts here — that was debug info useful
+// to us while testing the pipeline, not to someone using the app to
+// understand the stock's story. Collapsed by default — a comparative/range
+// question can cite half a dozen+ documents, which would otherwise push the
+// answer text around every time.
+function SourcesRow({ chunks, onViewSource }) {
   const [open, setOpen] = useState(false)
-  const sources = uniqueSources(result.chunks)
+  const sources = uniqueSources(chunks)
+  if (sources.length === 0) return null
   return (
-    <div className="term-chat-prov">
+    <div className="term-chat-sources">
       <button type="button" className="term-decode-btn" onClick={() => setOpen((o) => !o)}>
-        {open ? 'hide how we found this' : 'how we found this →'}
+        {open ? 'hide sources' : `sources (${sources.length}) →`}
       </button>
       {open && (
-        <div className="term-chat-prov-body">
-          <p className="term-chat-prov-line">
-            <span className="term-chat-tag">{result.query_type}</span>
-            {' '}scope: {result.event_ids.join(', ')}
-          </p>
-          {result.reasoning && <p className="muted">Why these: {result.reasoning}</p>}
-          {result.filing_dates?.length > 0 && (
-            <p className="muted">Filings queried: {result.filing_dates.join(', ')}</p>
-          )}
-          <p className="muted">
-            Evidence: {result.chunks?.length || 0} chunks, {result.chunk_relations?.length || 0} graph
-            relationships
-          </p>
-          {sources.length > 0 && <p className="muted">Sources: {sources.join(', ')}</p>}
+        <div className="term-chat-sources-chips">
+          {sources.map(({ filename, chunkText }) => (
+            <button
+              key={filename}
+              type="button"
+              className="term-chat-source-chip"
+              onClick={() => onViewSource?.(filename, chunkText)}
+              title={filename}
+            >
+              {formatDocumentLabel(filename)}
+            </button>
+          ))}
         </div>
       )}
     </div>
   )
 }
 
+// One entry per distinct source document, each carrying the first chunk's
+// text seen for that document — used to locate/highlight the exact passage
+// in DocumentViewer (Tier 2) when the user clicks through. A document cited
+// by several chunks only highlights the first for now; highlighting every
+// cited span within one document is a possible future refinement.
 function uniqueSources(chunks) {
-  const seen = new Set()
+  const seen = new Map()
   for (const c of chunks || []) {
-    const t = c?.source_title
-    if (t) seen.add(t)
+    const filename = c?.source_title
+    if (filename && !seen.has(filename)) {
+      seen.set(filename, c?.chunk_content ?? null)
+    }
   }
-  return [...seen]
+  return [...seen.entries()].map(([filename, chunkText]) => ({ filename, chunkText }))
 }

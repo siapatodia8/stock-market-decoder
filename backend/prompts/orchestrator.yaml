@@ -11,38 +11,56 @@ classify: |
   The user's question:
   "{question}"
 
-  Decide two things:
+  RULES (read all before deciding):
+  - GROUNDING: Do NOT use prior/outside knowledge of this company, its
+    executives, products, or industry to decide routing. The catalog above is
+    the ONLY source of truth. Match the question against the id/date/headline
+    text given — nothing else. If the question refers to a fact, name, or
+    number that isn't present in any headline above, you do not know which
+    event it belongs to (if any) — return an EMPTY event_ids list rather than
+    guessing from memory. Recognizing a real-world name or fact is not
+    permission to route on it unless that same fact appears above.
+  - event_ids must only ever be ids that literally appear in the list above.
+  - RELEVANCE GATE (check this FIRST): if the question has no plausible
+    connection to the catalog above — small talk, unrelated topics, general
+    trivia (e.g. "what's your favorite pizza topping?") — return an EMPTY
+    event_ids list. An unrelated question is NOT a "general/whole story"
+    question; do not fall back to including all events for it. An empty list
+    is the correct, expected answer for anything off-topic OR anything not
+    groundable in the catalog text.
+  - query_type — exactly one of:
+      - "single": about one specific event.
+      - "multi": about several specific named events (but not a comparison).
+      - "comparative": explicitly compares two or more events / periods
+        ("versus", "how did X differ from Y", "before and after").
+      - "range": everything before / after / between some point in time
+        ("leading up to a given event", "what happened after a certain
+        point", "the whole period from start to finish").
+  - For "range", include every event that falls inside the implied window.
+  - BOUNDARY RULE: when the window is defined relative to a specific event X
+    ("before X", "leading up to X", "after X", "since X", "between X and Y"),
+    work it out in this order, every time:
+      1. Find which single catalog id the anchor phrase X (and Y, if given)
+         refers to, and note its date(s).
+      2. Compare every OTHER id's date(s) in the catalog above against that
+         anchor date.
+      3. "before/leading up to X" = include only ids dated strictly earlier
+         than X's date. "after/since X" = include only ids dated strictly
+         later than X's date. "between X and Y" = include only ids dated
+         strictly between the two anchors' dates.
+      4. The anchor id(s) themselves (X, and Y if given) are NEVER included
+         in the result, even though the question names them — they mark the
+         edge of the window, they are not inside it.
+  - Only if the question genuinely asks about the company's OVERALL story
+    ("what's the whole story", "summarize everything") use query_type "range"
+    and include all event ids. This is for on-topic broad questions only —
+    never for off-topic ones (see the relevance gate above).
 
-  1. query_type — exactly one of:
-     - "single": about one specific event.
-     - "multi": about several specific named events (but not a comparison).
-     - "comparative": explicitly compares two or more events / periods
-       ("versus", "how did X differ from Y", "before and after").
-     - "range": everything before / after / between some point in time
-       ("leading up to the CFO change", "what happened after 2022",
-       "the whole boom period").
-
-  2. event_ids — the ids (from the list above) this question concerns.
-     - RELEVANCE GATE (check this FIRST): if the question has no plausible
-       connection to this company or the events listed above — small talk,
-       unrelated topics, general trivia (e.g. "what's your favorite pizza
-       topping?") — return an EMPTY event_ids list. An unrelated question is
-       NOT a "general/whole story" question; do not fall back to including all
-       events for it. An empty list is the correct, expected answer for
-       anything off-topic.
-     - For "range", include every event that falls inside the implied window.
-     - BOUNDARY RULE: when the window is defined relative to a specific event X
-       ("before X", "leading up to X", "after X", "since X", "between X and Y"),
-       the boundary event(s) X (and Y) are NOT inside the window — EXCLUDE them.
-       "before/leading up to X" = only events strictly earlier than X.
-       "after/since X" = only events strictly later than X.
-       "between X and Y" = only events strictly between them, excluding X and Y.
-       Example: "leading up to the CFO transition" (that event is 2022-06) must
-       NOT include 2022-06 — only the events before it.
-     - Only if the question genuinely asks about the company's OVERALL story
-       ("what's the whole story", "summarize everything") use query_type
-       "range" and include all event ids. This is for on-topic broad questions
-       only — never for off-topic ones (see the relevance gate above).
+  FORMATTING:
+  - reasoning must cite the specific catalog id/date/headline text that
+    matched, or state plainly that no catalog text matches if event_ids is
+    empty. Do not justify a routing decision with a fact that isn't quoted
+    from the catalog_block above.
 
   Respond ONLY with a JSON object of this exact shape, nothing else:
-  {{"query_type": "<single|multi|comparative|range>", "event_ids": ["<id>", ...], "reasoning": "<one short sentence>"}}
+  {{"query_type": "<single|multi|comparative|range>", "event_ids": ["<id>", ...], "reasoning": "<one short sentence, per FORMATTING above>"}}

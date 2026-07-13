@@ -38,6 +38,7 @@ function App() {
   const [selectedMonth, setSelectedMonth] = useState(null)
   const [selectedDocIndex, setSelectedDocIndex] = useState(0)
   const [graphSelection, setGraphSelection] = useState(null) // { type: 'node' | 'edge', id } | null
+  const [highlightChunkText, setHighlightChunkText] = useState(null) // set only when jumping here from a chat citation
 
   // Every divider in the terminal is a draggable border — these track each
   // adjustable panel's size in px so the whole layout can be reshaped instead
@@ -74,6 +75,34 @@ function App() {
     setSelectedMonth(month)
     setSelectedDocIndex(0)
     setGraphSelection(null)
+    setHighlightChunkText(null) // manual browsing, not following a chat citation
+  }
+
+  // Chat answers can cite documents from any event (range/comparative/multi
+  // questions aren't scoped to whatever's currently selected), so jumping to
+  // a cited source means finding which event owns that filename first, then
+  // switching both the selected event and the source tab together — unlike
+  // selectMonth, this doesn't reset the doc index to 0. chunkText (optional):
+  // the specific retrieved chunk behind this citation — carried through so
+  // DocumentViewer can highlight the exact passage, not just open the file.
+  function viewSource(filename, chunkText) {
+    for (const m of months || []) {
+      if (!m.event) continue
+      const docs = uniqueDocuments(m.event.evidence)
+      const idx = docs.indexOf(filename)
+      if (idx !== -1) {
+        setSelectedMonth(m.month)
+        setSelectedDocIndex(idx)
+        setGraphSelection(null)
+        setHighlightChunkText(chunkText ?? null)
+        return
+      }
+    }
+  }
+
+  function selectDocTab(i) {
+    setSelectedDocIndex(i)
+    setHighlightChunkText(null) // manually switching tabs clears any citation highlight
   }
 
   if (error) {
@@ -173,14 +202,18 @@ function App() {
                         key={filename}
                         type="button"
                         className={i === selectedDocIndex ? 'term-doc-tab term-doc-tab-active' : 'term-doc-tab'}
-                        onClick={() => setSelectedDocIndex(i)}
+                        onClick={() => selectDocTab(i)}
                         title={formatDocumentLabel(filename)}
                       >
                         {formatDocumentKind(filename)}
                       </button>
                     ))}
                   </div>
-                  <DocumentViewer filename={activeDoc} label={formatDocumentLabel(activeDoc)} />
+                  <DocumentViewer
+                    filename={activeDoc}
+                    label={formatDocumentLabel(activeDoc)}
+                    highlightChunkText={highlightChunkText}
+                  />
                 </>
               ) : (
                 <p className="muted">No source documents for this event.</p>
@@ -191,7 +224,7 @@ function App() {
 
             <div className="term-panel term-panel-decoder">
               <div className="term-panel-title term-panel-title-accent">02 · DECODER</div>
-              <ChatPanel />
+              <ChatPanel onViewSource={viewSource} />
             </div>
 
             <Resizer axis="x" value={graphWidth} onChange={setGraphWidth} min={220} max={640} invert />

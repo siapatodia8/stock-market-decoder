@@ -66,7 +66,7 @@ def _dedupe(items: list) -> list:
 
 def _build_event(dates_with_roles: dict) -> dict:
     """One metadata_filters call per date (multi-value lists don't work —
-    finding #20), kept separate per date-cluster (not merged) so synthesis
+    finding #10), kept separate per date-cluster (not merged) so synthesis
     can anchor the headline on the reversal_marker fact and order the detail
     sentence chronologically instead of by raw retrieval ranking."""
     date_groups = []
@@ -129,7 +129,7 @@ def _build_event(dates_with_roles: dict) -> dict:
     # app. Built from source_titles — the same deduplicated document list
     # already used for the evidence panel's decode dropdown, so the graph
     # always covers exactly the documents a user can already open. See
-    # knowledge_graph.py and finding #24 (docs/hydradb_findings_log.md) for the
+    # knowledge_graph.py and finding #14 (docs/hydradb_findings_log.md) for the
     # entity-alias step this goes through.
     graph = knowledge_graph.build_graph(source_titles) if source_titles else {
         "documents": [], "skipped_documents": [], "nodes": [], "edges": []

@@ -231,18 +231,29 @@ body.resizing-row * {
 }
 
 .term-chart {
-  flex: 0 0 auto;
+  /* Grows to fill whatever room heroHeight leaves after the ticker and event
+     header take their natural (flex: 0 0 auto) heights, so dragging the
+     hero panel taller actually enlarges the chart instead of leaving it
+     pinned at a fixed pixel height. min-height: 0 lets it shrink below its
+     content size too, which a flex child needs by default to respect the
+     panel's dragged-down minimum instead of overflowing it. */
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
   padding: 12px 18px 4px;
 }
 
 .chart-wrap {
   position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
   margin-bottom: 0;
 }
 
 .price-chart {
   width: 100%;
-  height: 220px;
+  height: 100%;
   display: block;
 }
 
@@ -253,11 +264,6 @@ body.resizing-row * {
 .gridline {
   stroke: #262419;
   stroke-width: 1;
-}
-.axis-label {
-  font-size: 11px;
-  font-family: "IBM Plex Mono", monospace;
-  fill: #6f6c5e;
 }
 .area-fill {
   fill: url(#areaGradient);
@@ -319,6 +325,12 @@ body.resizing-row * {
   white-space: nowrap;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
 }
+/* Used when the hovered point is close enough to the top of the chart that
+   the default above-point placement would push the tooltip past the edge
+   and get clipped — renders below the point instead. */
+.chart-tooltip-below {
+  transform: translate(-50%, 10px);
+}
 .tooltip-month {
   margin: 0;
   color: var(--text-muted);
@@ -333,6 +345,51 @@ body.resizing-row * {
 }
 .chart-tooltip .pct {
   margin: 0;
+}
+
+/* Axis labels render as real HTML text over the chart, not inside the SVG.
+   The SVG's viewBox is a fixed 900x450 shape stretched via
+   preserveAspectRatio="none" to fill a much wider/shorter box — fine for the
+   line/gridlines, since the whole point is a squashed visual, but it
+   squashes <text> glyphs too, making numbers look flattened. Positioning
+   plain HTML spans at the same %-based coordinates the SVG plot already
+   uses (same trick as .chart-tooltip) keeps every label at native,
+   undistorted text proportions regardless of the chart's own aspect ratio. */
+.chart-axis-labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.chart-axis-label {
+  position: absolute;
+  font-size: 11px;
+  font-family: "IBM Plex Mono", monospace;
+  color: #6f6c5e;
+  white-space: nowrap;
+}
+.chart-axis-label-y {
+  left: 4px;
+  transform: translateY(-50%);
+}
+.chart-axis-label-y-top {
+  left: 4px;
+  transform: translateY(0);
+}
+.chart-axis-label-y-bottom {
+  left: 4px;
+  transform: translateY(-100%);
+}
+.chart-axis-label-x-start {
+  bottom: 2px;
+  transform: translateX(4px);
+}
+.chart-axis-label-x-middle {
+  bottom: 2px;
+  transform: translateX(-50%);
+}
+.chart-axis-label-x-end {
+  bottom: 2px;
+  transform: translateX(calc(-100% - 4px));
 }
 
 /* ===== Event ticker ===== */
@@ -485,6 +542,13 @@ body.resizing-row * {
   padding: 0 16px 16px;
   min-height: 0;
 }
+.doc-viewer-highlight {
+  background: var(--ui-accent-bg);
+  border-left: 3px solid var(--ui-accent-hover);
+  border-radius: 0 4px 4px 0;
+  padding: 2px 10px;
+  margin: 4px 0;
+}
 .snippet {
   font-size: 12px;
   color: #b8b5a7;
@@ -589,7 +653,7 @@ body.resizing-row * {
   border: 1px solid var(--border);
   border-radius: 8px;
 }
-.term-chat-prov {
+.term-chat-sources {
   margin-top: 10px;
 }
 .term-decode-btn {
@@ -605,32 +669,25 @@ body.resizing-row * {
 .term-decode-btn:hover {
   text-decoration: underline;
 }
-.term-chat-prov-body {
+.term-chat-sources-chips {
   margin-top: 8px;
-  padding: 10px;
-  background: #0F0F0F;
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
 }
-.term-chat-prov-line {
-  font-size: 12px;
-  margin: 0 0 6px;
-  color: #cfccbe;
-}
-.term-chat-prov-body .muted {
-  margin: 4px 0;
-}
-.term-chat-tag {
-  display: inline-block;
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
+.term-chat-source-chip {
+  font: inherit;
+  font-size: 11.5px;
   color: var(--ui-accent-hover);
   background: var(--ui-accent-bg);
+  border: 1px solid var(--border);
   border-radius: 5px;
-  padding: 1px 6px;
-  margin-right: 4px;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+.term-chat-source-chip:hover {
+  text-decoration: underline;
 }
 
 .term-chat-input-row {

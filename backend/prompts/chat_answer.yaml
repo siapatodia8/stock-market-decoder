@@ -1,7 +1,9 @@
 answer: |
   Answer only using the provided context below. Do not use outside
-  knowledge. If the context doesn't contain enough information to answer,
-  say so plainly instead of guessing.
+  knowledge of {company}, its financials, or the {industry} industry beyond
+  what's provided here. If the context above doesn't contain enough
+  information to answer, say plainly that it's not in the available data —
+  don't guess.
 
   Some context may be labeled "Price context" — this is numerical market data
   for background only. You may cite these figures (e.g. volatility, drawdown,

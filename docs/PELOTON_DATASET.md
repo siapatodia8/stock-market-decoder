@@ -1,4 +1,4 @@
-# Peloton Dataset — Finalized (Phase 1: SEC 8-Ks)
+# Peloton Dataset — Finalized
 
 CIK 0001639825. Six 8-K filings (13 individual documents once split into bodies +
 exhibits) spanning the full claim → reversal → resolution arc, all independently
@@ -51,13 +51,12 @@ verified against EDGAR full-text search and read in full this session.
 
 ---
 
-## Not yet finalized (next phases)
-- Phase 2: yfinance price history (2020–2024)
-- Phase 3: Wikipedia — Peloton Interactive page
-
-## Still open before ingestion
-- All 6 filings identified and content-verified. Documents 3 and 4 (Feb 2022) confirmed
-  via direct fetch — content matches expected roles. No open questions on Phase 1 data.
+## Dataset scope, final
+Phase 1 (13 SEC filing documents, above) and Phase 2 (yfinance price history,
+`data/pton_price_history.csv`, 2020–2024) are both finalized and ingested/used
+throughout the built app. All 6 filings identified and content-verified;
+documents 3 and 4 (Feb 2022) confirmed via direct fetch — content matches
+expected roles. No open questions on the dataset as built.
 
 ---
 

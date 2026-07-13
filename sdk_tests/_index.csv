@@ -1,0 +1,10 @@
+test_id,topic,title,status,severity,category,date,file_ref
+T02.1,2 - Create database,Create stock-decoder database via SDK (deprecation notice reconfirmed),Pass,Moderate,HydraDB-SDK-bug,2026-07-13,02_create_database.md
+T06.1,6 - Poll ingestion status,Ingestion speed observation - no E6001 this run vs original build,Pass,n/a,Non-issue-as-expected,2026-07-13,06_poll_ingestion_status.md
+T05.1,5 - Ingest documents,No content-hash dedup - identical content different filename gets different id,Pass,n/a,Non-issue-as-expected,2026-07-13,05_ingest_documents.md
+T05.2,5 - Ingest documents,Deprecation notice inconsistent across endpoints for tenant_id/sub_tenant_id,Fail,Minor,HydraDB-SDK-bug,2026-07-13,05_ingest_documents.md
+T07.1,7 - Verify retrieval,Re-test finding #9 - synthesis_context reliable 7/7 for this query,Pass,n/a,Non-issue-as-expected,2026-07-13,07_verify_retrieval.md
+T08.1,8 - Verify knowledge graph relations,Re-test finding #14 - entity resolution gap reproduces on fresh database,Fail,Significant,HydraDB-SDK-bug,2026-07-13,08_verify_knowledge_graph_relations.md
+T10.1,10 - Backend build & run,Undocumented _retrieval_source field in chunk additional_metadata (finding #15 - present in original build too but never documented),Fail,Minor,HydraDB-Docs-mismatch,2026-07-13,10_backend_build_and_run.md
+T13.1,13 - Automated regression suite,Re-test finding #12 - thinking-mode rerank instability reproduces on fresh database,Fail,Significant,HydraDB-SDK-bug,2026-07-13,13_automated_regression_suite.md
+T13.2,13 - Automated regression suite,Re-test finding #12 production-impact scenario - real 8-K vanished via actual code path (max_results=10 default),Fail,Significant,HydraDB-SDK-bug,2026-07-13,13_automated_regression_suite.md
