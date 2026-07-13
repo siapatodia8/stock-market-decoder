@@ -21,6 +21,19 @@ The system uses HydraDB's knowledge graph and retrieval over 13 real SEC filings
 
 **Note:** this is a prototype, built and tested on a single company within a 3-day build window - the dashboard covers Peloton only. That scope was intentional: alongside the app itself, the primary goal of this build was a hands-on evaluation of HydraDB itself - its strengths, errors, and limitations - documented in full below.
 
+For detailed documentation, see below:
+
+| Document | Description |
+|---|---|
+| [Workflow Overview](docs/workflow_overview.md) | Step-by-step breakdown of both workflows - ingesting and indexing the data, and answering a live question |
+| [Why HydraDB](docs/why_hydradb.md) | What HydraDB delivered for this build, and where it earned its place in the stack |
+| [Limitations & Future Considerations](docs/limitations_and_future_considerations.md) | Our own data scope and system design choices, and where this could grow next |
+| [Testing & Findings](docs/testing_and_findings.md) | How this project tested and evaluated HydraDB, and an index of every findings doc below |
+| ↳ [SDK & Ingestion Findings](docs/findings/sdk_and_ingestion.md) | SDK behavior quirks and ingestion pipeline gotchas |
+| ↳ [Documentation Accuracy Findings](docs/findings/documentation_accuracy.md) | Where HydraDB's docs and actual behavior diverge |
+| ↳ [Query & Retrieval Quality Findings](docs/findings/query_and_retrieval_quality.md) | Retrieval reliability, reranking stability, and grounding quality |
+| ↳ [Knowledge Graph Findings](docs/findings/knowledge_graph.md) | What entity resolution and relationship extraction got right and wrong |
+
 ---
 
 ## Prerequisites
