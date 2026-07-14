@@ -33,6 +33,7 @@ For detailed documentation, see below:
 | ↳ [Documentation Accuracy Findings](docs/findings/documentation_accuracy.md) | Where HydraDB's docs and actual behavior diverge |
 | ↳ [Query & Retrieval Quality Findings](docs/findings/query_and_retrieval_quality.md) | Retrieval reliability, reranking stability, and grounding quality |
 | ↳ [Knowledge Graph Findings](docs/findings/knowledge_graph.md) | What entity resolution and relationship extraction got right and wrong |
+| ↳ [API Findings](docs/findings/api_findings.md) | Raw HTTP API behavior vs documented claims - tested SDK-free on synthetic datasets |
 
 ---
 
