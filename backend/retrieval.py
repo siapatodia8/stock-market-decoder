@@ -14,7 +14,7 @@ Constraints this respects, both already established in the findings log:
     we fan out one query per date and merge — never one range query.
   - max_results=20, not the default 10: thinking-mode reranking drops real
     chunks near the ranking boundary at 10 (test_chunk_retrieval_stability.py
-    saw 2/8 hits at 10 vs 8/8 at 20).
+    saw 3/8 hits at 10 vs 8/8 at 20).
 
 Difference from timeline.py: the query text here is the USER'S actual question,
 so ranking within each scoped document set reflects what they asked. Scope

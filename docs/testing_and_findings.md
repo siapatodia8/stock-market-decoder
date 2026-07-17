@@ -10,7 +10,7 @@ Separately from the SDK-based testing above, the raw HTTP API was also tested di
 
 | Severity | Count |
 |---|---|
-| Significant | 5 |
+| Significant | 4 |
 | Moderate | 6 |
 | Minor | 2 |
 | Informational | 1 |

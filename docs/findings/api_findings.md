@@ -21,9 +21,9 @@ Each test targeted a specific claim from hydradb.com or docs.hydradb.com (site a
 
 ## Significant findings
 
-### 1. Every 4xx error bypasses the documented response envelope
+### 1. Every error observed bypasses the documented response envelope
 
-Docs promise `{success, data, error, meta}` with `meta.request_id` "even on errors." In practice **every** error observed - auth, validation, conflict, not-found - returned a FastAPI-style `{"detail": {success, message, error_code}}` with **no request_id**, making errors impossible to correlate with support. Compounding it:
+The docs' error-responses page promises `{success, data, error, meta}` on all responses and explicitly instructs: "Use `error.code` for branching and log `meta.request_id` for every failed request." In practice **every** error observed - auth, validation, conflict, not-found - returned a FastAPI-style `{"detail": {success, message, error_code}}` with **no request_id**, making that instruction impossible to follow and errors impossible to correlate with support. Success responses carry the full documented envelope including `meta.request_id` (verified in this project's saved ingest responses), so the envelope exists and works - it is selectively absent on exactly the error paths the docs tell developers to log it from. Compounding it:
 
 - **Wrong status codes:** missing/invalid auth → **403 FORBIDDEN** (docs and HTTP convention say 401 UNAUTHORIZED); duplicate `Authorization` headers → 403 with `message: "unauthorized"` - the code and message disagree about which auth concept applies.
 - **The documented error taxonomy doesn't match live codes.** "Already exists" is `TENANT_ALREADY_EXISTS` in the docs, `DATABASE_ALREADY_EXISTS` on `POST /databases`, and `INVALID_INPUT` on `POST /tenants`; "not found" is `TENANT_NOT_FOUND` in the docs but `NOT_FOUND` live. One condition family, five names.
@@ -42,13 +42,13 @@ The docs state that `/query`, `/context/status`, `/context/inspect`, `/context/l
 
 The corpus was built as a textbook knowledge-update case (confident decision → documented reversal):
 
-- Asking **"is X being decommissioned - what is the current plan?"** ranked the **outdated RFC above the reversal** (0.6657 vs 0.6608), with nothing in the response marking the earlier decision as superseded - even though the graph demonstrably extracted both documents' dates. The LongMemEval Knowledge Update (97.43%) story evidently lives in an LLM pipeline above this API, not in `/query`.
-- **`recency_bias` had zero observable effect** (0.0 vs 0.9 → scores identical to 10 decimal places). Document-content dates are not used; if the feature keys off timestamp metadata, that dependency is undocumented.
+- **Nothing in any response marks a superseded decision as superseded** - even though the graph demonstrably extracted both documents' dates into `temporal_details`. On top of that, asking **"is X being decommissioned - what is the current plan?"** ranked the **outdated RFC above the reversal** (0.6657 vs 0.6608, `mode: "thinking"`) - and the same ordering reproduced in default mode across two further calls with bit-identical scores (T21), ruling out thinking-mode rank instability as the explanation.
+- **`recency_bias` had zero observable effect** (0.0 vs 0.9 → returned scores identical to 16 decimal places, same ordering, same counts). Document-content dates are not used; if the feature keys off timestamp metadata, that dependency is undocumented. The API reference defines `recency_bias` only as "Boost newer content" (float 0.0-1.0, default 0.0, with tuning guidance up to "0.6-0.8 for changelogs, news, or status updates") and never specifies what recency is measured against - ingest time, a timestamp field, or content dates - so a developer cannot construct the test the parameter is supposed to pass. At minimum a documentation gap; at most a no-op.
 - **`synthesis_context` gating matches the docs** (populated in `mode:"thinking"` only), but its content reads as query *classification*, not synthesis - and in one case it claimed the justification "is not in the snippets" while the top chunk of the same response contained it in full.
 
 ### 4. Silent traps that compound each other
 
-- **Malformed `document_metadata` is silently accepted** (202, `success_count: 1`) when it is valid JSON of the wrong shape, leaving metadata permanently empty - the SDK-era finding reproduced exactly at the raw layer.
+- **Malformed `document_metadata` is silently accepted** (202, `success_count: 1`) when it is a valid JSON array whose entries lack the recognized keys (the `id`/`metadata` wrapper) - no error, no unrecognized-key warning - leaving metadata empty until manually repaired via PATCH. The SDK-era finding reproduced exactly at the raw layer.
 - ...which then makes **any `metadata_filters` query return zero results** - contradicting the docs' claim that undeclared filter keys are "silently ignored, not errored" (they filter; they don't ignore). The docs make two mutually exclusive claims here (silent-ignore vs correctness-first); the implementation follows correctness-first.
 - **`ids=a,b` on `/context/status` is silently mis-parsed as a single id** (→ `errored` / `FILE_NOT_FOUND`); only repeated `ids=a&ids=b` works. The encoding is documented nowhere.
 - **No relevance floor:** a deliberately absurd query returned the full corpus at 0.64 relevancy (on-topic queries score ~0.74). The documented zero-result behavior is practically unreachable on a non-empty corpus, and the score compression makes client-side thresholding hopeless.
@@ -77,7 +77,7 @@ The corpus was built as a textbook knowledge-update case (confident decision →
 
 | SDK-based finding (this repo) | Raw-API result |
 |---|---|
-| Malformed metadata silently accepted, chunk metadata permanently empty ([SDK & Ingestion](sdk_and_ingestion.md)) | **Reproduced** - and `PATCH /context/sources/{id}/metadata` is a working repair |
+| Malformed metadata silently accepted, chunk metadata left empty ([SDK & Ingestion](sdk_and_ingestion.md)) | **Reproduced** - and `PATCH /context/sources/{id}/metadata` is a working repair |
 | `document_metadata` requires array-wrapping; server-side name `file_metadata` leaks in errors ([SDK & Ingestion](sdk_and_ingestion.md)) | **Reproduced**, plus raw Go unmarshal internals leak |
 | Deprecation notice references "nonexistent" `database_metadata` fields ([SDK & Ingestion](sdk_and_ingestion.md)) | **Explained** - the fields exist at the raw API; the SDK lags them |
 | Re-ingesting a just-deleted id silently never appears ([SDK & Ingestion](sdk_and_ingestion.md), logged Significant) | **Not reproduced** - clean reappearance with the same deterministic id in ~30-60s; possibly fixed since (both observations kept, with dates) |

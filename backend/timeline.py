@@ -77,7 +77,7 @@ def _build_event(dates_with_roles: dict) -> dict:
             mode="thinking",
             max_results=20,  # default (10) missed real chunks near the ranking
             # boundary under thinking-mode's rerank volatility — confirmed via
-            # tests/test_chunk_retrieval_stability.py (2/8 hits at 10 vs 8/8 at 20)
+            # tests/test_chunk_retrieval_stability.py (3/8 hits at 10 vs 8/8 at 20)
             metadata_filters={"filing_date": date},
         )
         chunks = data.chunks or []
