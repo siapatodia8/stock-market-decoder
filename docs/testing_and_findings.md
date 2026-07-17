@@ -2,7 +2,7 @@
 
 Every finding below came from hands-on testing against the live HydraDB SDK, not from reading documentation alone. Surprising or inconsistent results were re-run until confirmed rather than logged from a single pass, and several were independently cross-checked against HydraDB's own dashboard, not just its API responses.
 
-Separately from the SDK-based testing above, the raw HTTP API was also tested directly (no SDK, curl only) on smaller synthetic datasets to isolate backend behavior from SDK behavior - documented in [API Findings](findings/api_findings.md).
+Separately from the SDK-based testing above, the raw HTTP API was also tested directly (no SDK, curl only) on smaller synthetic datasets to isolate backend behavior from SDK behavior - documented in [API Findings](findings/api_findings.md), tests ran in [HydraDB API Tests](hydradb-test).
 
 ---
 
